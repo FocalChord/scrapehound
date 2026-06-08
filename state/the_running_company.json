@@ -3,8 +3,18 @@
     "attrs": {
       "brand": "New Balance",
       "sizes_in_stock": [
+        8.0,
+        8.5,
+        9.0,
+        9.5,
         10.0,
-        10.5
+        10.5,
+        11.0,
+        11.5,
+        12.0,
+        13.0,
+        14.0,
+        15.0
       ],
       "width": "4E"
     },
@@ -13,10 +23,316 @@
     "image": "https://cdn.shopify.com/s/files/1/0720/5424/3645/files/M880K15_2_9cb8f31a-eedb-4bd5-9672-c23302fe8614.jpg?v=1749174783",
     "in_stock": true,
     "price": "230.00",
-    "scraped_at": "2026-06-08T02:13:12+00:00",
+    "scraped_at": "2026-06-08T03:10:41+00:00",
     "source": "the_running_company",
     "title": "Mens New Balance Fresh Foam X 880 V15 (4E Extra Wide)",
     "url": "https://shop.therunningcompany.com.au/products/mens-new-balance-fresh-foam-x-880-v15-4e-extra-wide",
+    "variants": [
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "7"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "7.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black",
+          "Size": "8"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "8.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black",
+          "Size": "9"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "9.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "10"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "10.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "11"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black",
+          "Size": "11.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "12"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "13"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "14"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black",
+          "Size": "15"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "8"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "8.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "9"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "9.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "10.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "10"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "11"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "11.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "12"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "13"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "14"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black White Reflection",
+          "Size": "15"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "10"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "11"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "9"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "10.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "11.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "8"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "8.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "9.5"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "13"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "12"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "14"
+        },
+        "price": "230.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Vintage Indigo / Stoneware",
+          "Size": "15"
+        },
+        "price": "230.00"
+      }
+    ],
     "was_price": null
   }
 }
