@@ -7,12 +7,15 @@ generic fields only — domain attributes come from the derive step.
 """
 from __future__ import annotations
 
+import logging
 from urllib.parse import urlsplit
 
 from selectolax.parser import HTMLParser
 
 from .base import Adapter, register
 from ..models import Product, to_decimal
+
+log = logging.getLogger("scrapehound")
 
 
 def _origin(url: str) -> str:
@@ -33,6 +36,20 @@ def _extract(node, spec):
 @register("browser")
 class BrowserAdapter(Adapter):
     def fetch_raw(self) -> str:
+        """Render the page, retrying on transient slow renders/timeouts. After
+        all attempts fail it raises, and the pipeline skips the source (state
+        preserved) rather than reporting everything as removed."""
+        attempts = int(self.config.get("retries", 3))
+        err = None
+        for attempt in range(1, attempts + 1):
+            try:
+                return self._render()
+            except Exception as e:
+                err = e
+                log.warning("[browser] render attempt %d/%d failed: %s", attempt, attempts, e)
+        raise err
+
+    def _render(self) -> str:
         from ..web import browser_page
         c = self.config
         with browser_page(headless=c.get("headless", True), channel=c.get("channel")) as page:
@@ -49,10 +66,7 @@ class BrowserAdapter(Adapter):
                 except Exception:
                     pass
             if c.get("wait_for"):
-                try:
-                    page.wait_for_selector(c["wait_for"], timeout=c.get("wait_timeout", 30000))
-                except Exception:
-                    pass
+                page.wait_for_selector(c["wait_for"], timeout=c.get("wait_timeout", 30000))
             page.wait_for_timeout(c.get("settle_ms", 3000))
             html = page.content()
         block = c.get("block_text")
