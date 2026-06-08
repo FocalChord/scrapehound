@@ -1,0 +1,93 @@
+# Each source has a `type` (adapter), a `bot` (routing), a `notify` mode, and an
+# optional `filter`. Adapter-specific keys (base_url, url, selectors, ...) are
+# passed straight to the adapter.
+
+_shoe_filter: &shoe_filter
+  brand: New Balance
+  widths: [4E]
+  sizes: [10, 10.5]
+  require_size_in_stock: true
+  search: new balance 4e
+  exclude_terms:
+    [work boot, composite toe, steel toe, steel cap, safety, gumboot,
+     women, womens, wmns, kids, junior, girl]
+
+sources:
+  # --- New Balance 4E shoes -> "shoes" bot, price-drop alerts ---
+  athletes_foot:
+    type: magento_graphql
+    bot: shoes
+    notify: price_drop
+    graphql_url: "https://www.theathletesfoot.com.au/graphql"
+    base_url: "https://www.theathletesfoot.com.au"
+    store: au
+    filter: *shoe_filter
+
+  active_feet:
+    type: shopify
+    bot: shoes
+    notify: price_drop
+    base_url: "https://activefeet.com.au"
+    filter: *shoe_filter
+
+  the_running_company:
+    type: shopify
+    bot: shoes
+    notify: price_drop
+    base_url: "https://shop.therunningcompany.com.au"
+    filter: *shoe_filter
+
+  brand_house_direct:
+    type: shopify
+    bot: shoes
+    notify: price_drop
+    fetch: browser
+    base_url: "https://www.brandhousedirect.com.au"
+    filter: *shoe_filter
+
+  rebel:
+    type: sfcc_jsonld
+    bot: shoes
+    notify: price_drop
+    base_url: "https://www.rebelsport.com.au"
+    link_regex: "/p/(new-balance-[a-z0-9-]*4e[a-z0-9-]*-[A-Z0-9]+)\\.html"
+    filter: *shoe_filter
+
+  newbalance_au:
+    type: browser
+    bot: shoes
+    notify: price_drop
+    url: "https://www.newbalance.com.au/men/shoes/running/?prefn1=mensFootwearSize&prefv1=10%7C10.5&prefn2=width&prefv2=X-Wide%20%284E%29"
+    channel: chrome
+    headless: false
+    warm_url: "https://www.newbalance.com.au/"
+    wait_for: ".product-tile"
+    block_text: "Something went wrong"
+    sizes_from_filter: true
+    static_attrs: { brand: New Balance, width: "4E" }
+    selectors:
+      container: ".product-tile"
+      title: ".pdp-link a"
+      price: ".price .sales span[content]@content"
+      was_price: ".strike-through .value@content"
+      url: ".pdp-link a@href"
+      image: ".tile-image img@src"
+    filter: *shoe_filter
+
+  # --- DigiDirect preloved Leica -> "leica" bot, all changes ---
+  leica_digidirect:
+    type: browser
+    bot: leica
+    notify: changes
+    url: "https://www.digidirect.com.au/digiseconds/preloved?brand=Leica"
+    headless: true
+    wait_for: ".result-wrapper"
+    dismiss: 'button:has-text("Allow Cookies")'
+    selectors:
+      container: "div.col-md-4.col-sm-6.list-view-col"
+      title: "h3.result-title"
+      price: "meta[itemprop='price']@content"
+      was_price: "span.price-container span.price"
+      url: "a.result@href"
+      image: "img[itemprop='image']@src"
+      sku: "a.result@data-objectid"

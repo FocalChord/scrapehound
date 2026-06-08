@@ -1,0 +1,9 @@
+# Named Telegram bots. token/chat are read from these env vars (set in .env
+# locally and as GitHub Actions secrets). Each source routes to a bot by name.
+bots:
+  shoes:
+    token_env: SHOES_BOT_TOKEN
+    chat_env: SHOES_CHAT_ID
+  leica:
+    token_env: LEICA_BOT_TOKEN
+    chat_env: LEICA_CHAT_ID
