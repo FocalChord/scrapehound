@@ -108,6 +108,15 @@ sources:
     location: "3032"
     parts: ["MU963X/A", "MU973X/A"]   # M4 Max + M3 Ultra Mac Studio (base configs)
 
+  # --- Apple Certified Refurbished Macs: alert on new stock / price drops ---
+  apple_refurb_mac:
+    type: apple_refurb
+    bot: apple
+    notify: changes               # new (came into stock) / removed (sold) / price
+    region: au
+    category: mac                 # mac | ipad | watch | ...
+    # filter: [{field: title, op: contains_any, value: [Studio, Ultra]}]   # optional
+
   # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---
   leica_digidirect:
     type: browser

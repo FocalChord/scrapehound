@@ -73,6 +73,7 @@ Adapters, cheapest method first:
 | `sfcc_jsonld` | search → PDP JSON-LD (extruct) | Rebel Sport |
 | `browser` | rendered page + CSS selectors (patchright) | New Balance AU, DigiDirect Leica |
 | `apple` | Apple pickup-message + delivery-message APIs | Mac Studio pickup/lead-time |
+| `apple_refurb` | Apple refurb store (embedded JSON, plain HTTP) | refurbished Macs/iPads |
 
 Sources watch `price` by default, but `watch:` can track any field/attr — e.g. the
 Apple source uses `watch: [pickup, ships]` to alert when a config's lead time

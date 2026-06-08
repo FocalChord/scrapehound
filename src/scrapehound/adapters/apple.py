@@ -18,9 +18,28 @@ a config's lead time moves or pickup opens up.
 """
 from __future__ import annotations
 
+import json
+
 from .base import Adapter, register
-from ..models import Product
+from ..models import Product, to_decimal
 from ..web import http_client
+
+
+def _extract_array(html: str, key: str):
+    """Pull a balanced JSON array embedded as \"key\":[ ... ] from page HTML."""
+    i = html.find(f'"{key}":[')
+    if i < 0:
+        return []
+    start = html.index("[", i)
+    depth = 0
+    for j in range(start, len(html)):
+        if html[j] == "[":
+            depth += 1
+        elif html[j] == "]":
+            depth -= 1
+            if depth == 0:
+                return json.loads(html[start:j + 1])
+    return []
 
 
 @register("apple")
@@ -79,4 +98,42 @@ class AppleAdapter(Adapter):
                 id=part, title=regular.get("storePickupProductTitle") or part,
                 url=f"https://www.apple.com/{self.region}/shop/buy", attrs=attrs,
             ))
+        return products
+
+
+@register("apple_refurb")
+class AppleRefurbAdapter(Adapter):
+    """Apple Certified Refurbished store (e.g. /au/shop/refurbished/mac).
+
+    Plain HTTP — the page embeds a `tiles` JSON of every refurb product with part
+    number, title, price and image. Great for "alert me when a refurb config I
+    want comes into stock / drops in price" (new/removed/price via `changes`).
+    """
+    required = ["category"]
+
+    @property
+    def region(self) -> str:
+        return self.config.get("region", "au")
+
+    def fetch_raw(self) -> str:
+        url = f"https://www.apple.com/{self.region}/shop/refurbished/{self.config['category']}"
+        with http_client() as c:
+            r = c.get(url)
+            r.raise_for_status()
+            return r.text
+
+    def parse(self, raw: str) -> list[Product]:
+        products = []
+        for t in _extract_array(raw, "tiles"):
+            part = t.get("partNumber")
+            price = to_decimal((t.get("price", {}).get("currentPrice") or {}).get("raw_amount"))
+            if not part or price is None:
+                continue
+            url = (t.get("productDetailsUrl") or "").split("?")[0]
+            if url.startswith("/"):
+                url = "https://www.apple.com" + url
+            srcs = (t.get("image") or {}).get("sources") or []
+            image = (srcs[0].get("srcSet", "").split() or [None])[0] if srcs else None
+            products.append(Product(id=part, title=t.get("title", part), url=url,
+                                    price=price, image=image))
         return products
