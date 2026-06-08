@@ -65,7 +65,7 @@ sources:
     filter: *shoe_filter
 
   rebel:
-    type: sfcc_jsonld
+    type: jsonld                    # generic schema.org adapter (any such site)
     bot: shoes
     notify: price_drop
     base_url: "https://www.rebelsport.com.au"
@@ -108,13 +108,20 @@ sources:
     location: "3032"
     parts: ["MU963X/A", "MU973X/A"]   # M4 Max + M3 Ultra Mac Studio (base configs)
 
-  # --- Apple Certified Refurbished Macs: alert on new stock / price drops ---
+  # --- Apple Certified Refurbished Macs: now just a generic embedded_json config ---
   apple_refurb_mac:
-    type: apple_refurb
+    type: embedded_json           # no Apple-specific code; the page embeds a JSON list
     bot: apple
-    notify: changes               # new (came into stock) / removed (sold) / price
-    region: au
-    category: mac                 # mac | ipad | watch | ...
+    notify: changes               # new (in stock) / removed (sold) / price
+    url: "https://www.apple.com/au/shop/refurbished/mac"
+    base_url: "https://www.apple.com"
+    key: tiles
+    map:
+      id: partNumber
+      title: title
+      price: price.currentPrice.raw_amount
+      url: productDetailsUrl
+      image: image.sources.0.srcSet
     # filter: [{field: title, op: contains_any, value: [Studio, Ultra]}]   # optional
 
   # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---

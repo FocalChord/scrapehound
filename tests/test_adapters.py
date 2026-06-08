@@ -4,7 +4,7 @@ from decimal import Decimal
 from pathlib import Path
 
 from scrapehound.adapters.shopify import ShopifyAdapter
-from scrapehound.adapters.sfcc_jsonld import SfccJsonLdAdapter
+from scrapehound.adapters.jsonld import JsonLdAdapter
 from scrapehound.adapters.magento_graphql import MagentoGraphQLAdapter
 from scrapehound.derive import derive_attrs
 
@@ -25,10 +25,10 @@ def test_shopify_parse_variants_then_derive():
     assert p.attrs["width"] == "4E" and 10.0 in p.attrs["sizes_in_stock"]
 
 
-def test_sfcc_parse_then_derive():
+def test_jsonld_parse_then_derive():
     html = (FX / "rebel_624_pdp.html").read_text()
-    p = SfccJsonLdAdapter({"base_url": "https://www.rebelsport.com.au",
-                           "link_regex": "x"}).parse([html])[0]
+    p = JsonLdAdapter({"base_url": "https://www.rebelsport.com.au",
+                       "link_regex": "x"}).parse([html])[0]
     assert p.price == Decimal("119.99") and p.was_price == Decimal("139.99") and p.on_sale
     derive_attrs(p, DERIVE)
     assert 10.0 in p.attrs["sizes_in_stock"]

@@ -64,19 +64,26 @@ the_running_company:
     - {field: title, op: not_contains, value: [women, work boot]}
 ```
 
-Adapters, cheapest method first:
+### Do you need a custom adapter? (almost never)
 
-| type | how | used by |
+Most sites expose their data through one of a few **generic mechanisms**, so a
+new site is usually just a config block, not code. In order of preference:
+
+| mechanism | adapter | covers |
 |---|---|---|
-| `magento_graphql` | Magento GraphQL API | The Athlete's Foot |
-| `shopify` | `/products.json` + `.js` (browser mode for Cloudflare) | Active Feet, Running Co, Brand House Direct |
-| `sfcc_jsonld` | search → PDP JSON-LD (extruct) | Rebel Sport |
-| `browser` | rendered page + CSS selectors (patchright) | New Balance AU, DigiDirect Leica |
-| `apple` | Apple pickup-message + delivery-message APIs | Mac Studio pickup/lead-time |
-| `apple_refurb` | Apple refurb store (embedded JSON, plain HTTP) | refurbished Macs/iPads |
+| platform API | `shopify`, `magento_graphql` | every store on that platform (just `base_url`) |
+| schema.org JSON-LD | `jsonld` | **any** site with Product markup — verified on SFCC, Shopify, JB Hi-Fi… |
+| embedded JSON in the page | `embedded_json` | Apple refurb, Next.js/Nuxt, bespoke stores (map fields by dotted path) |
+| rendered DOM | `browser` | anything JS-rendered (CSS selectors, real Chrome) |
+| **private/bespoke API** | a small custom adapter | the rare exception — e.g. `apple` pickup/lead-time |
 
-Sources watch `price` by default, but `watch:` can track any field/attr — e.g. the
-Apple source uses `watch: [pickup, ships]` to alert when a config's lead time
+Only the last row needs Python. Apple's *refurb* store dropped its bespoke
+adapter and is now a pure `embedded_json` config; only its non-standard
+pickup/delivery API remains custom. All HTTP adapters share one retrying fetch
+(backoff on timeouts / 429 / 5xx).
+
+Sources watch `price` by default, but `watch:` can track any field/attr — the
+`apple` source uses `watch: [pickup, ships]` to alert when a config's lead time
 moves (M3 Ultra Mac Studio is currently 16-18 weeks) or in-store pickup opens up.
 
 ## Setup

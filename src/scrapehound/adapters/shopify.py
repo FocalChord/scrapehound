@@ -10,17 +10,10 @@ import time
 from decimal import Decimal
 from typing import Optional
 
-import httpx
-from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
-
 from .base import Adapter, register
 from ..models import Product, Variant
+from .. import web
 from ..web import http_client, browser_page
-
-
-def _throttled(exc: Exception) -> bool:
-    return (isinstance(exc, httpx.HTTPStatusError)
-            and exc.response.status_code in (429, 500, 502, 503, 504))
 
 
 @register("shopify")
@@ -73,14 +66,7 @@ class ShopifyAdapter(Adapter):
                 return self._products(
                     lambda u: page.evaluate("u => fetch(u).then(r => r.json())", u))
         with http_client({"Accept": "application/json"}) as client:
-            @retry(stop=stop_after_attempt(3),
-                   wait=wait_exponential(multiplier=1, min=1, max=8),
-                   retry=retry_if_exception(_throttled), reraise=True)
-            def get_json(url):
-                r = client.get(url)
-                r.raise_for_status()
-                return r.json()
-            return self._products(get_json)
+            return self._products(lambda url: web.get_json(client, url))
 
     def parse(self, raw: list[dict]) -> list[Product]:
         products: list[Product] = []
