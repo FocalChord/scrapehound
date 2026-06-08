@@ -1,24 +1,18 @@
-"""Generic browser adapter: scrape any rendered listing page via CSS selectors.
+"""Generic browser adapter: scrape any rendered listing via CSS selectors.
 
-Config-driven, so one adapter covers very different sites:
-  - digidirect (regular headless Chromium, cookie dismiss, text prices)
-  - New Balance AU (real Chrome headful via patchright to beat Akamai, prices in
-    a `content` attribute, sizes implied by the faceted URL)
-
-Selectors use a "css" or "css@attr" syntax (attr reads an attribute, otherwise
-inner text). fetch_raw renders the page; parse is pure (selectolax over the HTML),
-so it is unit-testable against a saved fixture.
+Config-driven so one adapter covers very different sites (DigiDirect headless,
+New Balance headful via patchright). Selectors use "css" or "css@attr" syntax.
+fetch_raw renders the page; parse is pure (selectolax over the HTML). It extracts
+generic fields only — domain attributes come from the derive step.
 """
 from __future__ import annotations
 
-from typing import Optional
 from urllib.parse import urlsplit
 
 from selectolax.parser import HTMLParser
 
 from .base import Adapter, register
-from ..models import Product, Filter, to_decimal, parse_brand, parse_width
-from ..web import browser_page
+from ..models import Product, to_decimal
 
 
 def _origin(url: str) -> str:
@@ -26,7 +20,7 @@ def _origin(url: str) -> str:
     return f"{s.scheme}://{s.netloc}"
 
 
-def _extract(node, spec: Optional[str]):
+def _extract(node, spec):
     if not spec:
         return None
     sel, _, attr = spec.partition("@")
@@ -38,7 +32,8 @@ def _extract(node, spec: Optional[str]):
 
 @register("browser")
 class BrowserAdapter(Adapter):
-    def fetch_raw(self, filt: Optional[Filter]) -> str:
+    def fetch_raw(self) -> str:
+        from ..web import browser_page
         c = self.config
         with browser_page(headless=c.get("headless", True), channel=c.get("channel")) as page:
             if c.get("warm_url"):
@@ -65,13 +60,10 @@ class BrowserAdapter(Adapter):
             raise RuntimeError(f"{c['url']} blocked (matched {block!r})")
         return html
 
-    def parse(self, raw: str, filt: Optional[Filter]) -> list[Product]:
+    def parse(self, raw: str) -> list[Product]:
         c = self.config
         sels = c["selectors"]
         base = c.get("base_url") or _origin(c["url"])
-        static = c.get("static_attrs") or {}
-        sizes = sorted(filt.targets) if (c.get("sizes_from_filter") and filt) else None
-
         products: list[Product] = []
         for node in HTMLParser(raw).css(sels["container"]):
             title = _extract(node, sels.get("title"))
@@ -84,17 +76,9 @@ class BrowserAdapter(Adapter):
             was = to_decimal(_extract(node, sels.get("was_price")))
             sku = _extract(node, sels.get("sku")) or (
                 url.rstrip("/").rsplit("/", 1)[-1] if url else title)
-
-            attrs = {"brand": parse_brand(title)}
-            if parse_width(title):
-                attrs["width"] = parse_width(title)
-            attrs.update(static)
-            if sizes is not None:
-                attrs["sizes_in_stock"] = sizes
-
             products.append(Product(
                 id=str(sku), title=title, url=url or base, price=price,
                 was_price=was if (was and was > price) else None,
-                image=_extract(node, sels.get("image")), attrs=attrs,
+                image=_extract(node, sels.get("image")),
             ))
         return products

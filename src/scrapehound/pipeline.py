@@ -13,6 +13,7 @@ import logging
 from . import adapters  # noqa: F401  (registers adapters)
 from .adapters import base
 from .config import BotConfig, SourceConfig
+from .derive import derive_attrs
 from .diff import diff
 from .notify import TelegramBot, preview_changes, summary_text
 from .store import Store
@@ -40,7 +41,7 @@ def run(sources: dict[str, SourceConfig], bots: dict[str, BotConfig], *,
             log.warning("unknown adapter type %r for %s; skipping", src.type, key)
             continue
         try:
-            products = cls(src.options()).collect(src.filter)
+            products = cls(src.options()).collect()       # extract (platform)
         except Exception as e:
             log.warning("[%s] ERROR: %s", key, e)
             continue
@@ -48,6 +49,8 @@ def run(sources: dict[str, SourceConfig], bots: dict[str, BotConfig], *,
         ts = now_iso()
         for p in products:
             p.source, p.scraped_at = key, ts
+            derive_attrs(p, src.derive)                   # derive (domain config)
+        products = [p for p in products if src.filter.matches(p)]   # select (rules)
         log.info("[%s] %d product(s)", key, len(products))
 
         store = Store(key, state_dir)

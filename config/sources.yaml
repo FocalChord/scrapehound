@@ -1,19 +1,29 @@
-# Each source has a `type` (adapter), a `bot` (routing), a `notify` mode, and an
-# optional `filter`. Adapter-specific keys (base_url, url, selectors, ...) are
-# passed straight to the adapter.
+# A source = type (adapter) + bot (routing) + notify (mode) + derive (compute
+# attrs) + filter (rule predicate). Adapter-specific keys (base_url, url, search,
+# prefilter, selectors, ...) are passed straight to the adapter.
+#
+# All "New Balance 4E shoes" domain knowledge lives in the three anchors below as
+# data — the adapters and core know nothing about brands, widths, or sizes.
+
+_shoe_prefilter: &shoe_prefilter        # cheap fetch-time pruning (AND of ORs)
+  - [new balance]
+  - ["4e", "x-wide", "x wide", "extra wide", "extra-wide"]
+
+_shoe_derive: &shoe_derive
+  brand: {from: title, match: [New Balance, Asics, Brooks, Saucony, Hoka, Mizuno]}
+  width: {from: title, regex: '\b([2468]E)\b', upper: true,
+          fallbacks: {"x-wide": "4E", "x wide": "4E", "extra wide": "4E", "extra-wide": "4E"}}
+  sizes_in_stock: {from_variants: Size}
 
 _shoe_filter: &shoe_filter
-  brand: New Balance
-  widths: [4E]
-  sizes: [10, 10.5]
-  require_size_in_stock: true
-  search: new balance 4e
-  exclude_terms:
-    [work boot, composite toe, steel toe, steel cap, safety, gumboot,
-     women, womens, wmns, kids, junior, girl]
+  - {attr: brand, op: eq, value: New Balance}
+  - {field: title, op: not_contains,
+     value: [work boot, composite toe, steel toe, steel cap, safety, gumboot,
+             women, womens, wmns, kids, junior, girl]}
+  - {attr: width, op: in, value: ["4E"]}
+  - {attr: sizes_in_stock, op: intersects, value: [10, 10.5]}
 
 sources:
-  # --- New Balance 4E shoes -> "shoes" bot, price-drop alerts ---
   athletes_foot:
     type: magento_graphql
     bot: shoes
@@ -21,6 +31,9 @@ sources:
     graphql_url: "https://www.theathletesfoot.com.au/graphql"
     base_url: "https://www.theathletesfoot.com.au"
     store: au
+    search: new balance 4e
+    prefilter: *shoe_prefilter
+    derive: *shoe_derive
     filter: *shoe_filter
 
   active_feet:
@@ -28,6 +41,8 @@ sources:
     bot: shoes
     notify: price_drop
     base_url: "https://activefeet.com.au"
+    prefilter: *shoe_prefilter
+    derive: *shoe_derive
     filter: *shoe_filter
 
   the_running_company:
@@ -35,6 +50,8 @@ sources:
     bot: shoes
     notify: price_drop
     base_url: "https://shop.therunningcompany.com.au"
+    prefilter: *shoe_prefilter
+    derive: *shoe_derive
     filter: *shoe_filter
 
   brand_house_direct:
@@ -43,6 +60,8 @@ sources:
     notify: price_drop
     fetch: browser
     base_url: "https://www.brandhousedirect.com.au"
+    prefilter: *shoe_prefilter
+    derive: *shoe_derive
     filter: *shoe_filter
 
   rebel:
@@ -50,7 +69,9 @@ sources:
     bot: shoes
     notify: price_drop
     base_url: "https://www.rebelsport.com.au"
+    search: new balance 4e
     link_regex: "/p/(new-balance-[a-z0-9-]*4e[a-z0-9-]*-[A-Z0-9]+)\\.html"
+    derive: *shoe_derive
     filter: *shoe_filter
 
   newbalance_au:
@@ -63,8 +84,6 @@ sources:
     warm_url: "https://www.newbalance.com.au/"
     wait_for: ".product-tile"
     block_text: "Something went wrong"
-    sizes_from_filter: true
-    static_attrs: { brand: New Balance, width: "4E" }
     selectors:
       container: ".product-tile"
       title: ".pdp-link a"
@@ -72,9 +91,13 @@ sources:
       was_price: ".strike-through .value@content"
       url: ".pdp-link a@href"
       image: ".tile-image img@src"
+    derive:                               # NB has no per-size variants on the PLP;
+      brand: {const: New Balance}         # the faceted URL guarantees the criteria
+      width: {const: "4E"}
+      sizes_in_stock: {const: [10, 10.5]}
     filter: *shoe_filter
 
-  # --- DigiDirect preloved Leica -> "leica" bot, all changes ---
+  # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---
   leica_digidirect:
     type: browser
     bot: leica

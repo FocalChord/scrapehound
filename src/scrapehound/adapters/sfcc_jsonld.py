@@ -1,18 +1,18 @@
 """Salesforce Commerce Cloud via JSON-LD (e.g. Rebel Sport).
 
 Discovers product links from a search page (config `link_regex`), then reads each
-PDP's JSON-LD with extruct: price from the Product offer's priceSpecification
-(current + strikethrough), in-stock sizes from the ProductGroup variants.
+PDP's JSON-LD with extruct: price from the Product offer's priceSpecification,
+available sizes from the ProductGroup variants -> generic Product + variants.
 """
 from __future__ import annotations
 
 import re
-from typing import Optional
 
 import extruct
 
 from .base import Adapter, register
-from ..models import Product, Filter, parse_brand, parse_width, to_decimal
+from ..models import Product, Variant, to_decimal
+from ..web import http_client
 
 _SIZE_RE = re.compile(r"US\s*(\d+(?:\.\d+)?)", re.I)
 
@@ -23,14 +23,12 @@ class SfccJsonLdAdapter(Adapter):
     def base(self) -> str:
         return self.config["base_url"].rstrip("/")
 
-    def fetch_raw(self, filt: Optional[Filter]) -> list[str]:
-        from ..web import http_client
+    def fetch_raw(self) -> list[str]:
         link_re = re.compile(self.config["link_regex"])
         template = self.config.get("product_url_template", "{base}/p/{handle}.html")
-        search = filt.search if filt and filt.search else ""
         with http_client() as client:
             r = client.get(f"{self.base}{self.config.get('search_path', '/search')}",
-                           params={self.config.get("search_param", "q"): search})
+                           params={self.config.get("search_param", "q"): self.config.get("search", "")})
             r.raise_for_status()
             pages = []
             for handle in sorted(set(link_re.findall(r.text))):
@@ -53,8 +51,7 @@ class SfccJsonLdAdapter(Adapter):
                 current = val
         return (current if current is not None else to_decimal(offers.get("price"))), strike
 
-    def parse(self, raw: list[str], filt: Optional[Filter]) -> list[Product]:
-        targets = filt.targets if filt else set()
+    def parse(self, raw: list[str]) -> list[Product]:
         products = []
         for page in raw:
             blocks = extruct.extract(page, syntaxes=["json-ld"]).get("json-ld", [])
@@ -68,19 +65,18 @@ class SfccJsonLdAdapter(Adapter):
             price, was = self._price(offers)
             if price is None:
                 continue
-            sizes = []
+            variants = []
             for v in (group or {}).get("hasVariant", []):
                 m = _SIZE_RE.search(v.get("name", ""))
-                if m and (not targets or float(m.group(1)) in targets):
-                    sizes.append(float(m.group(1)))
+                if m:
+                    variants.append(Variant(options={"Size": m.group(1)}, available=True))
             name = product.get("name", "")
             url = offers.get("url") or product.get("url") or self.base
             products.append(Product(
                 id=str(product.get("sku") or url), title=name, url=url, price=price,
                 was_price=was if (was and was > price) else None,
                 image=product.get("image") if isinstance(product.get("image"), str) else None,
-                in_stock=bool(sizes) or "InStock" in str(offers.get("availability")),
-                attrs={"brand": parse_brand(name), "width": parse_width(name) or "4E",
-                       "sizes_in_stock": sorted(set(sizes))},
+                in_stock=bool(variants) or "InStock" in str(offers.get("availability")),
+                variants=variants,
             ))
         return products

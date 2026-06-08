@@ -1,15 +1,14 @@
-"""Adapter interface + a self-registration decorator.
+"""Adapter interface + self-registration.
 
-Add a source type = one Adapter subclass decorated with @register("type"). The
-split between fetch_raw (network) and parse (pure) keeps parsing unit-testable
-against saved fixtures.
+Adapters are pure platform extractors: site -> generic Product[] (with variants).
+They hold no domain knowledge and no filtering — derivation and selection happen
+in the pipeline from config. Add a type = one @register-decorated subclass.
 """
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Optional
 
-from ..models import Product, Filter
+from ..models import Product
 
 REGISTRY: dict[str, type["Adapter"]] = {}
 
@@ -26,13 +25,19 @@ class Adapter(ABC):
         self.config = config or {}
 
     @abstractmethod
-    def fetch_raw(self, filt: Optional[Filter]):
+    def fetch_raw(self):
         """Hit the live source, return its raw payload."""
 
     @abstractmethod
-    def parse(self, raw, filt: Optional[Filter]) -> list[Product]:
-        """Pure: raw payload -> normalized Products. No network."""
+    def parse(self, raw) -> list[Product]:
+        """Pure: raw payload -> generic Products. No network, no filtering."""
 
-    def collect(self, filt: Optional[Filter]) -> list[Product]:
-        products = self.parse(self.fetch_raw(filt), filt)
-        return [p for p in products if filt is None or filt.matches(p)]
+    def collect(self) -> list[Product]:
+        return self.parse(self.fetch_raw())
+
+    def _prefilter_ok(self, blob: str) -> bool:
+        """Cheap fetch-time pruning hint: config `prefilter` is a list of token
+        groups; the text must contain a token from every group (AND of ORs)."""
+        groups = self.config.get("prefilter") or []
+        low = blob.lower()
+        return all(any(str(t).lower() in low for t in group) for group in groups)

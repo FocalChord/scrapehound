@@ -7,30 +7,35 @@ from typing import Optional
 
 import yaml
 from dotenv import load_dotenv
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, field_validator
 
-from .models import Filter
+from .filtering import Filter
 
 CONFIG_DIR = Path("config")
 
 
 class SourceConfig(BaseModel):
-    """One scrape source. Adapter-specific keys (url, base_url, selectors, ...)
-    are allowed and passed through to the adapter via options()."""
+    """One scrape source. Adapter-specific keys (url, base_url, selectors,
+    search, prefilter, ...) are allowed and passed to the adapter via options()."""
     model_config = ConfigDict(extra="allow")
 
     type: str
     bot: str = "default"
     enabled: bool = True
     notify: str = "changes"          # "changes" | "price_drop"
-    filter: Optional[Filter] = None
+    derive: dict = {}                # attr name -> derivation spec
+    filter: Filter = Filter()        # list of rules in YAML
+
+    @field_validator("filter", mode="before")
+    @classmethod
+    def _coerce_filter(cls, v):
+        return {"rules": v} if isinstance(v, list) else v
 
     def options(self) -> dict:
-        return self.model_dump(exclude={"bot", "enabled", "notify", "filter"})
+        return self.model_dump(exclude={"bot", "enabled", "notify", "filter", "derive"})
 
 
 class BotConfig(BaseModel):
-    """A named Telegram bot; token/chat are read from these env vars."""
     token_env: str
     chat_env: str
 
@@ -39,7 +44,6 @@ class BotConfig(BaseModel):
 
 
 def init_env() -> None:
-    """Load .env into the environment (idempotent)."""
     load_dotenv()
 
 

@@ -9,13 +9,39 @@ Combines two scrapers into one framework:
 
 ## How it works
 
+Three cleanly separated stages — platform extraction, then domain config:
+
 ```
-config/sources.yaml  ──►  adapter (by type)  ──►  Product[]  ──►  diff vs state  ──►  bot (by name)
-config/bots.yaml          shopify / magento_graphql / sfcc_jsonld / browser
+ EXTRACT (adapter)             DERIVE (config)            SELECT (config)
+ site → Product[] + variants   compute attrs from         keep items via a
+ no domain knowledge           title/variants (brand,     generic rule predicate
+                               width, sizes, ...)         over fields/attrs
+        │                            │                          │
+        └─────────────► diff vs per-source state ──► bot (by name, by mode)
 ```
 
-Each **source** declares a `type` (which adapter), a `bot` (routing), a `notify`
-mode, and an optional `filter`. Each **bot** maps to a token/chat env var pair.
+A new **product domain** (cameras, GPUs, ...) is pure config (`derive` + `filter`
+rules); a new **site platform** is one `@register`ed adapter. Each **source**
+declares `type` (adapter), `bot` (routing), `notify` mode, optional `derive`, and
+optional `filter` (a list of rules). Each **bot** maps to a token/chat env pair.
+
+```yaml
+the_running_company:
+  type: shopify
+  bot: shoes
+  notify: price_drop
+  base_url: "https://shop.therunningcompany.com.au"
+  prefilter: [[new balance], ["4e", "x-wide"]]      # cheap fetch-time pruning
+  derive:
+    brand: {from: title, match: [New Balance, Asics]}
+    width: {from: title, regex: '\b([2468]E)\b', upper: true}
+    sizes_in_stock: {from_variants: Size}
+  filter:
+    - {attr: brand, op: eq, value: New Balance}
+    - {attr: width, op: in, value: ["4E"]}
+    - {attr: sizes_in_stock, op: intersects, value: [10, 10.5]}
+    - {field: title, op: not_contains, value: [women, work boot]}
+```
 
 Adapters, cheapest method first:
 
