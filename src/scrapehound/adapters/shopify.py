@@ -38,6 +38,7 @@ class ShopifyAdapter(Adapter):
         return self._prefilter_ok(blob)
 
     def _candidate_handles(self, get_json) -> list[str]:
+        cap = int(self.config.get("max_products", 0)) or None
         handles = []
         for page in range(1, int(self.config.get("max_pages", 10)) + 1):
             try:
@@ -48,6 +49,8 @@ class ShopifyAdapter(Adapter):
             if not prods:
                 break
             handles += [p["handle"] for p in prods if self._is_candidate(p)]
+            if cap and len(handles) >= cap:
+                return handles[:cap]
             if len(prods) < 250:
                 break
             time.sleep(0.4)

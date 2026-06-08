@@ -7,6 +7,27 @@ Combines two scrapers into one framework:
 - **New Balance 4E shoes** across 6 AU retailers → `shoes` bot (price-drop alerts)
 - **DigiDirect preloved Leica** → `leica` bot (new / removed / price-change alerts)
 
+## Onboard your own watcher (60 seconds)
+
+scrapehound is a platform — start a fresh watcher without writing YAML by hand:
+
+```bash
+uvx --from git+https://github.com/FocalChord/scrapehound scrapehound init my-watcher
+cd my-watcher && uv sync
+
+scrapehound bot deals --token <BOTFATHER_TOKEN>   # message the bot first; chat id auto-found
+scrapehound add https://somestore.com.au --bot deals   # auto-detects the platform
+scrapehound preview somestore                     # see what it extracts
+scrapehound check                                 # validate config + creds
+scrapehound --dry-run                             # what it would alert on
+```
+
+`init` scaffolds `config/`, `.env`, and a GitHub Actions workflow; `add` detects
+Shopify automatically (and scaffolds a `browser` template with TODO selectors for
+anything else); `bot` connects a Telegram bot and discovers its chat id. Then
+narrow results by adding a `filter` to the source (see the rule ops below) and
+push to GitHub with the bot's secrets.
+
 ## How it works
 
 Three cleanly separated stages — platform extraction, then domain config:

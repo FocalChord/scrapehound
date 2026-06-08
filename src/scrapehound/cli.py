@@ -114,7 +114,99 @@ def _cmd_test_bot(argv) -> int:
     return 0
 
 
-_COMMANDS = {"run": _cmd_run, "list": _cmd_list, "check": _cmd_check, "test-bot": _cmd_test_bot}
+def _cmd_init(argv) -> int:
+    ap = argparse.ArgumentParser(prog="scrapehound init")
+    ap.add_argument("dir", nargs="?", default=".", help="project directory")
+    args = ap.parse_args(argv)
+    from . import scaffold
+    root = scaffold.init_project(args.dir)
+    print(f"✓ scaffolded a scrapehound project in {root}/")
+    print("\nnext:")
+    print("  uv sync")
+    print("  scrapehound bot mybot --token <BOTFATHER_TOKEN>   # message the bot first")
+    print("  scrapehound add <store-url> --bot mybot")
+    print("  scrapehound preview <source>   &&   scrapehound --dry-run")
+    return 0
+
+
+def _cmd_add(argv) -> int:
+    ap = argparse.ArgumentParser(prog="scrapehound add")
+    ap.add_argument("url", help="a store / listing URL")
+    ap.add_argument("--name", help="source key (default: from the domain)")
+    ap.add_argument("--bot", default="default", help="bot to route alerts to")
+    args = ap.parse_args(argv)
+    from . import scaffold
+    try:
+        name, typ = scaffold.add_source(args.url, args.name, args.bot)
+    except FileNotFoundError:
+        print("✗ no config/ here — run `scrapehound init` first")
+        return 1
+    except Exception as e:
+        print(f"✗ {e}")
+        return 1
+    print(f"✓ added source '{name}' (type: {typ}, bot: {args.bot})")
+    if typ == "browser":
+        print("  → couldn't auto-detect the platform; fill in the CSS selectors "
+              "(marked TODO) in config/sources.yaml")
+    print(f"  then:  scrapehound preview {name}")
+    return 0
+
+
+def _cmd_bot(argv) -> int:
+    ap = argparse.ArgumentParser(prog="scrapehound bot")
+    ap.add_argument("name", help="a name for this bot (used for routing)")
+    ap.add_argument("--token", help="BotFather token (prompted if omitted)")
+    ap.add_argument("--chat-id", help="override chat id (else auto-discovered)")
+    args = ap.parse_args(argv)
+    from . import scaffold
+    token = args.token
+    if not token:
+        try:
+            token = input(f"Bot token for '{args.name}' (from @BotFather): ").strip()
+        except EOFError:
+            print("✗ pass --token")
+            return 1
+    try:
+        chat = scaffold.add_bot(args.name, token, args.chat_id)
+    except FileNotFoundError:
+        print("✗ no config/ here — run `scrapehound init` first")
+        return 1
+    if chat:
+        print(f"✓ connected bot '{args.name}' (chat {chat}) — creds in .env + config/bots.yaml")
+    else:
+        print(f"⚠ added bot '{args.name}', but no chat found. Message the bot once, then "
+              f"re-run:  scrapehound bot {args.name} --token <token>")
+    print(f"  for CI, add {args.name.upper()}_BOT_TOKEN and {args.name.upper()}_CHAT_ID "
+          "as repo secrets.")
+    return 0
+
+
+def _cmd_preview(argv) -> int:
+    ap = argparse.ArgumentParser(prog="scrapehound preview")
+    ap.add_argument("source", help="source key to dry-extract")
+    args = ap.parse_args(argv)
+    sources, _ = _load()
+    if args.source not in sources:
+        print(f"✗ unknown source '{args.source}'; have: {list(sources)}")
+        return 1
+    s = sources[args.source]
+    from .derive import derive_attrs
+    opts = {**s.options(), "max_products": s.options().get("max_products", 25)}
+    items = base.REGISTRY[s.type](opts).collect()
+    for p in items:
+        derive_attrs(p, s.derive)
+    kept = [p for p in items if s.filter.matches(p)]
+    print(f"extracted {len(items)} → {len(kept)} after filter\n")
+    for p in (kept or items)[:10]:
+        attrs = "  ".join(f"{k}={v}" for k, v in p.attrs.items())
+        print(f"  ${p.price}  {p.title[:48]}   {attrs}")
+    return 0
+
+
+_COMMANDS = {
+    "run": _cmd_run, "list": _cmd_list, "check": _cmd_check, "test-bot": _cmd_test_bot,
+    "init": _cmd_init, "add": _cmd_add, "bot": _cmd_bot, "preview": _cmd_preview,
+}
 
 
 def main(argv=None) -> int:

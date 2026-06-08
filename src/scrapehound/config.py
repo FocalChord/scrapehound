@@ -44,14 +44,19 @@ class BotConfig(BaseModel):
 
 
 def init_env() -> None:
-    load_dotenv()
+    load_dotenv(".env")          # the project's .env (cwd), not the package dir
+
+
+def _section(data: dict, key: str) -> dict:
+    # support both {key: {...}} and a bare top-level mapping; tolerate empty.
+    return (data[key] if key in data else data) or {}
 
 
 def load_sources(path: Path | str = CONFIG_DIR / "sources.yaml") -> dict[str, SourceConfig]:
     data = yaml.safe_load(Path(path).read_text()) or {}
-    return {k: SourceConfig(**v) for k, v in (data.get("sources") or data).items()}
+    return {k: SourceConfig(**v) for k, v in _section(data, "sources").items()}
 
 
 def load_bots(path: Path | str = CONFIG_DIR / "bots.yaml") -> dict[str, BotConfig]:
     data = yaml.safe_load(Path(path).read_text()) or {}
-    return {k: BotConfig(**v) for k, v in (data.get("bots") or data).items()}
+    return {k: BotConfig(**v) for k, v in _section(data, "bots").items()}
