@@ -19,6 +19,7 @@ _SIZE_RE = re.compile(r"US\s*(\d+(?:\.\d+)?)", re.I)
 
 @register("sfcc_jsonld")
 class SfccJsonLdAdapter(Adapter):
+    required = ["base_url", "link_regex"]
     @property
     def base(self) -> str:
         return self.config["base_url"].rstrip("/")

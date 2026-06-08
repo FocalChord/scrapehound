@@ -35,6 +35,7 @@ def _extract(node, spec):
 
 @register("browser")
 class BrowserAdapter(Adapter):
+    required = ["url", "selectors"]
     def fetch_raw(self) -> str:
         """Render the page, retrying on transient slow renders/timeouts. After
         all attempts fail it raises, and the pipeline skips the source (state

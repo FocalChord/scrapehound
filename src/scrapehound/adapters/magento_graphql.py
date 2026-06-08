@@ -25,6 +25,7 @@ _VARIANT_QUERY = """
 
 @register("magento_graphql")
 class MagentoGraphQLAdapter(Adapter):
+    required = ["graphql_url"]
     LIST_PAGE_SIZE = 50
 
     @property

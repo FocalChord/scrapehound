@@ -21,6 +21,8 @@ def register(type_name: str):
 
 
 class Adapter(ABC):
+    required: list[str] = []          # config keys that must be present
+
     def __init__(self, config: dict | None = None):
         self.config = config or {}
 

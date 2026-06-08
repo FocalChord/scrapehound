@@ -25,6 +25,7 @@ def _throttled(exc: Exception) -> bool:
 
 @register("shopify")
 class ShopifyAdapter(Adapter):
+    required = ["base_url"]
     @property
     def base(self) -> str:
         return self.config["base_url"].rstrip("/")

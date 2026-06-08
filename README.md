@@ -65,12 +65,19 @@ Per bot: create it via @BotFather, message it once, then find the chat id at
 ## Run
 
 ```bash
-uv run scrapehound --dry-run            # all sources, print what would send
-uv run scrapehound --bot shoes          # only shoe sources
+uv run scrapehound                      # all sources: scrape, alert, persist
+uv run scrapehound --bot shoes          # only sources routed to a bot
 uv run scrapehound --source rebel       # only one source
+uv run scrapehound --dry-run            # print what would send; don't persist
 uv run scrapehound --summary --bot leica
-uv run pytest -q
+
+uv run scrapehound list                 # show sources + bots (and creds status)
+uv run scrapehound check                # validate config + creds (use in CI)
+uv run scrapehound test-bot shoes       # send a test message to a bot
 ```
+
+Common tasks are in the `Makefile` too: `make check`, `make list`, `make dry`,
+`make test`.
 
 ## Adding a source
 

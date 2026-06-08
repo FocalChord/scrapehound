@@ -15,9 +15,14 @@ from __future__ import annotations
 import re
 from typing import Any, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, model_validator
 
 from .models import Product, as_number
+
+KNOWN_OPS = {
+    "eq", "ne", "in", "contains_any", "contains_all", "not_contains",
+    "intersects", "gte", "lte", "gt", "lt", "regex", "exists",
+}
 
 
 def _norm_set(values) -> set:
@@ -33,6 +38,14 @@ class Rule(BaseModel):
     attr: Optional[str] = None
     op: str
     value: Any = None
+
+    @model_validator(mode="after")
+    def _validate(self):
+        if self.op not in KNOWN_OPS:
+            raise ValueError(f"unknown filter op {self.op!r}; known: {sorted(KNOWN_OPS)}")
+        if bool(self.field) == bool(self.attr):
+            raise ValueError(f"rule needs exactly one of field/attr (got field={self.field!r}, attr={self.attr!r})")
+        return self
 
     def _target(self, p: Product):
         return getattr(p, self.field, None) if self.field else p.attrs.get(self.attr)
