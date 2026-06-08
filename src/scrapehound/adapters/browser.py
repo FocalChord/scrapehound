@@ -89,8 +89,9 @@ class BrowserAdapter(Adapter):
             if url.startswith("/"):
                 url = base + url
             was = to_decimal(_extract(node, sels.get("was_price")))
+            # derive id from the URL *path* (ignore volatile query strings)
             sku = _extract(node, sels.get("sku")) or (
-                url.rstrip("/").rsplit("/", 1)[-1] if url else title)
+                urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1] if url else title)
             products.append(Product(
                 id=str(sku), title=title, url=url or base, price=price,
                 was_price=was if (was and was > price) else None,
