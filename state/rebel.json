@@ -1,0 +1,42 @@
+{
+  "rebel:https://www.rebelsport.com.au/p/new-balance-624-v5-4e-mens-cross-training-shoes-M57449501.html": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        10.0,
+        10.5
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "id": "https://www.rebelsport.com.au/p/new-balance-624-v5-4e-mens-cross-training-shoes-M57449501.html",
+    "image": null,
+    "in_stock": true,
+    "price": "119.99",
+    "scraped_at": "2026-06-08T02:13:21+00:00",
+    "source": "rebel",
+    "title": "New Balance 624 V5 4E Mens Cross Training Shoes",
+    "url": "https://www.rebelsport.com.au/p/new-balance-624-v5-4e-mens-cross-training-shoes-M57449501.html",
+    "was_price": "139.99"
+  },
+  "rebel:https://www.rebelsport.com.au/p/new-balance-624-v5-4e-mens-cross-training-shoes-M57449601.html": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        10.0,
+        10.5
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "id": "https://www.rebelsport.com.au/p/new-balance-624-v5-4e-mens-cross-training-shoes-M57449601.html",
+    "image": null,
+    "in_stock": true,
+    "price": "119.99",
+    "scraped_at": "2026-06-08T02:13:21+00:00",
+    "source": "rebel",
+    "title": "New Balance 624 V5 4E Mens Cross Training Shoes",
+    "url": "https://www.rebelsport.com.au/p/new-balance-624-v5-4e-mens-cross-training-shoes-M57449601.html",
+    "was_price": "139.99"
+  }
+}

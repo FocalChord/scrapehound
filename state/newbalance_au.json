@@ -1,0 +1,82 @@
+{
+  "newbalance_au:M860V15_RU-FTW-802888.html": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        10.0,
+        10.5
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "id": "M860V15_RU-FTW-802888.html",
+    "image": null,
+    "in_stock": true,
+    "price": "250.00",
+    "scraped_at": "2026-06-08T02:13:44+00:00",
+    "source": "newbalance_au",
+    "title": "Fresh Foam X 860 v15",
+    "url": "https://www.newbalance.com.au/pd/fresh-foam-x-860-v15/M860V15_RU-FTW-802888.html",
+    "was_price": null
+  },
+  "newbalance_au:M860V15_RU-FTW-855537.html": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        10.0,
+        10.5
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "id": "M860V15_RU-FTW-855537.html",
+    "image": null,
+    "in_stock": true,
+    "price": "250.00",
+    "scraped_at": "2026-06-08T02:13:44+00:00",
+    "source": "newbalance_au",
+    "title": "Fresh Foam X 860v15",
+    "url": "https://www.newbalance.com.au/pd/fresh-foam-x-860v15/M860V15_RU-FTW-855537.html",
+    "was_price": null
+  },
+  "newbalance_au:M880V15-48603-PMG-APAC-ANZ-M880B15.html": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        10.0,
+        10.5
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "id": "M880V15-48603-PMG-APAC-ANZ-M880B15.html",
+    "image": null,
+    "in_stock": true,
+    "price": "230.00",
+    "scraped_at": "2026-06-08T02:13:44+00:00",
+    "source": "newbalance_au",
+    "title": "Fresh Foam X 880v15",
+    "url": "https://www.newbalance.com.au/pd/fresh-foam-x-880v15/M880V15-48603-PMG-APAC-ANZ-M880B15.html",
+    "was_price": null
+  },
+  "newbalance_au:M880V15-48603-PMG-APAC-ANZ-M880K15.html": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        10.0,
+        10.5
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "id": "M880V15-48603-PMG-APAC-ANZ-M880K15.html",
+    "image": null,
+    "in_stock": true,
+    "price": "230.00",
+    "scraped_at": "2026-06-08T02:13:44+00:00",
+    "source": "newbalance_au",
+    "title": "Fresh Foam X 880v15",
+    "url": "https://www.newbalance.com.au/pd/fresh-foam-x-880v15/M880V15-48603-PMG-APAC-ANZ-M880K15.html",
+    "was_price": null
+  }
+}
