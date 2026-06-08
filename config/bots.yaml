@@ -7,3 +7,6 @@ bots:
   leica:
     token_env: LEICA_BOT_TOKEN
     chat_env: LEICA_CHAT_ID
+  apple:
+    token_env: APPLE_BOT_TOKEN
+    chat_env: APPLE_CHAT_ID

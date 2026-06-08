@@ -1,0 +1,37 @@
+name: apple
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"     # lead times move daily; pickup can flip any time
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apple
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync          # HTTP-only adapter, no browser needed
+      - name: Run
+        env:
+          APPLE_BOT_TOKEN: ${{ secrets.APPLE_BOT_TOKEN }}
+          APPLE_CHAT_ID: ${{ secrets.APPLE_CHAT_ID }}
+        run: uv run scrapehound --bot apple
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/
+          git diff --cached --quiet && exit 0
+          git commit -m "update apple state [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --no-rebase -X ours -q origin main || true
+            git push && exit 0; sleep $((RANDOM % 6 + 3))
+          done

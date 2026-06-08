@@ -72,6 +72,11 @@ Adapters, cheapest method first:
 | `shopify` | `/products.json` + `.js` (browser mode for Cloudflare) | Active Feet, Running Co, Brand House Direct |
 | `sfcc_jsonld` | search → PDP JSON-LD (extruct) | Rebel Sport |
 | `browser` | rendered page + CSS selectors (patchright) | New Balance AU, DigiDirect Leica |
+| `apple` | Apple pickup-message + delivery-message APIs | Mac Studio pickup/lead-time |
+
+Sources watch `price` by default, but `watch:` can track any field/attr — e.g. the
+Apple source uses `watch: [pickup, ships]` to alert when a config's lead time
+moves (M3 Ultra Mac Studio is currently 16-18 weeks) or in-store pickup opens up.
 
 ## Setup
 

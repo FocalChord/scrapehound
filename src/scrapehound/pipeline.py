@@ -66,7 +66,7 @@ def run(sources: dict[str, SourceConfig], bots: dict[str, BotConfig], *,
                         key, len(previous))
             continue
         else:
-            changes = diff(previous, products, store)
+            changes = diff(previous, products, store, watch=tuple(src.watch))
             if changes.any():
                 log.info("[%s] %s", key, changes.summary())
                 if dry_run or not (bot and bot.has_creds()):

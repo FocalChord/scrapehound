@@ -67,4 +67,13 @@ def test_diff_new_removed_pricechange(tmp_path):
     ch = diff(prev, [a, b], store)
     assert [p.id for p in ch.new] == ["2"]
     assert [p.id for p in ch.removed] == ["3"]
-    assert len(ch.price_changes) == 1 and ch.price_changes[0].dropped
+    assert len(ch.changes) == 1 and ch.changes[0].field == "price" and ch.changes[0].dropped
+
+
+def test_diff_watches_any_attr(tmp_path):
+    store = Store("s", tmp_path)
+    p = P(id="1", title="Mac Studio", source="s", attrs={"ships": "9-10 weeks"})
+    prev = {p.key: {**p.model_dump(mode="json"), "attrs": {"ships": "16-18 weeks"}}}
+    ch = diff(prev, [p], store, watch=("ships",))
+    assert len(ch.changes) == 1 and ch.changes[0].field == "ships"
+    assert ch.changes[0].old == "16-18 weeks" and ch.changes[0].new == "9-10 weeks"

@@ -45,8 +45,8 @@ class Product(BaseModel):
     source: str = ""                 # set by the pipeline to the source key
     id: str                          # stable id within the source
     title: str
-    url: str
-    price: Decimal
+    url: str = ""
+    price: Optional[Decimal] = None  # not everything monitored has a price
     was_price: Optional[Decimal] = None
     currency: str = "AUD"
     image: Optional[str] = None
@@ -61,10 +61,15 @@ class Product(BaseModel):
 
     @property
     def on_sale(self) -> bool:
-        return self.was_price is not None and self.was_price > self.price
+        return (self.was_price is not None and self.price is not None
+                and self.was_price > self.price)
 
     @property
     def percent_off(self) -> Optional[int]:
         if not self.on_sale:
             return None
         return int(round((1 - (self.price / self.was_price)) * 100))
+
+    def value(self, field: str):
+        """Unified access for rules/diff: a top-level field or an attr."""
+        return getattr(self, field) if hasattr(self, field) else self.attrs.get(field)

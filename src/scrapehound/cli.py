@@ -199,7 +199,8 @@ def _cmd_preview(argv) -> int:
     print(f"extracted {len(items)} → {len(kept)} after filter\n")
     for p in (kept or items)[:10]:
         attrs = "  ".join(f"{k}={v}" for k, v in p.attrs.items())
-        print(f"  ${p.price}  {p.title[:48]}   {attrs}")
+        price = f"${p.price}" if p.price is not None else ""
+        print(f"  {price:>9}  {p.title[:48]}   {attrs}")
     return 0
 
 

@@ -23,6 +23,7 @@ class SourceConfig(BaseModel):
     bot: str = "default"
     enabled: bool = True
     notify: str = "changes"          # "changes" | "price_drop"
+    watch: list[str] = ["price"]     # fields/attrs to detect changes in
     derive: dict = {}                # attr name -> derivation spec
     filter: Filter = Filter()        # list of rules in YAML
 
@@ -32,7 +33,8 @@ class SourceConfig(BaseModel):
         return {"rules": v} if isinstance(v, list) else v
 
     def options(self) -> dict:
-        return self.model_dump(exclude={"bot", "enabled", "notify", "filter", "derive"})
+        return self.model_dump(
+            exclude={"bot", "enabled", "notify", "watch", "filter", "derive"})
 
 
 class BotConfig(BaseModel):

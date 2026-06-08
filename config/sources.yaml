@@ -97,6 +97,17 @@ sources:
       sizes_in_stock: {const: [10, 10.5]}
     filter: *shoe_filter
 
+  # --- Apple Mac Studio: alert when lead time moves or pickup opens at Highpoint ---
+  apple_mac_studio:
+    type: apple
+    bot: apple
+    notify: changes
+    watch: [pickup, ships]          # alert on availability/lead-time changes
+    region: au
+    store: R504                     # Apple Highpoint, Melbourne
+    location: "3032"
+    parts: ["MU963X/A", "MU973X/A"]   # M4 Max + M3 Ultra Mac Studio (base configs)
+
   # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---
   leica_digidirect:
     type: browser

@@ -1,9 +1,9 @@
 """Telegram notification: named bots + HTML cards.
 
-A `TelegramBot` is a token+chat pair resolved from a BotConfig. Formatting is
-mode-aware: `changes` sends new/removed/price-change cards (digidirect style),
-`price_drop` sends only drops + newly-on-sale items (shoe style). The same card
-builders feed both real sends and dry-run previews.
+Mode-aware: `changes` sends new/removed/changed cards; `price_drop` sends only
+price drops + newly-on-sale items. Handles any watched field (price, or attrs
+like availability/lead-time) and price-less products. Card builders feed both
+real sends and dry-run previews.
 """
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ import html
 import httpx
 
 from ..config import BotConfig
-from ..diff import Changes, PriceChange
+from ..diff import Change, Changes
 from ..models import Product
 
 
@@ -21,10 +21,17 @@ def _e(s) -> str:
 
 
 def _money(v) -> str:
-    return f"${v:,.2f}"
+    if v is None or v == "":
+        return "—"
+    try:
+        return f"${float(str(v).replace(',', '').replace('$', '')):,.2f}"
+    except ValueError:
+        return f"${v}"
 
 
 def _link(text: str, url: str) -> str:
+    if not url:
+        return f"<b>{_e(text)}</b>"
     return f'<a href="{html.escape(url, quote=True)}">{_e(text)}</a>'
 
 
@@ -32,43 +39,50 @@ def _button(p: Product):
     return {"text": "View ↗", "url": p.url} if p.url else None
 
 
-def _price_line(p: Product) -> str:
-    s = f"<b>{_money(p.price)}</b>"
-    if p.on_sale:
-        s += f"  <s>{_money(p.was_price)}</s> -{p.percent_off}%"
-    return s
+def _attrs_line(p: Product) -> str:
+    return "  ".join(f"{k}: {_e(v)}" for k, v in p.attrs.items() if v not in (None, "", []))
 
 
-# Each builder returns (photo_url, caption_html, button).
+def _detail(p: Product) -> str:
+    if p.price is not None:
+        s = f"<b>{_money(p.price)}</b>"
+        if p.on_sale:
+            s += f"  <s>{_money(p.was_price)}</s> -{p.percent_off}%"
+        return s
+    return _attrs_line(p)
+
+
 def card_new(p: Product, source: str):
-    return p.image, (f"\U0001f195 <b>{_e(p.title)}</b>\n{_price_line(p)}\n"
-                     f"\U0001f3f7️ <i>{_e(source)}</i>"), _button(p)
+    return p.image, f"\U0001f195 <b>{_e(p.title)}</b>\n{_detail(p)}\n\U0001f3f7️ <i>{_e(source)}</i>", _button(p)
 
 
 def card_removed(p: Product, source: str):
-    return None, (f"❌ <b>{_e(p.title)}</b>\nNo longer available\n"
-                  f"\U0001f3f7️ <i>{_e(source)}</i>"), None
+    return None, f"❌ <b>{_e(p.title)}</b>\nno longer listed\n\U0001f3f7️ <i>{_e(source)}</i>", None
 
 
-def card_price_change(pc: PriceChange, source: str):
-    p = pc.product
-    arrow = "\U0001f4c9" if pc.dropped else "\U0001f4c8"
-    cap = f"{arrow} <b>{_e(p.title)}</b>\n{_money(pc.old_price)} → <b>{_money(pc.new_price)}</b>"
-    if pc.dropped and pc.all_time_low:
-        cap += "  \U0001f525 all-time low"
-    cap += f"\n\U0001f3f7️ <i>{_e(source)}</i>"
-    return p.image, cap, _button(p)
+def card_change(ch: Change, source: str):
+    p = ch.product
+    if ch.field == "price":
+        arrow = "\U0001f4c9" if ch.dropped else "\U0001f4c8"
+        line = f"{_money(ch.old)} → <b>{_money(ch.new)}</b>"
+        if ch.dropped and ch.all_time_low:
+            line += "  \U0001f525 all-time low"
+    else:
+        arrow = "\U0001f514"
+        line = f"{_e(ch.field)}: {_e(ch.old)} → <b>{_e(ch.new)}</b>"
+    return p.image, f"{arrow} <b>{_e(p.title)}</b>\n{line}\n\U0001f3f7️ <i>{_e(source)}</i>", _button(p)
 
 
 def _cards_for(changes: Changes, source: str, mode: str):
     cards = []
     if mode == "price_drop":
-        cards += [card_price_change(pc, source) for pc in changes.price_changes if pc.dropped]
+        cards += [card_change(c, source) for c in changes.changes
+                  if c.field == "price" and c.dropped]
         cards += [card_new(p, source) for p in changes.new if p.on_sale]
     else:  # "changes"
         cards += [card_new(p, source) for p in changes.new]
         cards += [card_removed(p, source) for p in changes.removed]
-        cards += [card_price_change(pc, source) for pc in changes.price_changes]
+        cards += [card_change(c, source) for c in changes.changes]
     return cards
 
 
@@ -78,10 +92,10 @@ def preview_changes(changes: Changes, source: str, mode: str) -> str:
 
 
 def summary_text(products: list[Product], source: str, limit: int = 40) -> str:
-    ps = sorted(products, key=lambda x: x.price)
+    ps = sorted(products, key=lambda x: (x.price is None, x.price or 0))
     lines = [f"\U0001f4cb <b>{_e(source)}</b> — {len(ps)} item(s)", ""]
     for p in ps[:limit]:
-        lines.append(f"{_price_line(p)}  {_link(p.title, p.url)}")
+        lines.append(f"{_detail(p)}  {_link(p.title, p.url)}")
     if len(ps) > limit:
         lines.append(f"… +{len(ps) - limit} more")
     return "\n".join(lines)
@@ -89,9 +103,7 @@ def summary_text(products: list[Product], source: str, limit: int = 40) -> str:
 
 class TelegramBot:
     def __init__(self, name: str, token: str | None, chat_id: str | None):
-        self.name = name
-        self.token = token
-        self.chat_id = chat_id
+        self.name, self.token, self.chat_id = name, token, chat_id
 
     @classmethod
     def from_config(cls, name: str, cfg: BotConfig) -> "TelegramBot":
