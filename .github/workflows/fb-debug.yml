@@ -1,0 +1,65 @@
+name: fb-debug
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "egress mode: none | warp | tor"
+        default: "none"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run patchright install --with-deps chromium
+
+      - name: Baseline egress IP
+        run: curl -s https://www.cloudflare.com/cdn-cgi/trace | grep -E '^(ip|loc)='
+
+      - name: Set up Cloudflare WARP (proxy mode :40000)
+        if: ${{ inputs.mode == 'warp' }}
+        run: |
+          curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor -o /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+          sudo apt-get update -qq
+          sudo apt-get install -y cloudflare-warp
+          sudo warp-cli --accept-tos registration new
+          sudo warp-cli --accept-tos mode proxy
+          sudo warp-cli --accept-tos connect
+          sleep 8
+          warp-cli --accept-tos status || true
+          echo "WARP egress:"; curl -s --socks5 127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep -E '^(ip|loc|warp)='
+          echo "BROWSER_PROXY=socks5://127.0.0.1:40000" >> "$GITHUB_ENV"
+
+      - name: Set up Tor (proxy :9050)
+        if: ${{ inputs.mode == 'tor' }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y tor
+          sudo service tor start
+          sleep 8
+          echo "Tor egress:"; curl -s --socks5 127.0.0.1:9050 https://www.cloudflare.com/cdn-cgi/trace | grep -E '^(ip|loc)='
+          echo "BROWSER_PROXY=socks5://127.0.0.1:9050" >> "$GITHUB_ENV"
+
+      - name: Probe Facebook Marketplace
+        env:
+          QUERY: "dyson airwrap"
+          CITY: "melbourne"
+          MAX_PRICE: "1000"
+          DEBUG_DIR: "fb-debug"
+        run: uv run python scripts/fb_probe.py
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fb-debug-${{ inputs.mode }}
+          path: fb-debug/
+          retention-days: 3
