@@ -10,3 +10,9 @@ bots:
   apple:
     token_env: APPLE_BOT_TOKEN
     chat_env: APPLE_CHAT_ID
+  ebay:
+    token_env: EBAY_BOT_TOKEN
+    chat_env: EBAY_CHAT_ID
+  marketplace:
+    token_env: MARKETPLACE_BOT_TOKEN
+    chat_env: MARKETPLACE_CHAT_ID

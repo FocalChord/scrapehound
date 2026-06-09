@@ -1,0 +1,40 @@
+name: facebook
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # Marketplace is heavier + bot-sensitive; every 6h
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: facebook
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run patchright install --with-deps chromium
+      - name: Run
+        env:
+          MARKETPLACE_BOT_TOKEN: ${{ secrets.MARKETPLACE_BOT_TOKEN }}
+          MARKETPLACE_CHAT_ID: ${{ secrets.MARKETPLACE_CHAT_ID }}
+        run: uv run scrapehound --bot marketplace
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/
+          git diff --cached --quiet && exit 0
+          git commit -m "update facebook state [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --no-rebase -X ours -q origin main || true
+            git push && exit 0
+            sleep $((RANDOM % 6 + 3))
+          done
+          echo "state push raced out; next run will persist"; exit 0

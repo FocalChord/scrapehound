@@ -13,6 +13,7 @@ dependencies = [
     "tenacity>=8.2",
     "extruct>=0.16",
     "python-dotenv>=1.0",
+    "curl_cffi>=0.7",
 ]
 
 [project.scripts]

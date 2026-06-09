@@ -7,3 +7,7 @@ __pycache__/
 
 _site/
 docs/
+
+# standalone source scrapers (ported into src/scrapehound/adapters/, kept local)
+ebay-scrape/
+marketplac-escraper/
