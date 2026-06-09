@@ -22,6 +22,7 @@ class SourceConfig(BaseModel):
     type: str
     bot: str = "default"
     enabled: bool = True
+    alert: bool = True               # false = track + dashboard, but no Telegram
     notify: str = "changes"          # "changes" | "price_drop"
     watch: list[str] = ["price"]     # fields/attrs to detect changes in
     derive: dict = {}                # attr name -> derivation spec
@@ -34,7 +35,7 @@ class SourceConfig(BaseModel):
 
     def options(self) -> dict:
         return self.model_dump(
-            exclude={"bot", "enabled", "notify", "watch", "filter", "derive"})
+            exclude={"bot", "enabled", "alert", "notify", "watch", "filter", "derive"})
 
 
 class BotConfig(BaseModel):

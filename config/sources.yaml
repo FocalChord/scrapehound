@@ -101,6 +101,7 @@ sources:
   apple_mac_studio:
     type: apple
     bot: apple
+    alert: false                    # tracked on the dashboard, but no Telegram alerts
     notify: changes
     watch: [pickup, ships]          # alert on availability/lead-time changes
     region: au
@@ -112,6 +113,7 @@ sources:
   apple_refurb_mac:
     type: embedded_json           # no Apple-specific code; the page embeds a JSON list
     bot: apple
+    alert: false                  # tracked on the dashboard, but no Telegram alerts
     notify: changes               # new (in stock) / removed (sold) / price
     url: "https://www.apple.com/au/shop/refurbished/mac"
     base_url: "https://www.apple.com"

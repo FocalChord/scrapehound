@@ -69,7 +69,9 @@ def run(sources: dict[str, SourceConfig], bots: dict[str, BotConfig], *,
             changes = diff(previous, products, store, watch=tuple(src.watch))
             if changes.any():
                 log.info("[%s] %s", key, changes.summary())
-                if dry_run or not (bot and bot.has_creds()):
+                if dry_run or not src.alert or not (bot and bot.has_creds()):
+                    if not src.alert:
+                        log.info("[%s] alert: false — tracked, not sent", key)
                     _emit(None, f"--- {src.bot} / {src.notify} ---\n"
                           + preview_changes(changes, src.bot, src.notify), True)
                 else:
