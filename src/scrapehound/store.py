@@ -38,6 +38,26 @@ class Store:
             low = p if low is None or p < low else low
         return low
 
+    def low_point(self, key: str) -> Optional[tuple[Decimal, str]]:
+        """All-time-low price and the date it was first reached, from history."""
+        if not self.history_path.exists():
+            return None
+        low: Optional[Decimal] = None
+        when: Optional[str] = None
+        for line in self.history_path.read_text().splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if row.get("key") != key:
+                continue
+            try:
+                p = Decimal(str(row["price"]))
+            except (ArithmeticError, ValueError, TypeError):
+                continue
+            if low is None or p < low:
+                low, when = p, row.get("scraped_at")
+        return (low, when) if low is not None else None
+
     def save(self, products: list[Product], scraped_at: str) -> None:
         self.dir.mkdir(parents=True, exist_ok=True)
         latest = {p.key: p.model_dump(mode="json") for p in products}

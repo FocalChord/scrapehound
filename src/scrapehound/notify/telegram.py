@@ -1,19 +1,21 @@
 """Telegram notification: named bots + HTML cards.
 
 Mode-aware: `changes` sends new/removed/changed cards; `price_drop` sends only
-price drops + newly-on-sale items. Handles any watched field (price, or attrs
-like availability/lead-time) and price-less products. Card builders feed both
-real sends and dry-run previews.
+price drops + newly-on-sale items. Cards are sent as a `sendMessage` with a large
+link preview, so the product image is pulled from the page and tapping it (or the
+linked title) opens the retailer — no upload, no button. Price drops show the
+all-time low and the date it was reached.
 """
 from __future__ import annotations
 
+import datetime as dt
 import html
 
 import httpx
 
 from ..config import BotConfig
 from ..diff import Change, Changes
-from ..models import Product
+from ..models import Product, as_number
 
 
 def _e(s) -> str:
@@ -29,14 +31,33 @@ def _money(v) -> str:
         return f"${v}"
 
 
+def _num(s) -> str:
+    f = float(s)
+    return str(int(f)) if f == int(f) else str(f)
+
+
+def _sizes(p: Product) -> str:
+    v = p.attrs.get("sizes_in_stock")
+    if not isinstance(v, list) or not v:
+        return ""
+    return ", ".join(_num(s) for s in v)
+
+
+def _fmt_date(iso) -> str:
+    try:
+        return dt.datetime.fromisoformat(str(iso).replace("Z", "+00:00")).strftime("%-d %b %Y")
+    except (ValueError, TypeError):
+        return _e(iso)
+
+
 def _link(text: str, url: str) -> str:
     if not url:
         return f"<b>{_e(text)}</b>"
     return f'<a href="{html.escape(url, quote=True)}">{_e(text)}</a>'
 
 
-def _button(p: Product):
-    return {"text": "View ↗", "url": p.url} if p.url else None
+def _title_link(p: Product) -> str:
+    return _link(p.title, p.url)
 
 
 def _attrs_line(p: Product) -> str:
@@ -52,25 +73,44 @@ def _detail(p: Product) -> str:
     return _attrs_line(p)
 
 
+def _low_line(ch: Change) -> str:
+    if ch.low_price is None:
+        return ""
+    if ch.all_time_low:
+        return f"\U0001f525 <b>all-time low</b> · {_money(ch.low_price)}"
+    return f"\U0001f4c9 lowest was {_money(ch.low_price)} · {_fmt_date(ch.low_date)}"
+
+
 def card_new(p: Product, source: str):
-    return p.image, f"\U0001f195 <b>{_e(p.title)}</b>\n{_detail(p)}\n\U0001f3f7️ <i>{_e(source)}</i>", _button(p)
+    return p.image, f"\U0001f195 {_title_link(p)}\n{_detail(p)}\n<i>{_e(source)}</i>", p.url
 
 
 def card_removed(p: Product, source: str):
-    return None, f"❌ <b>{_e(p.title)}</b>\nno longer listed\n\U0001f3f7️ <i>{_e(source)}</i>", None
+    return None, f"❌ <b>{_e(p.title)}</b>\nno longer listed\n<i>{_e(source)}</i>", None
 
 
 def card_change(ch: Change, source: str):
     p = ch.product
-    if ch.field == "price":
-        arrow = "\U0001f4c9" if ch.dropped else "\U0001f4c8"
-        line = f"{_money(ch.old)} → <b>{_money(ch.new)}</b>"
-        if ch.dropped and ch.all_time_low:
-            line += "  \U0001f525 all-time low"
-    else:
-        arrow = "\U0001f514"
-        line = f"{_e(ch.field)}: {_e(ch.old)} → <b>{_e(ch.new)}</b>"
-    return p.image, f"{arrow} <b>{_e(p.title)}</b>\n{line}\n\U0001f3f7️ <i>{_e(source)}</i>", _button(p)
+    if ch.field != "price":
+        body = (f"\U0001f514 {_title_link(p)}\n"
+                f"{_e(ch.field)}: {_e(ch.old)}  ➜  <b>{_e(ch.new)}</b>\n"
+                f"<i>{_e(source)}</i>")
+        return p.image, body, p.url
+
+    lines = ["\U0001f525 <b>PRICE DROP</b>" if ch.dropped else "\U0001f4c8 <b>Price up</b>",
+             _title_link(p),
+             f"<s>{_money(ch.old)}</s>  ➜  <b>{_money(ch.new)}</b>"]
+    o, n = as_number(ch.old), as_number(ch.new)
+    if ch.dropped and o and n:
+        pct = p.percent_off
+        extra = f"  ·  <b>{pct}% off</b>" if pct else ""
+        lines.append(f"\U0001f4b8 save <b>{_money(o - n)}</b>{extra}")
+    if low := _low_line(ch):
+        lines.append(low)
+    if sizes := _sizes(p):
+        lines.append(f"\U0001f7e2 sizes {sizes}")
+    lines.append(f"<i>{_e(source)}</i>")
+    return p.image, "\n".join(lines), p.url
 
 
 def _cards_for(changes: Changes, source: str, mode: str):
@@ -121,25 +161,24 @@ class TelegramBot:
 
     def send(self, text: str) -> dict:
         return self._api("sendMessage", {"text": text, "parse_mode": "HTML",
-                                         "disable_web_page_preview": True})
+                                         "link_preview_options": {"is_disabled": True}})
 
-    def send_card(self, photo: str | None, caption: str, button: dict | None) -> dict:
-        markup = {"inline_keyboard": [[button]]} if button else None
+    def send_card(self, photo: str | None, caption: str, url: str | None) -> dict:
+        # Real uploaded photo (always shows); the title in the caption is the link,
+        # so there's no button. No image -> message with a link preview as fallback.
         if photo:
             try:
-                payload = {"photo": photo, "caption": caption, "parse_mode": "HTML"}
-                if markup:
-                    payload["reply_markup"] = markup
-                return self._api("sendPhoto", payload)
+                return self._api("sendPhoto", {"photo": photo, "caption": caption,
+                                               "parse_mode": "HTML"})
             except httpx.HTTPError:
                 pass
-        payload = {"text": caption, "parse_mode": "HTML", "disable_web_page_preview": False}
-        if markup:
-            payload["reply_markup"] = markup
-        return self._api("sendMessage", payload)
+        preview = ({"url": url, "prefer_large_media": True, "show_above_text": True}
+                   if url else {"is_disabled": True})
+        return self._api("sendMessage", {"text": caption, "parse_mode": "HTML",
+                                         "link_preview_options": preview})
 
     def send_changes(self, changes: Changes, source: str, mode: str) -> int:
         cards = _cards_for(changes, source, mode)
-        for photo, caption, button in cards:
-            self.send_card(photo, caption, button)
+        for photo, caption, url in cards:
+            self.send_card(photo, caption, url)
         return len(cards)

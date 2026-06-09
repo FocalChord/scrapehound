@@ -37,6 +37,8 @@ class Change(BaseModel):
     old: Any = None
     new: Any = None
     all_time_low: bool = False
+    low_price: Any = None        # all-time-low price for this model
+    low_date: Any = None         # ISO date that low was first reached
 
     @property
     def dropped(self) -> bool:
@@ -77,10 +79,15 @@ def diff(previous: dict, current: list[Product], store, watch=("price",)) -> Cha
             old, new_v = _record_value(previous[k], field), p.value(field)
             if _canon(old) == _canon(new_v):
                 continue
-            atl = False
+            atl, low_price, low_date = False, None, None
             if field == "price":
-                low = store.all_time_low(k)
+                point = store.low_point(k)
                 n = as_number(new_v)
-                atl = n is not None and (low is None or n <= float(low))
-            changes.append(Change(product=p, field=field, old=old, new=new_v, all_time_low=atl))
+                atl = n is not None and (point is None or n <= float(point[0]))
+                if atl and n is not None:
+                    low_price, low_date = new_v, p.scraped_at   # current run set a new low
+                elif point is not None:
+                    low_price, low_date = str(point[0]), point[1]
+            changes.append(Change(product=p, field=field, old=old, new=new_v,
+                                  all_time_low=atl, low_price=low_price, low_date=low_date))
     return Changes(new=new, removed=removed, changes=changes)
