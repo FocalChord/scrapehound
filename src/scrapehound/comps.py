@@ -252,15 +252,27 @@ def _segment(window_rows: list[dict]) -> dict:
     """
     by = {"auction": [], "fixed": [], "offer": []}
     for r in window_rows:
-        by[_kind(r)].append(r["price"])
+        by[_kind(r)].append(r)
     realized = by["auction"] + by["fixed"]
+
+    def _extreme(rows, pick):
+        if not rows:
+            return None
+        r = pick(rows, key=lambda x: x["price"])
+        return {"price": r["price"], "url": r.get("url"), "kind": _kind(r),
+                "sold_date": r.get("sold_date"), "title": r.get("title"),
+                "bids": r.get("bids")}
+
+    prices = lambda rows: [r["price"] for r in rows]  # noqa: E731
     return {
-        "realized": summarize(realized),
-        "auction": summarize(by["auction"]),
-        "fixed": summarize(by["fixed"]),
-        "offer": summarize(by["offer"]),
-        "all": summarize([r["price"] for r in window_rows]),
+        "realized": summarize(prices(realized)),
+        "auction": summarize(prices(by["auction"])),
+        "fixed": summarize(prices(by["fixed"])),
+        "offer": summarize(prices(by["offer"])),
+        "all": summarize(prices(window_rows)),
         "counts": {k: len(v) for k, v in by.items()},
+        "lo": _extreme(realized, min),   # cheapest realized sale (with link + sale type)
+        "hi": _extreme(realized, max),   # priciest realized sale
     }
 
 

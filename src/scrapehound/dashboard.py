@@ -123,6 +123,9 @@ footer a{color:var(--mut);text-decoration:none}
 .tile{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
 .tile .n{font-size:20px;font-weight:800;letter-spacing:-.02em}
 .tile .l{font-size:11px;color:var(--mut);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+.tile.lk{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:.15s}
+.tile.lk:hover{border-color:var(--acc);transform:translateY(-2px)}
+.tile.lk .l::after{content:" ↗";color:var(--faint)}
 .tile.big{border-color:rgba(122,162,255,.35)}
 .tile.big .n{background:linear-gradient(120deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -276,6 +279,14 @@ function trendSVG(trend){
     <text x="2" y="11" fill="#8b93a3" font-size="9">${m0(ymax)}</text>
     <text x="2" y="${H-20}" fill="#8b93a3" font-size="9">${m0(ymin)}</text></svg>`;
 }
+const KIND_TAG={auction:"🔨 auction", fixed:"Buy It Now", offer:"best offer"};
+function tileLink(label,val,sale){
+  const tag=sale&&sale.kind?` · ${KIND_TAG[sale.kind]||""}`:"";
+  const body=`<div class="n">${val}</div><div class="l">${esc(label)}${tag}</div>`;
+  if(sale&&sale.url)
+    return `<a class="tile lk" href="${esc(sale.url)}" target="_blank" rel="noopener" title="sold ${esc(sale.sold_date||"")} — ${esc(sale.title||"")}">${body}</a>`;
+  return `<div class="tile">${body}</div>`;
+}
 function compPanel(c){
   const st=c.windows[cwin]||{}, rz=st.realized||{}, au=st.auction||{}, ct=st.counts||{};
   const span=c.span?`${c.span[0]} → ${c.span[1]}`:"";
@@ -283,7 +294,8 @@ function compPanel(c){
     tile("market value · p50",m0(rz.p50),true),
     tile("p90",m0(rz.p90)),tile("p95",m0(rz.p95)),
     tile(au.n?`auction p50 · n${au.n}`:"auction p50",au.n?m0(au.p50):"—"),
-    tile("min",m0(rz.min)),tile("max",m0(rz.max)),tile("realized sales",rz.n),
+    tileLink("min",m0(rz.min),st.lo),tileLink("max",m0(rz.max),st.hi),
+    tile("realized sales",rz.n),
   ].join("")
     :`<div class="empty">no realized sales in the ${cwin}-day window</div>`;
   const bd=`<span class="kb au">🔨 ${ct.auction||0} auction</span>
