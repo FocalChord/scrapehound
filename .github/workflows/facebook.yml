@@ -1,8 +1,10 @@
 name: facebook
 
+# DISABLED (manual dispatch only). Facebook serves logged-out Marketplace only to
+# residential/mobile IPs; from GitHub's datacenter IPs it redirects to /login and
+# returns 0 listings. Re-enable the schedule once an AU residential proxy is wired
+# (set FB_PROXY secret + proxy_env: FB_PROXY on the dyson_marketplace source).
 on:
-  schedule:
-    - cron: "0 */6 * * *"   # Marketplace is heavier + bot-sensitive; every 6h
   workflow_dispatch: {}
 
 permissions:

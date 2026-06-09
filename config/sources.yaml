@@ -160,9 +160,15 @@ sources:
     located_in_country: true      # items located in Australia only
 
   # --- Facebook Marketplace: Dyson Airwrap -> "marketplace" bot, alert on changes ---
+  # DISABLED on CI: Facebook serves logged-out Marketplace only to residential/mobile
+  # IPs. From GitHub Actions (Azure datacenter) it redirects to /login -> 0 listings.
+  # Verified working locally (Melbourne residential IP -> 24 listings). To re-enable:
+  # set enabled: true, add an AU residential proxy (see proxy_env below + FB_PROXY
+  # secret), and restore the schedule in .github/workflows/facebook.yml.
   dyson_marketplace:
     type: facebook
     bot: marketplace
+    enabled: false                # needs an AU residential proxy to run on CI (see note above)
     notify: changes
     watch: [price]
     query: "dyson airwrap"
@@ -170,6 +176,7 @@ sources:
     currency: AUD
     max_price: 1000
     limit: 40
+    # proxy_env: FB_PROXY         # uncomment once an AU residential proxy secret is set
 
   # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---
   leica_digidirect:

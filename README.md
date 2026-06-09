@@ -122,6 +122,25 @@ file in `src/scrapehound/adapters/` decorated with `@register("type")`.
 
 ## GitHub Actions
 
-Two workflows: `leica.yml` (every 10 min, headless) and `shoes.yml` (every 6h,
-headful Chrome under xvfb for the Akamai/Cloudflare sites). Add the four bot
-secrets in repo settings. Each commits its `state/` back.
+Workflows include `leica.yml` (every 10 min, headless) and `shoes.yml` (every 6h,
+headful Chrome under xvfb for the Akamai/Cloudflare sites). `ebay.yml` (every 30
+min, HTTP-only) watches eBay search results. Add the relevant bot secrets in repo
+settings. Each commits its `state/` back.
+
+## Known limitations
+
+**Facebook Marketplace (`facebook` adapter) does not work on GitHub Actions.**
+Facebook serves logged-out Marketplace listings only to residential/mobile IPs.
+From GitHub's Azure datacenter IPs it redirects to `/login` and returns zero
+listings. Verified free workarounds **do not help** — Cloudflare WARP and Tor
+egress are both redirected to the login wall too (their IP ranges are flagged).
+It works fine locally from a residential connection (e.g. ~24 Melbourne listings
+for "dyson airwrap").
+
+The `dyson_marketplace` source is therefore `enabled: false` and `facebook.yml`
+is manual-dispatch only. **To re-enable:** wire an AU residential proxy
+(DataImpulse ~$1/GB or IPRoyal ~$7/GB-once-never-expires; Decodo has a free trial
+with Melbourne targeting). Set an `FB_PROXY` repo secret, uncomment
+`proxy_env: FB_PROXY` on the source, pass it in the workflow `env:`, flip the
+source to `enabled: true`, and restore the schedule. `scripts/fb_probe.py` +
+`fb-debug.yml` (manual) are kept to validate a proxy before re-enabling.
