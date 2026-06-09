@@ -147,6 +147,30 @@ sources:
     map: *arefmap
     filter: [{field: title, op: not_contains, value: [HomePod]}]
 
+  # --- eBay search: Leica M6 on ebay.com.au -> "ebay" bot, alert on changes ---
+  leica_ebay:
+    type: ebay
+    bot: ebay
+    notify: changes               # new listings / removed / price changes
+    watch: [price]
+    query: "leica m6"
+    site: au                      # ebay.com.au (AUD)
+    pages: 2
+    sort: newest                  # deterministic order (vs personalised Best Match) -> stable diffs
+    located_in_country: true      # items located in Australia only
+
+  # --- Facebook Marketplace: Dyson Airwrap -> "marketplace" bot, alert on changes ---
+  dyson_marketplace:
+    type: facebook
+    bot: marketplace
+    notify: changes
+    watch: [price]
+    query: "dyson airwrap"
+    city: melbourne               # Melbourne 3000 (slug only; results IP-geolocated when logged out)
+    currency: AUD
+    max_price: 1000
+    limit: 40
+
   # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---
   leica_digidirect:
     type: browser
