@@ -24,6 +24,7 @@ class SourceConfig(BaseModel):
     enabled: bool = True
     alert: bool = True               # false = track + dashboard, but no Telegram
     notify: str = "changes"          # "changes" | "price_drop"
+    dashboard: bool = True           # false = keep tracking, but hide from the dashboard
     watch: list[str] = ["price"]     # fields/attrs to detect changes in
     derive: dict = {}                # attr name -> derivation spec
     filter: Filter = Filter()        # list of rules in YAML
@@ -35,7 +36,8 @@ class SourceConfig(BaseModel):
 
     def options(self) -> dict:
         return self.model_dump(
-            exclude={"bot", "enabled", "alert", "notify", "watch", "filter", "derive"})
+            exclude={"bot", "enabled", "alert", "notify", "dashboard",
+                     "watch", "filter", "derive"})
 
 
 class BotConfig(BaseModel):

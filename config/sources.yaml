@@ -113,6 +113,7 @@ sources:
   apple_refurb_mac:
     type: embedded_json           # no Apple-specific code; the page embeds a JSON list
     bot: apple
+    dashboard: false              # tracked, but hidden from the public dashboard
     alert: false                  # tracked on the dashboard, but no Telegram alerts
     notify: changes               # new (in stock) / removed (sold) / price
     url: "https://www.apple.com/au/shop/refurbished/mac"
@@ -151,6 +152,7 @@ sources:
   leica_ebay:
     type: ebay
     bot: ebay
+    dashboard: false              # tracked, but hidden from the public dashboard
     notify: changes               # new listings / removed / price changes
     watch: [price]
     query: "leica m6"
@@ -168,6 +170,7 @@ sources:
   dyson_marketplace:
     type: facebook
     bot: marketplace
+    dashboard: false              # tracked, but hidden from the public dashboard
     enabled: false                # needs an AU residential proxy to run on CI (see note above)
     notify: changes
     watch: [price]

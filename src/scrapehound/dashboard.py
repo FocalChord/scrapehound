@@ -154,10 +154,10 @@ footer a{color:var(--mut);text-decoration:none}
 .srow .sub2{font-size:11px;color:var(--mut);margin-top:3px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
 .srow .loc{color:var(--faint)}
 .srow.off{opacity:.6}
-.kb{font-size:10px;font-weight:700;border-radius:6px;padding:1px 6px;border:1px solid var(--line);white-space:nowrap}
-.kb.au{color:var(--ok);border-color:rgba(55,211,153,.3)}
-.kb.bo{color:#ff9f6b;border-color:rgba(255,159,107,.3)}
-.kb.bin{color:var(--mut)}
+.kb{font-size:10px;font-weight:700;border-radius:999px;padding:2px 8px;border:1px solid var(--line);white-space:nowrap}
+.kb.au{color:var(--ok);background:rgba(55,211,153,.12);border-color:rgba(55,211,153,.35)}
+.kb.bin{color:var(--acc);background:rgba(122,162,255,.12);border-color:rgba(122,162,255,.3)}
+.kb.bo{color:#ff9f6b;background:rgba(255,159,107,.12);border-color:rgba(255,159,107,.35)}
 </style></head>
 <body>
 <div class="glow"></div>
@@ -279,14 +279,15 @@ function trendSVG(trend){
     <text x="2" y="11" fill="#8b93a3" font-size="9">${m0(ymax)}</text>
     <text x="2" y="${H-20}" fill="#8b93a3" font-size="9">${m0(ymin)}</text></svg>`;
 }
-const KIND_TAG={auction:"🔨 auction", fixed:"Buy It Now", offer:"best offer"};
 function tileLink(label,val,sale){
-  const tag=sale&&sale.kind?` · ${KIND_TAG[sale.kind]||""}`:"";
-  const body=`<div class="n">${val}</div><div class="l">${esc(label)}${tag}</div>`;
-  if(sale&&sale.url)
-    return `<a class="tile lk" href="${esc(sale.url)}" target="_blank" rel="noopener" title="sold ${esc(sale.sold_date||"")} — ${esc(sale.title||"")}">${body}</a>`;
+  const body=`<div class="n">${val}</div><div class="l">${esc(label)}</div>`;
+  if(sale&&sale.url){
+    const k=KIND_TAG[sale.kind]||"";
+    return `<a class="tile lk" href="${esc(sale.url)}" target="_blank" rel="noopener" title="${esc(label)} — sold ${esc(sale.sold_date||"")}${k?" via "+k:""} — ${esc(sale.title||"")}">${body}</a>`;
+  }
   return `<div class="tile">${body}</div>`;
 }
+const KIND_TAG={auction:"auction", fixed:"Buy It Now", offer:"Best Offer"};
 function compPanel(c){
   const st=c.windows[cwin]||{}, rz=st.realized||{}, au=st.auction||{}, ct=st.counts||{};
   const span=c.span?`${c.span[0]} → ${c.span[1]}`:"";
@@ -312,7 +313,7 @@ function compPanel(c){
 }
 const KIND={auction:'<span class="kb au">🔨 Auction</span>',
   fixed:'<span class="kb bin">Buy It Now</span>',
-  offer:'<span class="kb bo">🏷️ Best offer · asking</span>'};
+  offer:'<span class="kb bo">🏷️ Best Offer</span>'};
 function soldRow(r){
   const d=r.sold_date?r.sold_date.slice(2):"";  // YY-MM-DD
   const title=esc(r.title||"(untitled)");
@@ -371,6 +372,8 @@ def build_site(out: str = "docs", config_dir: str = "config", state_dir: str = "
     data = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "sources": []}
     for key, s in sources.items():
+        if not s.dashboard:          # tracked + alerting, but hidden from the dashboard
+            continue
         path = Path(state_dir) / f"{key}.json"
         records = json.loads(path.read_text()) if path.exists() else {}
         items = []
