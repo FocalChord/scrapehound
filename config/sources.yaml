@@ -257,3 +257,21 @@ comps:
       - {field: title, op: not_contains,
          value: [monochrom, reporter, case, grip, thumb, strap, "for leica",
                  protector, screen, cap, battery]}
+
+  # A liquid item — sealed single Pokémon 151 Elite Trainer Box. Tight market,
+  # lots of AU sellers. Filters isolate the standard single ETB from empties,
+  # bundles, multipacks, and the pricier Pokémon Center variant.
+  pokemon_151_etb:
+    type: ebay
+    query: "151 elite trainer box"
+    site: au
+    pages: 4
+    filter:
+      - {field: price, op: gte, value: 600}            # exclude empties/opened/bundles
+      - {field: price, op: lte, value: 1400}           # exclude PC variant / multipacks
+      - {field: title, op: contains_any, value: ["151"]}
+      - {field: title, op: contains_any, value: [etb, "elite trainer"]}
+      - {field: title, op: not_contains,
+         value: [empty, "no pack", "no card", "no hits", opened, "pokemon center",
+                 "pc etb", upc, "ultra premium", binder, chinese, greninja,
+                 "gift box", celebrations, "mega evolution", "x4", "x5", "x 4", "x 5"]}
