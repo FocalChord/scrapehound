@@ -258,21 +258,25 @@ def _comps_stats(argv) -> int:
         return 1
     span = f"  ·  {s['span'][0]} → {s['span'][1]}" if s.get("span") else ""
     cond = f"  ·  {s['condition']}" if s.get("condition") else ""
-    print(f"\n{args.key}  ({s['currency']})  ·  {s['total']} comps stored{span}{cond}\n")
-    cols = ["n", "min", "p50", "p90", "p95", "max", "mean"]
-    print(f"  {'window':>8}  " + "  ".join(f"{c:>9}" for c in cols))
-    print(f"  {'-'*8}  " + "  ".join("-" * 9 for _ in cols))
+    print(f"\n{args.key}  ({s['currency']})  ·  {s['total']} comps stored{span}{cond}")
+    print("market value = realized (auction + Buy It Now); Best-Offer "
+          "asking prices excluded\n")
+    cols = ["n", "min", "p50", "p90", "p95", "max"]
+    money = lambda v: ("$" + format(v, ",.0f")) if v is not None else "—"  # noqa: E731
+    head = "  ".join(f"{c:>8}" for c in cols)
+    print(f"  {'window':>7}  {head}  {'auction p50':>13}  {'BO excl':>8}")
+    print(f"  {'-'*7}  " + "  ".join("-" * 8 for _ in cols) + f"  {'-'*13}  {'-'*8}")
     for w in windows:
-        st = s["windows"][w]
+        seg = s["windows"][w]
+        rz, au = seg["realized"], seg["auction"]
         label = f"{w}d"
-        if not st.get("n"):
-            print(f"  {label:>8}  " + f"{'0':>9}" + "  (no sales in window)")
+        if not rz.get("n"):
+            print(f"  {label:>7}  {'0':>8}  (no realized sales in window)")
             continue
-        cells = []
-        for c in cols:
-            v = st.get(c)
-            cells.append(f"{v:>9}" if c == "n" else f"{('$'+format(v, ',.0f')):>9}")
-        print(f"  {label:>8}  " + "  ".join(cells))
+        cells = [f"{rz['n']:>8}" if c == "n" else f"{money(rz.get(c)):>8}" for c in cols]
+        au_p50 = f"{money(au.get('p50'))} (n={au['n']})" if au.get("n") else "—"
+        print(f"  {label:>7}  " + "  ".join(cells)
+              + f"  {au_p50:>13}  {seg['counts']['offer']:>8}")
     print()
     return 0
 

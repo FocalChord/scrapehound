@@ -79,6 +79,22 @@ def _now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
 
+def row_kind(attrs: dict) -> str:
+    """Classify a sale by how its price relates to the true clearing price:
+
+      auction  – competitive final bid (truest market value)
+      fixed    – Buy It Now at a real transacted price
+      offer    – Best Offer accepted; eBay shows the ASKING price, not the
+                 accepted amount, so these inflate comps and are excluded from
+                 the headline 'realized' market value.
+    """
+    if attrs.get("best_offer"):
+        return "offer"
+    if attrs.get("bids") or attrs.get("buying_format") == "Auction":
+        return "auction"
+    return "fixed"
+
+
 class CompStore:
     """Append-only sold-comp store, deduped by item id (first capture wins)."""
 
@@ -128,22 +144,36 @@ def collect(key: str, src: SourceConfig, state_dir: str = "state") -> tuple[int,
         sold = parse_sold_date(p.attrs.get("sold_date"))
         if p.price is None or sold is None:
             continue  # need a price and a sale date to be a usable comp
+        a = p.attrs
         rows.append({
             "item_id": p.id,
             "title": p.title,
             "price": float(p.price),
             "currency": p.currency,
-            "condition": p.attrs.get("condition"),
+            "condition": a.get("condition"),
+            "url": (p.url or "").split("?")[0],   # clean /itm/<id> link to the sold listing
             "sold_date": sold.isoformat(),
             "captured_at": captured,
+            # sale type — distinguishes true clearing prices from asking prices
+            "kind": row_kind(a),                  # auction | fixed | offer
+            "buying_format": a.get("buying_format"),
+            "best_offer": bool(a.get("best_offer")),
+            "bids": a.get("bids"),
+            # rich metadata resurfaced for the listings view
+            "location": a.get("location"),
+            "image": p.image,
+            "seller": a.get("seller"),
+            "seller_pct": a.get("seller_pct"),
+            "shipping": a.get("shipping"),
+            "free_shipping": bool(a.get("free_shipping")),
         })
     store = CompStore(key, state_dir)
     added = store.append_new(rows)
     return added, len(store.load())
 
 
-def _window_prices(rows: list[dict], days: int, currency: str,
-                   condition: Optional[str], today: dt.date) -> list[float]:
+def _window_rows(rows: list[dict], days: int, currency: str,
+                 condition: Optional[str], today: dt.date) -> list[dict]:
     cutoff = today - dt.timedelta(days=days)
     out = []
     for r in rows:
@@ -151,16 +181,44 @@ def _window_prices(rows: list[dict], days: int, currency: str,
             continue
         if condition and (r.get("condition") or "").lower() != condition.lower():
             continue
-        d = dt.date.fromisoformat(r["sold_date"])
-        if d >= cutoff:
-            out.append(r["price"])
+        if dt.date.fromisoformat(r["sold_date"]) >= cutoff:
+            out.append(r)
     return out
+
+
+def _window_prices(rows: list[dict], days: int, currency: str,
+                   condition: Optional[str], today: dt.date) -> list[float]:
+    return [r["price"] for r in _window_rows(rows, days, currency, condition, today)]
+
+
+def _kind(r: dict) -> str:
+    return r.get("kind") or row_kind(r)  # tolerate rows written before `kind`
+
+
+def _segment(window_rows: list[dict]) -> dict:
+    """Split a window's rows by sale type and summarize each.
+
+    `realized` (auction + fixed) is the headline true market value; `offer`
+    (Best Offer asking prices) is reported separately and excluded from it.
+    """
+    by = {"auction": [], "fixed": [], "offer": []}
+    for r in window_rows:
+        by[_kind(r)].append(r["price"])
+    realized = by["auction"] + by["fixed"]
+    return {
+        "realized": summarize(realized),
+        "auction": summarize(by["auction"]),
+        "fixed": summarize(by["fixed"]),
+        "offer": summarize(by["offer"]),
+        "all": summarize([r["price"] for r in window_rows]),
+        "counts": {k: len(v) for k, v in by.items()},
+    }
 
 
 def stats(key: str, state_dir: str = "state", windows: tuple[int, ...] = (30, 90, 365),
           currency: Optional[str] = None, condition: Optional[str] = None,
           today: Optional[dt.date] = None) -> dict:
-    """Market-value stats per window for a comps key.
+    """Sale-type-segmented market-value stats per window for a comps key.
 
     currency defaults to the most common in the store (sold listings can be a
     mix; stats only make sense within one currency).
@@ -182,14 +240,18 @@ def stats(key: str, state_dir: str = "state", windows: tuple[int, ...] = (30, 90
         "windows": {},
     }
     for w in windows:
-        out["windows"][w] = summarize(
-            _window_prices(rows, w, currency, condition, today))
+        out["windows"][w] = _segment(
+            _window_rows(rows, w, currency, condition, today))
     return out
 
 
 def monthly_trend(key: str, state_dir: str = "state",
                   currency: Optional[str] = None) -> list[dict]:
-    """Per-month median (p50) + count, oldest→newest, for charting a trend."""
+    """Per-month realized median (p50) + count, oldest→newest, for the trend.
+
+    Uses realized sales (auction + fixed) only, so the trend tracks true
+    clearing prices rather than Best-Offer asking prices.
+    """
     rows = CompStore(key, state_dir).load()
     if not rows:
         return []
@@ -197,9 +259,8 @@ def monthly_trend(key: str, state_dir: str = "state",
         currency = Counter(r.get("currency") for r in rows).most_common(1)[0][0]
     buckets: dict[str, list[float]] = {}
     for r in rows:
-        if r.get("currency") != currency:
+        if r.get("currency") != currency or _kind(r) == "offer":
             continue
-        ym = r["sold_date"][:7]  # YYYY-MM
-        buckets.setdefault(ym, []).append(r["price"])
+        buckets.setdefault(r["sold_date"][:7], []).append(r["price"])  # YYYY-MM
     return [{"month": ym, "p50": percentile(p, 0.5), "n": len(p)}
             for ym, p in sorted(buckets.items())]

@@ -112,8 +112,9 @@ footer a{color:var(--mut);text-decoration:none}
 .cpanel{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
   border-radius:16px;padding:18px;margin-top:18px}
 .cpanel h2{margin:0 0 2px;font-size:18px;letter-spacing:-.01em}
-.cpanel .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+.cpanel .sub{color:var(--mut);font-size:13px;margin-bottom:8px}
 .cpanel .sub b{color:var(--txt)}
+.sub2bar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
 .wtabs{display:flex;gap:6px;margin:6px 0 4px}
 .wtab{font-size:12px;padding:5px 11px;border-radius:8px;border:1px solid var(--line);background:var(--card);
   color:var(--mut);cursor:pointer;font-family:inherit}
@@ -129,6 +130,31 @@ footer a{color:var(--mut);text-decoration:none}
 .chart{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px}
 .chart h3{margin:0 0 8px;font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
 .chart svg{width:100%;height:auto;display:block}
+.sold{margin-top:16px;border-top:1px solid var(--line);padding-top:6px}
+.sold>summary{cursor:pointer;list-style:none;color:var(--mut);font-size:13px;font-weight:600;
+  padding:8px 2px;display:flex;align-items:center;gap:8px;user-select:none}
+.sold>summary::-webkit-details-marker{display:none}
+.sold>summary .car{transition:.2s;color:var(--faint)}
+.sold[open]>summary .car{transform:rotate(90deg)}
+.sold>summary:hover{color:var(--txt)}
+.solds{max-height:360px;overflow:auto;margin-top:6px;border:1px solid var(--line);border-radius:10px}
+.srow{display:grid;grid-template-columns:40px 80px 1fr;gap:11px;align-items:center;
+  padding:8px 12px;border-bottom:1px solid var(--line);font-size:13px}
+.srow:last-child{border-bottom:none}
+.srow:hover{background:var(--bg2)}
+.srow .th{width:40px;height:40px;border-radius:8px;object-fit:contain;background:#fff}
+.srow .th.none{width:40px;height:40px;border-radius:8px;background:var(--bg2)}
+.srow .p{font-weight:700;font-variant-numeric:tabular-nums}
+.srow .info{min-width:0}
+.srow .info a{color:var(--txt);text-decoration:none;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.srow .info a:hover{color:var(--acc)}
+.srow .sub2{font-size:11px;color:var(--mut);margin-top:3px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.srow .loc{color:var(--faint)}
+.srow.off{opacity:.6}
+.kb{font-size:10px;font-weight:700;border-radius:6px;padding:1px 6px;border:1px solid var(--line);white-space:nowrap}
+.kb.au{color:var(--ok);border-color:rgba(55,211,153,.3)}
+.kb.bo{color:#ff9f6b;border-color:rgba(255,159,107,.3)}
+.kb.bin{color:var(--mut)}
 </style></head>
 <body>
 <div class="glow"></div>
@@ -249,17 +275,47 @@ function trendSVG(trend){
     <text x="2" y="${H-20}" fill="#8b93a3" font-size="9">${m0(ymin)}</text></svg>`;
 }
 function compPanel(c){
-  const st=c.windows[cwin]||{};
+  const st=c.windows[cwin]||{}, rz=st.realized||{}, au=st.auction||{}, ct=st.counts||{};
   const span=c.span?`${c.span[0]} → ${c.span[1]}`:"";
-  const tiles=st.n?[tile("market value · p50",m0(st.p50),true),tile("p90",m0(st.p90)),
-    tile("p95",m0(st.p95)),tile("min",m0(st.min)),tile("max",m0(st.max)),tile("sales",st.n)].join("")
-    :`<div class="empty">no sales in the ${cwin}-day window</div>`;
+  const tiles=rz.n?[
+    tile("market value · p50",m0(rz.p50),true),
+    tile("p90",m0(rz.p90)),tile("p95",m0(rz.p95)),
+    tile(au.n?`auction p50 · n${au.n}`:"auction p50",au.n?m0(au.p50):"—"),
+    tile("min",m0(rz.min)),tile("max",m0(rz.max)),tile("realized sales",rz.n),
+  ].join("")
+    :`<div class="empty">no realized sales in the ${cwin}-day window</div>`;
+  const bd=`<span class="kb au">🔨 ${ct.auction||0} auction</span>
+    <span class="kb bin">${ct.fixed||0} buy-it-now</span>
+    <span class="kb bo">🏷️ ${ct.offer||0} best-offer · excluded</span>`;
   return `<div class="cpanel"><h2>${esc(c.key)}</h2>
     <div class="sub">“${esc(c.query||"")}” · <b>${esc(c.currency)}</b> · ${c.total} comps${span?" · "+esc(span):""}</div>
+    <div class="sub2bar">${bd}</div>
     <div class="tiles">${tiles}</div>
     <div class="charts">
-      <div class="chart"><h3>Price distribution (90d)</h3>${histSVG(c.hist)}</div>
-      <div class="chart"><h3>Median price by month</h3>${trendSVG(c.trend)}</div></div></div>`;
+      <div class="chart"><h3>Realized price distribution (90d)</h3>${histSVG(c.hist)}</div>
+      <div class="chart"><h3>Realized median by month</h3>${trendSVG(c.trend)}</div></div>
+    ${soldList(c)}</div>`;
+}
+const KIND={auction:'<span class="kb au">🔨 Auction</span>',
+  fixed:'<span class="kb bin">Buy It Now</span>',
+  offer:'<span class="kb bo">🏷️ Best offer · asking</span>'};
+function soldRow(r){
+  const d=r.sold_date?r.sold_date.slice(2):"";  // YY-MM-DD
+  const title=esc(r.title||"(untitled)");
+  const link=r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener" title="${title}">${title}</a>`
+                  :`<span title="${title}">${title}</span>`;
+  const img=r.image?`<img class="th" loading="lazy" src="${esc(r.image)}" onerror="this.classList.add('none');this.removeAttribute('src')">`
+                   :`<span class="th none"></span>`;
+  const loc=r.location?`<span class="loc">${esc(r.location)}</span>`:"";
+  const bids=(r.kind==="auction"&&r.bids)?`<span>${r.bids} bid${r.bids>1?"s":""}</span>`:"";
+  return `<div class="srow${r.kind==="offer"?" off":""}">${img}<span class="p">${m0(r.price)}</span>
+    <div class="info">${link}<div class="sub2">${KIND[r.kind]||""}<span>${esc(d)}</span>${loc}${bids}</div></div></div>`;
+}
+function soldList(c){
+  const ls=c.listings||[];
+  if(!ls.length)return "";
+  return `<details class="sold"><summary><span class="car">▸</span>Show ${ls.length} sold listings (newest first)</summary>
+    <div class="solds">${ls.map(soldRow).join("")}</div></details>`;
 }
 function renderComps(){
   const root=document.getElementById("comps");
@@ -345,6 +401,13 @@ def _build_comps(config_dir: str, state_dir: str) -> list[dict]:
         cur = st["currency"]
         rows = comps_mod.CompStore(key, state_dir).load()
         prices90 = comps_mod._window_prices(rows, 90, cur, None, today)
+        listings = sorted(
+            ({"title": r["title"], "price": r["price"], "condition": r.get("condition"),
+              "sold_date": r["sold_date"], "url": r.get("url"),
+              "kind": comps_mod._kind(r), "location": r.get("location"),
+              "image": r.get("image"), "bids": r.get("bids")}
+             for r in rows if r.get("currency") == cur),
+            key=lambda r: r["sold_date"], reverse=True)
         out.append({
             "key": key,
             "query": s.options().get("query"),
@@ -354,5 +417,6 @@ def _build_comps(config_dir: str, state_dir: str) -> list[dict]:
             "windows": st["windows"],
             "trend": comps_mod.monthly_trend(key, state_dir, currency=cur),
             "hist": _histogram(prices90),
+            "listings": listings,
         })
     return out

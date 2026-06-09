@@ -223,3 +223,37 @@ comps:
       - {field: title, op: not_contains,
          value: [cover, plate, strap, case, book, manual, leicavit, winder, grip,
                  "for leica", battery, cap, hood, filter]}
+
+  contax_t2:
+    type: ebay
+    query: "contax t2"
+    site: au
+    pages: 4
+    filter:
+      - {field: price, op: gte, value: 400}
+      - {field: title, op: contains_any, value: [t2]}
+      - {field: title, op: not_contains,
+         value: [t3, case, manual, strap, cover, "for contax", parts, repair, leather, battery]}
+
+  contax_t3:
+    type: ebay
+    query: "contax t3"
+    site: au
+    pages: 4
+    filter:
+      - {field: price, op: gte, value: 600}
+      - {field: title, op: contains_any, value: [t3]}
+      - {field: title, op: not_contains,
+         value: [t2, case, manual, strap, cover, "for contax", parts, repair, leather, battery]}
+
+  leica_q2:
+    type: ebay
+    query: "leica q2"
+    site: au
+    pages: 4
+    filter:
+      - {field: price, op: gte, value: 2500}           # standard Q2 body
+      - {field: title, op: contains_any, value: [q2]}
+      - {field: title, op: not_contains,
+         value: [monochrom, reporter, case, grip, thumb, strap, "for leica",
+                 protector, screen, cap, battery]}
