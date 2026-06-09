@@ -21,6 +21,8 @@ jobs:
       - run: uv sync
       # eBay sold-comp collection is HTTP-only (curl_cffi) — no browser needed.
       - run: uv run scrapehound comps collect
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # semantic `match:` filter (free tier)
       - name: Commit comps
         run: |
           git config user.name "github-actions[bot]"

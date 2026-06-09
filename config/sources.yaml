@@ -207,26 +207,27 @@ comps:
     query: "pokemon heartgold cib"
     site: au
     pages: 4
-    filter:
-      - {field: price, op: gte, value: 300}            # CIB floor (cart-only ~$160-190)
+    filter:                                            # cheap pre-filter; `match` does the rest
+      - {field: price, op: gte, value: 300}            # keyless floor (cart-only ~$160-190)
       - {field: title, op: contains_any, value: [heartgold, heart gold]}
-      - {field: title, op: contains_any, value: [cib, complete, "in box"]}   # must be complete-in-box
-      - {field: title, op: not_contains,
-         value: [empty, cartridge, "cart only", "game only", "case & manual",
-                 "case and manual", "manual only", "box only", loose, disc,
-                 repro, reproduction, poster]}
+    match: >
+      Pokémon HeartGold for Nintendo DS, COMPLETE IN BOX (CIB): must include the
+      original box. Exclude cartridge-only / game-only / loose, case-and-manual
+      only (no game), empty boxes, reproductions, and posters/inserts.
 
   leica_m6:
     type: ebay
     query: "leica m6"
     site: au
     pages: 4
-    filter:
-      - {field: price, op: gte, value: 1500}           # camera bodies, not accessories
-      - {field: title, op: contains_any, value: [m6]}  # MUST be an M6 (eBay fuzzes in M2/M3/M5)
-      - {field: title, op: not_contains,
-         value: [m2, m3, m4, m5, m7, m8, m9, mp, cover, plate, strap, case, book,
-                 manual, leicavit, winder, grip, "for leica", battery, cap, hood, filter]}
+    filter:                                            # cheap pre-filter; `match` does the rest
+      - {field: price, op: gte, value: 1500}
+      - {field: title, op: contains_any, value: [m6]}  # keyless safety net (no M2/M3/M5)
+    match: >
+      A Leica M6 35mm film rangefinder camera body (any variant: Classic, TTL,
+      0.72/0.85, Millennium, LHSA). Exclude every other Leica model (M2, M3, M4,
+      M5, M7, M8, M9, M10, M11, MP, MA, CL, Q), lens-only listings, and
+      accessories (cases, straps, covers, winders, grips, manuals).
 
   contax_t2:
     type: ebay
