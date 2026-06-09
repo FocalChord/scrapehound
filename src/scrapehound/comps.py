@@ -106,6 +106,27 @@ class CompStore:
     def __init__(self, key: str, directory: Path | str = "state", scope: str = ""):
         name = f"{key}.{scope}.jsonl" if scope else f"{key}.jsonl"
         self.path = Path(directory) / "comps" / name
+        # ledger of every item id already classified (kept OR rejected), so the
+        # LLM judges each listing exactly once across all future runs
+        self.seen_path = self.path.with_suffix(".seen")
+
+    def load_seen(self) -> set[str]:
+        if not self.seen_path.exists():
+            return set()
+        return {ln.strip() for ln in self.seen_path.read_text().splitlines() if ln.strip()}
+
+    def mark_seen(self, ids: list[str]) -> None:
+        new = [i for i in ids if i]
+        if not new:
+            return
+        existing = self.load_seen()
+        new = [i for i in new if i not in existing]
+        if not new:
+            return
+        self.seen_path.parent.mkdir(parents=True, exist_ok=True)
+        with self.seen_path.open("a") as f:
+            for i in new:
+                f.write(i + "\n")
 
     def load(self) -> list[dict]:
         if not self.path.exists():
@@ -173,13 +194,18 @@ def _collect_pass(key: str, src: SourceConfig, state_dir: str, scope: str,
         derive_attrs(p, src.derive)
     products = [p for p in products if src.filter.matches(p)]
     store = CompStore(key, state_dir, scope)
-    seen = {r["item_id"] for r in store.load()}
-    fresh = [p for p in products if p.id not in seen]   # only classify NEW listings
     match_spec = src.options().get("match")
+    # never re-classify: skip ids already stored (kept) or in the seen ledger (rejected)
+    seen = {r["item_id"] for r in store.load()}
+    if match_spec:
+        seen |= store.load_seen()
+    fresh = [p for p in products if p.id not in seen]
+    keep = fresh
     if match_spec and fresh:
         from .classify import semantic_keep
-        fresh = semantic_keep(fresh, match_spec, key=lambda p: p.title)
-    added = store.append_new(_rows_from_products(fresh))
+        keep = semantic_keep(fresh, match_spec, key=lambda p: p.title)
+        store.mark_seen([p.id for p in fresh])   # remember kept + rejected
+    added = store.append_new(_rows_from_products(keep))
     return added, len(store.load())
 
 
