@@ -284,3 +284,19 @@ comps:
       (ETB). Exclude empty or opened boxes, "no packs/no cards" listings, booster
       bundles, multi-box lots (x2/x3/x4/x5), binder collections, the Ultra Premium
       Collection (UPC), Chinese/gift-box sets, and the Pokémon Center exclusive ETB.
+
+  # Super-liquid: sealed Prismatic Evolutions Elite Trainer Box — huge AU turnover.
+  pokemon_prismatic_etb:
+    type: ebay
+    query: "prismatic evolutions elite trainer box"
+    site: au
+    pages: 4
+    filter:                                            # cheap pre-filter; `match` does the rest
+      - {field: price, op: gte, value: 50}             # drop loose packs/promos/accessories
+      - {field: price, op: lte, value: 600}            # drop sealed cases / booster boxes / lots
+      - {field: title, op: contains_any, value: [prismatic]}
+    match: >
+      A single, factory-sealed Pokémon Scarlet & Violet Prismatic Evolutions Elite
+      Trainer Box (ETB). Exclude empty or opened boxes, booster bundles, booster
+      boxes, binder collections, surprise/mystery boxes, multi-box lots, sealed
+      cases, the Pokémon Center ETB variant, and single packs/promos/accessories.
