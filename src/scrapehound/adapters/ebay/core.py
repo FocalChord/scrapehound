@@ -385,6 +385,18 @@ def search_url(site, query, page, *, ipg=60, category=None, min_price=None,
     return base + "?" + urllib.parse.urlencode(params)
 
 
+# With the "Australia only" location filter (LH_PrefLoc=1) eBay still appends an
+# "N items found from eBay international sellers" section after the local results.
+# To get a true located-in-country view we parse only the markup before it.
+_INTL_DIVIDER_RE = re.compile(r'(?:items?|results?)\s+found\s+from[^<]{0,40}international', re.I)
+
+
+def local_segment(body: str) -> str:
+    """Markup up to eBay's 'international sellers' divider (local results only)."""
+    m = _INTL_DIVIDER_RE.search(body) or re.search(r'international sellers', body, re.I)
+    return body[:m.start()] if m else body
+
+
 # --------------------------------------------------------------------------- #
 # Parsing: search results
 # --------------------------------------------------------------------------- #

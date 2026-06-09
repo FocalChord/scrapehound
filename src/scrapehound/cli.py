@@ -234,8 +234,9 @@ def _comps_collect(argv) -> int:
         if args.key and key != args.key:
             continue
         try:
-            added, total = comps.collect(key, src, args.state)
-            print(f"  {key:22} +{added} new  (store: {total})")
+            r = comps.collect(key, src, args.state)
+            g, a = r["global"], r["au"]
+            print(f"  {key:22} global +{g[0]} ({g[1]})   ·   🇦🇺 AU +{a[0]} ({a[1]})")
         except Exception as e:  # noqa: BLE001
             log.warning("[comps:%s] ERROR: %s", key, e)
     return 0
@@ -248,17 +249,21 @@ def _comps_stats(argv) -> int:
     ap.add_argument("--window", type=int, help="single window in days (else 30/90/365)")
     ap.add_argument("--currency", help="restrict to a currency (default: most common)")
     ap.add_argument("--condition", help="restrict to a condition (e.g. 'Pre-owned')")
+    ap.add_argument("--au", action="store_true", help="Australia-located market only")
     ap.add_argument("--state", default="state")
     args = ap.parse_args(argv)
     windows = (args.window,) if args.window else (30, 90, 365)
+    scope = "au" if args.au else ""
     s = comps.stats(args.key, args.state, windows=windows,
-                    currency=args.currency, condition=args.condition)
+                    currency=args.currency, condition=args.condition, scope=scope)
     if not s["total"]:
-        print(f"no comps stored for '{args.key}' yet — run: scrapehound comps collect")
+        where = " (AU-located)" if args.au else ""
+        print(f"no comps stored for '{args.key}'{where} yet — run: scrapehound comps collect")
         return 1
     span = f"  ·  {s['span'][0]} → {s['span'][1]}" if s.get("span") else ""
     cond = f"  ·  {s['condition']}" if s.get("condition") else ""
-    print(f"\n{args.key}  ({s['currency']})  ·  {s['total']} comps stored{span}{cond}")
+    market = "🇦🇺 AU-located" if args.au else "global"
+    print(f"\n{args.key}  ({s['currency']}, {market})  ·  {s['total']} comps stored{span}{cond}")
     print("market value = realized (auction + Buy It Now); Best-Offer "
           "asking prices excluded\n")
     cols = ["n", "min", "p50", "p90", "p95", "max"]

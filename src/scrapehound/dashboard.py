@@ -187,9 +187,11 @@ footer a{color:var(--mut);text-decoration:none}
   <div class="tabs">
     <button class="tab on" data-tab="tracking">Tracking</button>
     <button class="tab" data-tab="comps">Market value</button>
+    <button class="tab" data-tab="comps-au">🇦🇺 AU market</button>
   </div>
   <main id="app"></main>
   <main id="comps" class="hidden"></main>
+  <main id="comps-au" class="hidden"></main>
   <footer>Built by <a href="https://github.com/FocalChord/scrapehound">scrapehound</a> · <span id="gen"></span></footer>
 </div>
 <script>
@@ -245,8 +247,8 @@ function filter(){
     sec.classList.toggle("hidden", shown===0 && (query||saleOnly));
   });
 }
-// ---- Market value (comps) tab ----
-let COMPS=[], cwin=90;
+// ---- Market value (comps) tabs ----
+let COMPS=[], COMPS_AU=[], cwin=90;
 const m0=v=>v==null?"—":"$"+Number(v).toLocaleString(undefined,{maximumFractionDigits:0});
 function tile(label,val,big){return `<div class="tile${big?" big":""}"><div class="n">${val}</div><div class="l">${esc(label)}</div></div>`;}
 function histSVG(hist){
@@ -317,27 +319,34 @@ function soldList(c){
   return `<details class="sold"><summary><span class="car">▸</span>Show ${ls.length} sold listings (newest first)</summary>
     <div class="solds">${ls.map(soldRow).join("")}</div></details>`;
 }
-function renderComps(){
-  const root=document.getElementById("comps");
-  if(!COMPS.length){root.innerHTML='<div class="empty">No sold-price comps yet. Run <code>scrapehound comps collect</code>.</div>';return;}
+function renderComps(rootId, list, note){
+  const root=document.getElementById(rootId);
+  if(!list.length){root.innerHTML=`<div class="empty">${note||"No sold-price comps yet. Run <code>scrapehound comps collect</code>."}</div>`;return;}
   const sel=[30,90,365].map(w=>`<button class="wtab${w===cwin?" on":""}" data-w="${w}">${w}d</button>`).join("");
-  root.innerHTML=`<div class="wtabs">${sel}</div>`+COMPS.map(compPanel).join("");
-  root.querySelectorAll(".wtab").forEach(b=>b.onclick=()=>{cwin=+b.dataset.w;renderComps();});
+  const hdr=note?`<div class="sub" style="margin:4px 0 2px">${note}</div>`:"";
+  root.innerHTML=hdr+`<div class="wtabs">${sel}</div>`+list.map(compPanel).join("");
+  root.querySelectorAll(".wtab").forEach(b=>b.onclick=()=>{cwin=+b.dataset.w;renderComps(rootId,list,note);});
+}
+function renderActiveComps(){
+  renderComps("comps", COMPS);
+  renderComps("comps-au", COMPS_AU,
+    "🇦🇺 Sold by sellers <b>located in Australia</b> only — the local market (eBay's international sellers excluded). Sparse for globally-traded items.");
 }
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
-  const tracking=t.dataset.tab==="tracking";
+  const tab=t.dataset.tab, tracking=tab==="tracking";
   document.getElementById("app").classList.toggle("hidden",!tracking);
-  document.getElementById("comps").classList.toggle("hidden",tracking);
+  document.getElementById("comps").classList.toggle("hidden",tab!=="comps");
+  document.getElementById("comps-au").classList.toggle("hidden",tab!=="comps-au");
   document.querySelector(".toolbar").classList.toggle("hidden",!tracking);
-  if(!tracking)renderComps();
+  if(!tracking)renderActiveComps();
 }));
 document.getElementById("q").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();filter();});
 document.getElementById("saleonly").addEventListener("click",e=>{saleOnly=!saleOnly;e.currentTarget.classList.toggle("on",saleOnly);filter();});
 const themeBtn=document.getElementById("theme"), root=document.documentElement;
 if(localStorage.theme)root.dataset.theme=localStorage.theme;
 themeBtn.addEventListener("click",()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";localStorage.theme=root.dataset.theme;});
-fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;COMPS=d.comps||[];render();})
+fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;COMPS=d.comps||[];COMPS_AU=d.comps_au||[];render();})
   .catch(()=>{document.getElementById("app").innerHTML='<div class="empty">could not load data.json</div>';});
 </script></body></html>
 """
@@ -367,6 +376,7 @@ def build_site(out: str = "docs", config_dir: str = "config", state_dir: str = "
         data["sources"].append({"key": key, "type": s.type, "bot": s.bot,
                                 "notify": s.notify, "count": len(items), "items": items})
     data["comps"] = _build_comps(config_dir, state_dir)
+    data["comps_au"] = _build_comps(config_dir, state_dir, scope="au")
     (out_dir / "data.json").write_text(json.dumps(data, indent=1))
     (out_dir / "index.html").write_text(_INDEX_HTML)
     return out_dir
@@ -390,16 +400,17 @@ def _histogram(prices: list[float], bins: int = 12) -> list[dict]:
             for i, c in enumerate(counts)]
 
 
-def _build_comps(config_dir: str, state_dir: str) -> list[dict]:
-    """Per comps key: windowed stats, monthly p50 trend, and a 90d histogram."""
+def _build_comps(config_dir: str, state_dir: str, scope: str = "") -> list[dict]:
+    """Per comps key (for one market scope: "" global, "au" Australia-located):
+    windowed stats, monthly p50 trend, a 90d histogram, and the listing rows."""
     today = dt.datetime.now(dt.timezone.utc).date()
     out = []
     for key, s in load_comps(f"{config_dir}/sources.yaml").items():
-        st = comps_mod.stats(key, state_dir, today=today)
+        st = comps_mod.stats(key, state_dir, today=today, scope=scope)
         if not st["total"]:
             continue
         cur = st["currency"]
-        rows = comps_mod.CompStore(key, state_dir).load()
+        rows = comps_mod.CompStore(key, state_dir, scope).load()
         prices90 = comps_mod._window_prices(rows, 90, cur, None, today)
         listings = sorted(
             ({"title": r["title"], "price": r["price"], "condition": r.get("condition"),
@@ -415,7 +426,7 @@ def _build_comps(config_dir: str, state_dir: str) -> list[dict]:
             "total": st["total"],
             "span": st.get("span"),
             "windows": st["windows"],
-            "trend": comps_mod.monthly_trend(key, state_dir, currency=cur),
+            "trend": comps_mod.monthly_trend(key, state_dir, currency=cur, scope=scope),
             "hist": _histogram(prices90),
             "listings": listings,
         })

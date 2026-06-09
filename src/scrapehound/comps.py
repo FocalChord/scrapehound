@@ -96,10 +96,16 @@ def row_kind(attrs: dict) -> str:
 
 
 class CompStore:
-    """Append-only sold-comp store, deduped by item id (first capture wins)."""
+    """Append-only sold-comp store, deduped by item id (first capture wins).
 
-    def __init__(self, key: str, directory: Path | str = "state"):
-        self.path = Path(directory) / "comps" / f"{key}.jsonl"
+    `scope` separates collections of the same query: "" is the global market,
+    "au" is the Australia-located market (eBay located_in_country, with the
+    appended international section stripped). Each lands in its own file.
+    """
+
+    def __init__(self, key: str, directory: Path | str = "state", scope: str = ""):
+        name = f"{key}.{scope}.jsonl" if scope else f"{key}.jsonl"
+        self.path = Path(directory) / "comps" / name
 
     def load(self) -> list[dict]:
         if not self.path.exists():
@@ -123,21 +129,7 @@ class CompStore:
         return len(fresh)
 
 
-def collect(key: str, src: SourceConfig, state_dir: str = "state") -> tuple[int, int]:
-    """Scrape sold listings for a comps source and append new ones to the store.
-
-    Returns (added_this_run, total_in_store). Forces sold/completed on so the
-    config only needs the query + filters.
-    """
-    cls = base.REGISTRY.get(src.type)
-    if cls is None:
-        raise ValueError(f"unknown adapter type {src.type!r} for comps '{key}'")
-    opts = {**src.options(), "sold": True, "completed": True}
-    products = cls(opts).collect()
-    for p in products:
-        derive_attrs(p, src.derive)
-    products = [p for p in products if src.filter.matches(p)]
-
+def _rows_from_products(products) -> list[dict]:
     captured = _now_iso()
     rows = []
     for p in products:
@@ -167,9 +159,34 @@ def collect(key: str, src: SourceConfig, state_dir: str = "state") -> tuple[int,
             "shipping": a.get("shipping"),
             "free_shipping": bool(a.get("free_shipping")),
         })
-    store = CompStore(key, state_dir)
-    added = store.append_new(rows)
+    return rows
+
+
+def _collect_pass(key: str, src: SourceConfig, state_dir: str, scope: str,
+                  extra_opts: dict) -> tuple[int, int]:
+    cls = base.REGISTRY.get(src.type)
+    if cls is None:
+        raise ValueError(f"unknown adapter type {src.type!r} for comps '{key}'")
+    opts = {**src.options(), "sold": True, "completed": True, **extra_opts}
+    products = cls(opts).collect()
+    for p in products:
+        derive_attrs(p, src.derive)
+    products = [p for p in products if src.filter.matches(p)]
+    store = CompStore(key, state_dir, scope)
+    added = store.append_new(_rows_from_products(products))
     return added, len(store.load())
+
+
+def collect(key: str, src: SourceConfig, state_dir: str = "state") -> dict:
+    """Scrape sold listings into two stores: the global market and the
+    Australia-located market (eBay located_in_country, international section
+    stripped). Forces sold/completed on. Returns
+    {'global': (added, total), 'au': (added, total)}.
+    """
+    return {
+        "global": _collect_pass(key, src, state_dir, "", {}),
+        "au": _collect_pass(key, src, state_dir, "au", {"located_in_country": True}),
+    }
 
 
 def _window_rows(rows: list[dict], days: int, currency: str,
@@ -217,13 +234,14 @@ def _segment(window_rows: list[dict]) -> dict:
 
 def stats(key: str, state_dir: str = "state", windows: tuple[int, ...] = (30, 90, 365),
           currency: Optional[str] = None, condition: Optional[str] = None,
-          today: Optional[dt.date] = None) -> dict:
+          today: Optional[dt.date] = None, scope: str = "") -> dict:
     """Sale-type-segmented market-value stats per window for a comps key.
 
-    currency defaults to the most common in the store (sold listings can be a
-    mix; stats only make sense within one currency).
+    scope "" is the global market, "au" the Australia-located market. currency
+    defaults to the most common in the store (sold listings can be a mix; stats
+    only make sense within one currency).
     """
-    rows = CompStore(key, state_dir).load()
+    rows = CompStore(key, state_dir, scope).load()
     today = today or dt.datetime.now(dt.timezone.utc).date()
     if not rows:
         return {"key": key, "total": 0, "currency": currency, "windows": {}}
@@ -246,13 +264,13 @@ def stats(key: str, state_dir: str = "state", windows: tuple[int, ...] = (30, 90
 
 
 def monthly_trend(key: str, state_dir: str = "state",
-                  currency: Optional[str] = None) -> list[dict]:
+                  currency: Optional[str] = None, scope: str = "") -> list[dict]:
     """Per-month realized median (p50) + count, oldest→newest, for the trend.
 
     Uses realized sales (auction + fixed) only, so the trend tracks true
     clearing prices rather than Best-Offer asking prices.
     """
-    rows = CompStore(key, state_dir).load()
+    rows = CompStore(key, state_dir, scope).load()
     if not rows:
         return []
     if currency is None:

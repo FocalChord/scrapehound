@@ -55,8 +55,11 @@ class EbayAdapter(Adapter):
                 )
                 body = sess.get(url, referer=referer)
                 referer = url
+                # "located in country" => drop eBay's appended international section
+                if c.get("located_in_country"):
+                    body = core.local_segment(body)
                 if not core.parse_search(body, site):
-                    break  # empty page -> no more results
+                    break  # empty page (or no local results left) -> stop
                 bodies.append(body)
         finally:
             sess.close()
