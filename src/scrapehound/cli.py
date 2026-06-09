@@ -204,9 +204,20 @@ def _cmd_preview(argv) -> int:
     return 0
 
 
+def _cmd_dashboard(argv) -> int:
+    ap = argparse.ArgumentParser(prog="scrapehound dashboard")
+    ap.add_argument("--out", default="docs", help="output directory for the static site")
+    args = ap.parse_args(argv)
+    from .dashboard import build_site
+    out = build_site(args.out)
+    print(f"✓ built static dashboard in {out}/  (open {out}/index.html or serve it)")
+    return 0
+
+
 _COMMANDS = {
     "run": _cmd_run, "list": _cmd_list, "check": _cmd_check, "test-bot": _cmd_test_bot,
     "init": _cmd_init, "add": _cmd_add, "bot": _cmd_bot, "preview": _cmd_preview,
+    "dashboard": _cmd_dashboard,
 }
 
 

@@ -1,0 +1,36 @@
+name: pages
+
+on:
+  workflow_run:                       # rebuild after each scrape commits fresh state
+    workflows: [shoes, leica, apple]
+    types: [completed]
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["src/scrapehound/dashboard.py", ".github/workflows/pages.yml"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run scrapehound dashboard --out _site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
