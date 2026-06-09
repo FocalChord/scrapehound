@@ -28,8 +28,9 @@ def test_no_api_key_keeps_all(monkeypatch):
 
 
 def test_api_error_fails_open(monkeypatch):
+    # non-retryable error -> immediate fail-open (no long backoff loop)
     def boom(*a, **k):
-        raise httpx.ConnectError("down")
+        raise RuntimeError("down")
     monkeypatch.setattr(httpx, "post", boom)
     assert classify.match_titles("spec", ["a", "b"], api_key="x") == [True, True]
 

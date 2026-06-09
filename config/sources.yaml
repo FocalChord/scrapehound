@@ -234,49 +234,53 @@ comps:
     query: "contax t2"
     site: au
     pages: 4
-    filter:
+    filter:                                            # cheap pre-filter; `match` does the rest
       - {field: price, op: gte, value: 400}
       - {field: title, op: contains_any, value: [t2]}
-      - {field: title, op: not_contains,
-         value: [t3, case, manual, strap, cover, "for contax", parts, repair, leather, battery]}
+    match: >
+      A Contax T2 35mm compact film camera (titanium silver/black/gold, T2D data-
+      back variants OK). Exclude other Contax models (T3, TVS, G1, G2, S2, RTS,
+      Aria), lenses, straps, cases, manuals, and parts/repair/non-working listings.
 
   contax_t3:
     type: ebay
     query: "contax t3"
     site: au
     pages: 4
-    filter:
+    filter:                                            # cheap pre-filter; `match` does the rest
       - {field: price, op: gte, value: 600}
       - {field: title, op: contains_any, value: [t3]}
-      - {field: title, op: not_contains,
-         value: [t2, case, manual, strap, cover, "for contax", parts, repair, leather, battery]}
+    match: >
+      A Contax T3 35mm compact film camera (silver/black, single/double-tooth).
+      Exclude other Contax models (T2, TVS, G1, G2, S2, RTS), lenses, straps,
+      cases, manuals, and parts/repair/non-working listings.
 
   leica_q2:
     type: ebay
     query: "leica q2"
     site: au
     pages: 4
-    filter:
-      - {field: price, op: gte, value: 2500}           # standard Q2 body
+    filter:                                            # cheap pre-filter; `match` does the rest
+      - {field: price, op: gte, value: 2500}
       - {field: title, op: contains_any, value: [q2]}
-      - {field: title, op: not_contains,
-         value: [monochrom, reporter, case, grip, thumb, strap, "for leica",
-                 protector, screen, cap, battery]}
+    match: >
+      A standard Leica Q2 fixed-lens digital compact camera body. Exclude the Q2
+      Monochrom and Q2 Reporter special editions, the original Q / Q-P / Q3, and
+      accessories (cases, grips, thumb rests, straps, screen protectors, batteries).
 
   # A liquid item — sealed single Pokémon 151 Elite Trainer Box. Tight market,
-  # lots of AU sellers. Filters isolate the standard single ETB from empties,
-  # bundles, multipacks, and the pricier Pokémon Center variant.
+  # lots of AU sellers. `match` isolates the standard single ETB.
   pokemon_151_etb:
     type: ebay
     query: "151 elite trainer box"
     site: au
     pages: 4
-    filter:
+    filter:                                            # cheap pre-filter; `match` does the rest
       - {field: price, op: gte, value: 600}            # exclude empties/opened/bundles
       - {field: price, op: lte, value: 1400}           # exclude PC variant / multipacks
       - {field: title, op: contains_any, value: ["151"]}
-      - {field: title, op: contains_any, value: [etb, "elite trainer"]}
-      - {field: title, op: not_contains,
-         value: [empty, "no pack", "no card", "no hits", opened, "pokemon center",
-                 "pc etb", upc, "ultra premium", binder, chinese, greninja,
-                 "gift box", celebrations, "mega evolution", "x4", "x5", "x 4", "x 5"]}
+    match: >
+      A single, factory-sealed Pokémon Scarlet & Violet 151 Elite Trainer Box
+      (ETB). Exclude empty or opened boxes, "no packs/no cards" listings, booster
+      bundles, multi-box lots (x2/x3/x4/x5), binder collections, the Ultra Premium
+      Collection (UPC), Chinese/gift-box sets, and the Pokémon Center exclusive ETB.

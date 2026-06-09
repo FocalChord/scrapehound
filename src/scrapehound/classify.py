@@ -17,12 +17,28 @@ import logging
 import os
 
 import httpx
+from tenacity import retry, retry_if_exception, stop_after_attempt, wait_exponential
 
 log = logging.getLogger("scrapehound")
 
+
+def _retryable(exc: Exception) -> bool:
+    return (isinstance(exc, (httpx.TimeoutException, httpx.TransportError))
+            or (isinstance(exc, httpx.HTTPStatusError)
+                and exc.response.status_code in (429, 500, 502, 503, 529)))
+
+
+@retry(stop=stop_after_attempt(6), wait=wait_exponential(multiplier=2, min=2, max=45),
+       retry=retry_if_exception(_retryable), reraise=True)
+def _post(url: str, body: dict, api_key: str) -> httpx.Response:
+    """POST with backoff on 429/5xx — free-tier rate limits recover within a minute."""
+    r = httpx.post(url, json=body, headers={"x-goog-api-key": api_key}, timeout=60)
+    r.raise_for_status()
+    return r
+
 _ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-_DEFAULT_MODEL = "gemini-2.5-flash-lite"
-_CHUNK = 50  # titles per request
+_DEFAULT_MODEL = "gemini-2.5-flash"   # larger free-tier daily quota than flash-lite
+_CHUNK = 100  # titles per request — fewer calls keeps us under free-tier request/day caps
 
 _SYSTEM = (
     "You are a precise e-commerce listing classifier. You are given a TARGET "
@@ -81,9 +97,7 @@ def _classify_chunk(spec: str, titles: list[str], model: str,
     }
     url = _ENDPOINT.format(model=model)
     try:
-        r = httpx.post(url, json=body, headers={"x-goog-api-key": api_key},
-                       timeout=60)
-        r.raise_for_status()
+        r = _post(url, body, api_key)
         text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
         decisions = json.loads(text)
         if not isinstance(decisions, list):

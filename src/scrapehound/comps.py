@@ -172,13 +172,14 @@ def _collect_pass(key: str, src: SourceConfig, state_dir: str, scope: str,
     for p in products:
         derive_attrs(p, src.derive)
     products = [p for p in products if src.filter.matches(p)]
-    # optional plain-English semantic match (e.g. "Leica M6, not M2/M3/M5")
-    match_spec = src.options().get("match")
-    if match_spec:
-        from .classify import semantic_keep
-        products = semantic_keep(products, match_spec, key=lambda p: p.title)
     store = CompStore(key, state_dir, scope)
-    added = store.append_new(_rows_from_products(products))
+    seen = {r["item_id"] for r in store.load()}
+    fresh = [p for p in products if p.id not in seen]   # only classify NEW listings
+    match_spec = src.options().get("match")
+    if match_spec and fresh:
+        from .classify import semantic_keep
+        fresh = semantic_keep(fresh, match_spec, key=lambda p: p.title)
+    added = store.append_new(_rows_from_products(fresh))
     return added, len(store.load())
 
 
