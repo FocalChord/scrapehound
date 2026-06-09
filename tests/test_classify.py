@@ -6,8 +6,10 @@ import httpx
 from scrapehound import classify
 
 
-def _fake_response(decisions):
-    payload = {"candidates": [{"content": {"parts": [{"text": json.dumps(decisions)}]}}]}
+def _fake_response(decisions, *, start=1):
+    """decisions: list of bools -> the {n, keep} object array Gemini returns."""
+    objs = [{"n": start + i, "keep": d} for i, d in enumerate(decisions)]
+    payload = {"candidates": [{"content": {"parts": [{"text": json.dumps(objs)}]}}]}
     return httpx.Response(200, json=payload, request=httpx.Request("POST", "https://x"))
 
 
@@ -32,9 +34,13 @@ def test_api_error_fails_open(monkeypatch):
     assert classify.match_titles("spec", ["a", "b"], api_key="x") == [True, True]
 
 
-def test_length_mismatch_fails_open(monkeypatch):
-    monkeypatch.setattr(httpx, "post", lambda *a, **k: _fake_response([True]))  # too short
-    assert classify.match_titles("spec", ["a", "b", "c"], api_key="x") == [True, True, True]
+def test_missing_numbers_default_keep(monkeypatch):
+    # model returns a verdict only for listing 2 -> 1 and 3 default to keep
+    objs = [{"n": 2, "keep": False}]
+    payload = {"candidates": [{"content": {"parts": [{"text": json.dumps(objs)}]}}]}
+    monkeypatch.setattr(httpx, "post",
+                        lambda *a, **k: httpx.Response(200, json=payload, request=httpx.Request("POST", "https://x")))
+    assert classify.match_titles("spec", ["a", "b", "c"], api_key="x") == [True, False, True]
 
 
 def test_semantic_keep_filters(monkeypatch):

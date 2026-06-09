@@ -21,17 +21,26 @@ import httpx
 log = logging.getLogger("scrapehound")
 
 _ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-_DEFAULT_MODEL = "gemini-2.0-flash"
-_CHUNK = 80  # titles per request
+_DEFAULT_MODEL = "gemini-2.5-flash-lite"
+_CHUNK = 50  # titles per request
 
 _SYSTEM = (
     "You are a precise e-commerce listing classifier. You are given a TARGET "
     "description and a numbered list of marketplace listing titles. For EACH "
-    "title decide whether the listing genuinely matches the TARGET. Be strict: "
-    "reject different models/variants, accessories, parts, empties, or wrong "
-    "condition even if keywords overlap. Return a JSON array of booleans, one "
-    "per listing, in the same order — true = matches, false = does not."
+    "numbered title decide whether the listing genuinely matches the TARGET. Be "
+    "strict: reject different models/variants, accessories, parts, empties, or "
+    "wrong condition even if keywords overlap. Return a JSON array with one "
+    "object per listing: {\"n\": the listing number, \"keep\": true if it "
+    "matches the TARGET else false}. Include every listing number exactly once."
 )
+_SCHEMA = {
+    "type": "ARRAY",
+    "items": {
+        "type": "OBJECT",
+        "properties": {"n": {"type": "INTEGER"}, "keep": {"type": "BOOLEAN"}},
+        "required": ["n", "keep"],
+    },
+}
 
 
 def match_titles(spec: str, titles: list[str], *, model: str | None = None,
@@ -49,19 +58,17 @@ def match_titles(spec: str, titles: list[str], *, model: str | None = None,
     out: list[bool] = []
     for start in range(0, len(titles), _CHUNK):
         chunk = titles[start:start + _CHUNK]
-        decisions = _classify_chunk(spec, chunk, model, api_key)
-        if decisions is None or len(decisions) != len(chunk):
-            if decisions is not None:
-                log.warning("[match] response length %s != %d; keeping chunk",
-                            len(decisions) if decisions else None, len(chunk))
+        verdict = _classify_chunk(spec, chunk, model, api_key)  # {1-based n: keep}
+        if verdict is None:
             out.extend([True] * len(chunk))      # fail open for this chunk
         else:
-            out.extend(decisions)
+            # align by listing number; any missing number defaults to keep
+            out.extend(verdict.get(i + 1, True) for i in range(len(chunk)))
     return out
 
 
 def _classify_chunk(spec: str, titles: list[str], model: str,
-                    api_key: str) -> list[bool] | None:
+                    api_key: str) -> dict[int, bool] | None:
     listing_block = "\n".join(f"{i + 1}. {t}" for i, t in enumerate(titles))
     body = {
         "system_instruction": {"parts": [{"text": _SYSTEM}]},
@@ -69,7 +76,7 @@ def _classify_chunk(spec: str, titles: list[str], model: str,
         "generationConfig": {
             "temperature": 0,
             "responseMimeType": "application/json",
-            "responseSchema": {"type": "ARRAY", "items": {"type": "BOOLEAN"}},
+            "responseSchema": _SCHEMA,
         },
     }
     url = _ENDPOINT.format(model=model)
@@ -79,9 +86,10 @@ def _classify_chunk(spec: str, titles: list[str], model: str,
         r.raise_for_status()
         text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
         decisions = json.loads(text)
-        if isinstance(decisions, list):
-            return [bool(x) for x in decisions]
-        return None
+        if not isinstance(decisions, list):
+            return None
+        return {int(d["n"]): bool(d["keep"]) for d in decisions
+                if isinstance(d, dict) and "n" in d and "keep" in d}
     except Exception as e:  # noqa: BLE001  (fail open — never break collection)
         log.warning("[match] Gemini classify failed (%s); keeping chunk", e)
         return None
