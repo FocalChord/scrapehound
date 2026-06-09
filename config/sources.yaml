@@ -116,13 +116,34 @@ sources:
     url: "https://www.apple.com/au/shop/refurbished/mac"
     base_url: "https://www.apple.com"
     key: tiles
-    map:
+    map: &arefmap
       id: partNumber
       title: title
       price: price.currentPrice.raw_amount
       url: productDetailsUrl
       image: image.sources.0.srcSet
     # filter: [{field: title, op: contains_any, value: [Studio, Ultra]}]   # optional
+
+  apple_refurb_homepod:
+    type: embedded_json
+    bot: apple
+    notify: changes
+    url: "https://www.apple.com/au/shop/refurbished/homepod"
+    base_url: "https://www.apple.com"
+    key: tiles
+    map: *arefmap
+
+  # Refurb accessories is sparse today (just HomePods, watched above) — this
+  # source baselines it and pings when a NEW non-HomePod accessory appears.
+  apple_refurb_accessories:
+    type: embedded_json
+    bot: apple
+    notify: changes
+    url: "https://www.apple.com/au/shop/refurbished/accessories"
+    base_url: "https://www.apple.com"
+    key: tiles
+    map: *arefmap
+    filter: [{field: title, op: not_contains, value: [HomePod]}]
 
   # --- DigiDirect preloved Leica -> "leica" bot, all changes, no derive/filter ---
   leica_digidirect:
