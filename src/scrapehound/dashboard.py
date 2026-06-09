@@ -11,7 +11,8 @@ import datetime as dt
 import json
 from pathlib import Path
 
-from .config import load_sources
+from . import comps as comps_mod
+from .config import load_comps, load_sources
 
 _INDEX_HTML = r"""<!doctype html>
 <html lang="en" data-theme="dark"><head>
@@ -103,6 +104,31 @@ section.src{margin-top:34px}
 footer{color:var(--faint);font-size:13px;text-align:center;padding:40px 0;border-top:1px solid var(--line);margin-top:48px}
 footer a{color:var(--mut);text-decoration:none}
 .hidden{display:none!important}
+.tabs{display:flex;gap:6px;margin:26px 0 0;border-bottom:1px solid var(--line)}
+.tab{padding:9px 16px;border-radius:11px 11px 0 0;border:1px solid transparent;border-bottom:none;
+  background:transparent;color:var(--mut);cursor:pointer;font-size:14px;font-weight:600;font-family:inherit;transition:.18s;margin-bottom:-1px}
+.tab:hover{color:var(--txt)}
+.tab.on{color:var(--txt);background:var(--card);border-color:var(--line)}
+.cpanel{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+  border-radius:16px;padding:18px;margin-top:18px}
+.cpanel h2{margin:0 0 2px;font-size:18px;letter-spacing:-.01em}
+.cpanel .sub{color:var(--mut);font-size:13px;margin-bottom:14px}
+.cpanel .sub b{color:var(--txt)}
+.wtabs{display:flex;gap:6px;margin:6px 0 4px}
+.wtab{font-size:12px;padding:5px 11px;border-radius:8px;border:1px solid var(--line);background:var(--card);
+  color:var(--mut);cursor:pointer;font-family:inherit}
+.wtab.on{color:var(--txt);border-color:var(--acc)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:10px;margin-bottom:18px}
+.tile{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.tile .n{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.tile .l{font-size:11px;color:var(--mut);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+.tile.big{border-color:rgba(122,162,255,.35)}
+.tile.big .n{background:linear-gradient(120deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.charts{grid-template-columns:1fr}}
+.chart{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px}
+.chart h3{margin:0 0 8px;font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.chart svg{width:100%;height:auto;display:block}
 </style></head>
 <body>
 <div class="glow"></div>
@@ -132,7 +158,12 @@ footer a{color:var(--mut);text-decoration:none}
       <div class="toggle" id="saleonly"><span class="sw"></span><span>On sale only</span></div>
     </div>
   </div>
+  <div class="tabs">
+    <button class="tab on" data-tab="tracking">Tracking</button>
+    <button class="tab" data-tab="comps">Market value</button>
+  </div>
   <main id="app"></main>
+  <main id="comps" class="hidden"></main>
   <footer>Built by <a href="https://github.com/FocalChord/scrapehound">scrapehound</a> · <span id="gen"></span></footer>
 </div>
 <script>
@@ -188,12 +219,69 @@ function filter(){
     sec.classList.toggle("hidden", shown===0 && (query||saleOnly));
   });
 }
+// ---- Market value (comps) tab ----
+let COMPS=[], cwin=90;
+const m0=v=>v==null?"—":"$"+Number(v).toLocaleString(undefined,{maximumFractionDigits:0});
+function tile(label,val,big){return `<div class="tile${big?" big":""}"><div class="n">${val}</div><div class="l">${esc(label)}</div></div>`;}
+function histSVG(hist){
+  if(!hist||!hist.length)return '<div class="empty">—</div>';
+  const W=320,H=120,pad=18,n=hist.length,maxN=Math.max(...hist.map(b=>b.n),1),bw=(W-pad*2)/n;
+  const bars=hist.map((b,i)=>{const h=(H-pad-14)*(b.n/maxN),x=pad+i*bw,y=H-14-h;
+    return `<rect x="${(x+1).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${Math.max(h,0).toFixed(1)}" rx="2" fill="url(#cg)"><title>${m0(b.x0)}–${m0(b.x1)}: ${b.n}</title></rect>`;}).join("");
+  return `<svg viewBox="0 0 ${W} ${H}"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#7aa2ff"/><stop offset="1" stop-color="#b794ff"/></linearGradient></defs>${bars}
+    <text x="${pad}" y="${H-2}" fill="#8b93a3" font-size="9">${m0(hist[0].x0)}</text>
+    <text x="${W-pad}" y="${H-2}" text-anchor="end" fill="#8b93a3" font-size="9">${m0(hist[hist.length-1].x1)}</text></svg>`;
+}
+function trendSVG(trend){
+  const pts=(trend||[]).filter(t=>t.p50!=null);
+  if(!pts.length)return '<div class="empty">—</div>';
+  const W=320,H=120,pad=24,ys=pts.map(p=>p.p50),ymin=Math.min(...ys),ymax=Math.max(...ys),span=(ymax-ymin)||1;
+  const X=i=>pad+(pts.length===1?(W-2*pad)/2:i*(W-2*pad)/(pts.length-1));
+  const Y=v=>H-18-(H-30)*((v-ymin)/span);
+  const line=pts.map((p,i)=>`${i?"L":"M"}${X(i).toFixed(1)} ${Y(p.p50).toFixed(1)}`).join(" ");
+  const area=`M${X(0).toFixed(1)} ${H-18} `+pts.map((p,i)=>`L${X(i).toFixed(1)} ${Y(p.p50).toFixed(1)}`).join(" ")+` L${X(pts.length-1).toFixed(1)} ${H-18} Z`;
+  const dots=pts.map((p,i)=>`<circle cx="${X(i).toFixed(1)}" cy="${Y(p.p50).toFixed(1)}" r="3" fill="#7aa2ff"><title>${esc(p.month)}: ${m0(p.p50)} (n=${p.n})</title></circle>`).join("");
+  const labs=pts.map((p,i)=>`<text x="${X(i).toFixed(1)}" y="${H-4}" text-anchor="middle" fill="#5b626f" font-size="8">${esc(p.month.slice(2))}</text>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}"><path d="${area}" fill="rgba(122,162,255,.12)"/>
+    <path d="${line}" fill="none" stroke="#7aa2ff" stroke-width="2"/>${dots}${labs}
+    <text x="2" y="11" fill="#8b93a3" font-size="9">${m0(ymax)}</text>
+    <text x="2" y="${H-20}" fill="#8b93a3" font-size="9">${m0(ymin)}</text></svg>`;
+}
+function compPanel(c){
+  const st=c.windows[cwin]||{};
+  const span=c.span?`${c.span[0]} → ${c.span[1]}`:"";
+  const tiles=st.n?[tile("market value · p50",m0(st.p50),true),tile("p90",m0(st.p90)),
+    tile("p95",m0(st.p95)),tile("min",m0(st.min)),tile("max",m0(st.max)),tile("sales",st.n)].join("")
+    :`<div class="empty">no sales in the ${cwin}-day window</div>`;
+  return `<div class="cpanel"><h2>${esc(c.key)}</h2>
+    <div class="sub">“${esc(c.query||"")}” · <b>${esc(c.currency)}</b> · ${c.total} comps${span?" · "+esc(span):""}</div>
+    <div class="tiles">${tiles}</div>
+    <div class="charts">
+      <div class="chart"><h3>Price distribution (90d)</h3>${histSVG(c.hist)}</div>
+      <div class="chart"><h3>Median price by month</h3>${trendSVG(c.trend)}</div></div></div>`;
+}
+function renderComps(){
+  const root=document.getElementById("comps");
+  if(!COMPS.length){root.innerHTML='<div class="empty">No sold-price comps yet. Run <code>scrapehound comps collect</code>.</div>';return;}
+  const sel=[30,90,365].map(w=>`<button class="wtab${w===cwin?" on":""}" data-w="${w}">${w}d</button>`).join("");
+  root.innerHTML=`<div class="wtabs">${sel}</div>`+COMPS.map(compPanel).join("");
+  root.querySelectorAll(".wtab").forEach(b=>b.onclick=()=>{cwin=+b.dataset.w;renderComps();});
+}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t));
+  const tracking=t.dataset.tab==="tracking";
+  document.getElementById("app").classList.toggle("hidden",!tracking);
+  document.getElementById("comps").classList.toggle("hidden",tracking);
+  document.querySelector(".toolbar").classList.toggle("hidden",!tracking);
+  if(!tracking)renderComps();
+}));
 document.getElementById("q").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();filter();});
 document.getElementById("saleonly").addEventListener("click",e=>{saleOnly=!saleOnly;e.currentTarget.classList.toggle("on",saleOnly);filter();});
 const themeBtn=document.getElementById("theme"), root=document.documentElement;
 if(localStorage.theme)root.dataset.theme=localStorage.theme;
 themeBtn.addEventListener("click",()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";localStorage.theme=root.dataset.theme;});
-fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;render();})
+fetch("data.json").then(r=>r.json()).then(d=>{DATA=d;COMPS=d.comps||[];render();})
   .catch(()=>{document.getElementById("app").innerHTML='<div class="empty">could not load data.json</div>';});
 </script></body></html>
 """
@@ -222,6 +310,49 @@ def build_site(out: str = "docs", config_dir: str = "config", state_dir: str = "
         items.sort(key=lambda x: float(x["price"]) if x["price"] else 1e12)
         data["sources"].append({"key": key, "type": s.type, "bot": s.bot,
                                 "notify": s.notify, "count": len(items), "items": items})
+    data["comps"] = _build_comps(config_dir, state_dir)
     (out_dir / "data.json").write_text(json.dumps(data, indent=1))
     (out_dir / "index.html").write_text(_INDEX_HTML)
     return out_dir
+
+
+def _histogram(prices: list[float], bins: int = 12) -> list[dict]:
+    """Bin sale prices for a distribution chart, clipping the top to p95 so a
+    single outlier doesn't flatten the bars."""
+    if not prices:
+        return []
+    lo = min(prices)
+    hi = comps_mod.percentile(prices, 0.95) or max(prices)
+    if hi <= lo:
+        hi = lo + 1
+    width = (hi - lo) / bins
+    counts = [0] * bins
+    for p in prices:
+        idx = min(int((min(p, hi) - lo) / width), bins - 1)
+        counts[max(idx, 0)] += 1
+    return [{"x0": round(lo + i * width), "x1": round(lo + (i + 1) * width), "n": c}
+            for i, c in enumerate(counts)]
+
+
+def _build_comps(config_dir: str, state_dir: str) -> list[dict]:
+    """Per comps key: windowed stats, monthly p50 trend, and a 90d histogram."""
+    today = dt.datetime.now(dt.timezone.utc).date()
+    out = []
+    for key, s in load_comps(f"{config_dir}/sources.yaml").items():
+        st = comps_mod.stats(key, state_dir, today=today)
+        if not st["total"]:
+            continue
+        cur = st["currency"]
+        rows = comps_mod.CompStore(key, state_dir).load()
+        prices90 = comps_mod._window_prices(rows, 90, cur, None, today)
+        out.append({
+            "key": key,
+            "query": s.options().get("query"),
+            "currency": cur,
+            "total": st["total"],
+            "span": st.get("span"),
+            "windows": st["windows"],
+            "trend": comps_mod.monthly_trend(key, state_dir, currency=cur),
+            "hist": _histogram(prices90),
+        })
+    return out

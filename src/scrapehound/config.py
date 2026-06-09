@@ -63,3 +63,11 @@ def load_sources(path: Path | str = CONFIG_DIR / "sources.yaml") -> dict[str, So
 def load_bots(path: Path | str = CONFIG_DIR / "bots.yaml") -> dict[str, BotConfig]:
     data = yaml.safe_load(Path(path).read_text()) or {}
     return {k: BotConfig(**v) for k, v in _section(data, "bots").items()}
+
+
+def load_comps(path: Path | str = CONFIG_DIR / "sources.yaml") -> dict[str, SourceConfig]:
+    """Sold-price comp sources (a `comps:` section). Reuses SourceConfig; the
+    collector forces sold/completed on, so only query + filter matter here."""
+    data = yaml.safe_load(Path(path).read_text()) or {}
+    comps = data.get("comps") or {}
+    return {k: SourceConfig(**v) for k, v in comps.items()}

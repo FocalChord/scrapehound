@@ -18,7 +18,7 @@ import sys
 
 from . import pipeline
 from .adapters import base
-from .config import init_env, load_bots, load_sources
+from .config import init_env, load_bots, load_comps, load_sources
 
 log = logging.getLogger("scrapehound")
 
@@ -204,6 +204,79 @@ def _cmd_preview(argv) -> int:
     return 0
 
 
+def _cmd_comps(argv) -> int:
+    sub = argv[0] if argv else "stats"
+    rest = argv[1:]
+    if sub == "collect":
+        return _comps_collect(rest)
+    if sub == "stats":
+        return _comps_stats(rest)
+    print(f"unknown comps subcommand '{sub}'; use: collect | stats")
+    return 2
+
+
+def _comps_collect(argv) -> int:
+    from . import comps
+    ap = argparse.ArgumentParser(prog="scrapehound comps collect")
+    ap.add_argument("--key", help="collect only this comps source")
+    ap.add_argument("--config", default="config")
+    ap.add_argument("--state", default="state")
+    args = ap.parse_args(argv)
+    init_env()
+    sources = load_comps(f"{args.config}/sources.yaml")
+    if not sources:
+        print("no `comps:` sources configured in sources.yaml")
+        return 1
+    if args.key and args.key not in sources:
+        print(f"✗ unknown comps source '{args.key}'; have: {list(sources)}")
+        return 1
+    for key, src in sources.items():
+        if args.key and key != args.key:
+            continue
+        try:
+            added, total = comps.collect(key, src, args.state)
+            print(f"  {key:22} +{added} new  (store: {total})")
+        except Exception as e:  # noqa: BLE001
+            log.warning("[comps:%s] ERROR: %s", key, e)
+    return 0
+
+
+def _comps_stats(argv) -> int:
+    from . import comps
+    ap = argparse.ArgumentParser(prog="scrapehound comps stats")
+    ap.add_argument("key", help="comps source key")
+    ap.add_argument("--window", type=int, help="single window in days (else 30/90/365)")
+    ap.add_argument("--currency", help="restrict to a currency (default: most common)")
+    ap.add_argument("--condition", help="restrict to a condition (e.g. 'Pre-owned')")
+    ap.add_argument("--state", default="state")
+    args = ap.parse_args(argv)
+    windows = (args.window,) if args.window else (30, 90, 365)
+    s = comps.stats(args.key, args.state, windows=windows,
+                    currency=args.currency, condition=args.condition)
+    if not s["total"]:
+        print(f"no comps stored for '{args.key}' yet — run: scrapehound comps collect")
+        return 1
+    span = f"  ·  {s['span'][0]} → {s['span'][1]}" if s.get("span") else ""
+    cond = f"  ·  {s['condition']}" if s.get("condition") else ""
+    print(f"\n{args.key}  ({s['currency']})  ·  {s['total']} comps stored{span}{cond}\n")
+    cols = ["n", "min", "p50", "p90", "p95", "max", "mean"]
+    print(f"  {'window':>8}  " + "  ".join(f"{c:>9}" for c in cols))
+    print(f"  {'-'*8}  " + "  ".join("-" * 9 for _ in cols))
+    for w in windows:
+        st = s["windows"][w]
+        label = f"{w}d"
+        if not st.get("n"):
+            print(f"  {label:>8}  " + f"{'0':>9}" + "  (no sales in window)")
+            continue
+        cells = []
+        for c in cols:
+            v = st.get(c)
+            cells.append(f"{v:>9}" if c == "n" else f"{('$'+format(v, ',.0f')):>9}")
+        print(f"  {label:>8}  " + "  ".join(cells))
+    print()
+    return 0
+
+
 def _cmd_dashboard(argv) -> int:
     ap = argparse.ArgumentParser(prog="scrapehound dashboard")
     ap.add_argument("--out", default="docs", help="output directory for the static site")
@@ -217,7 +290,7 @@ def _cmd_dashboard(argv) -> int:
 _COMMANDS = {
     "run": _cmd_run, "list": _cmd_list, "check": _cmd_check, "test-bot": _cmd_test_bot,
     "init": _cmd_init, "add": _cmd_add, "bot": _cmd_bot, "preview": _cmd_preview,
-    "dashboard": _cmd_dashboard,
+    "comps": _cmd_comps, "dashboard": _cmd_dashboard,
 }
 
 

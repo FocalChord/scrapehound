@@ -195,3 +195,31 @@ sources:
       url: "a.result@href"
       image: "img[itemprop='image']@src"
       sku: "a.result@data-objectid"
+
+# --- Sold-price comps: accumulate eBay sold listings -> rolling market value ---
+# eBay only shows ~90 days of sold data, so `scrapehound comps collect` runs on a
+# schedule and appends new sold points (deduped) to state/comps/<key>.jsonl. Query
+# stats with `scrapehound comps stats <key>`. Filters strip accessories so the
+# percentiles reflect the actual item's market value, not covers/manuals/parts.
+comps:
+  pokemon_heartgold:
+    type: ebay
+    query: "pokemon heartgold cib"
+    site: au
+    pages: 4
+    filter:
+      - {field: price, op: gte, value: 150}            # drop loose carts / accessories
+      - {field: title, op: contains_any, value: [heartgold, heart gold]}
+      - {field: title, op: not_contains,
+         value: [empty, "manual only", "case only", "box only", repro, reproduction, poster]}
+
+  leica_m6:
+    type: ebay
+    query: "leica m6"
+    site: au
+    pages: 4
+    filter:
+      - {field: price, op: gte, value: 1500}           # camera bodies, not accessories
+      - {field: title, op: not_contains,
+         value: [cover, plate, strap, case, book, manual, leicavit, winder, grip,
+                 "for leica", battery, cap, hood, filter]}

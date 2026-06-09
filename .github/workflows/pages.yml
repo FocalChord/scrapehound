@@ -2,7 +2,7 @@ name: pages
 
 on:
   workflow_run:                       # rebuild after each scrape commits fresh state
-    workflows: [shoes, leica, apple]
+    workflows: [shoes, leica, apple, ebay, comps]
     types: [completed]
   workflow_dispatch: {}
   push:

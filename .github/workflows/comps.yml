@@ -1,0 +1,36 @@
+name: comps
+
+on:
+  schedule:
+    - cron: "23 2 * * *"   # daily; accumulate eBay sold comps toward a rolling year
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: comps
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      # eBay sold-comp collection is HTTP-only (curl_cffi) — no browser needed.
+      - run: uv run scrapehound comps collect
+      - name: Commit comps
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/comps/
+          git diff --cached --quiet && exit 0
+          git commit -m "update comps [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --no-rebase -X ours -q origin main || true
+            git push && exit 0
+            sleep $((RANDOM % 6 + 3))
+          done
+          echo "comps push raced out; next run will persist"; exit 0
