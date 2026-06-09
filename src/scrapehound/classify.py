@@ -37,8 +37,8 @@ def _post(url: str, body: dict, api_key: str) -> httpx.Response:
     return r
 
 _ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-_DEFAULT_MODEL = "gemini-2.5-flash"   # larger free-tier daily quota than flash-lite
-_CHUNK = 100  # titles per request — fewer calls keeps us under free-tier request/day caps
+_DEFAULT_MODEL = "gemini-2.5-flash-lite"   # cheapest ($0.10/$0.40); paid tier lifts the rate caps
+_CHUNK = 100  # titles per request — fewer, larger calls keep request volume (and cost) low
 
 _SYSTEM = (
     "You are a precise e-commerce listing classifier. You are given a TARGET "
