@@ -95,6 +95,7 @@ section.src{margin-top:34px}
 .off{font-size:11px;font-weight:700;color:#fff;background:linear-gradient(120deg,var(--sale),#ff8f6b);
   border-radius:999px;padding:2px 8px;margin-left:auto}
 .chips{display:flex;flex-wrap:wrap;gap:5px}
+.age{font-size:11px;color:var(--faint);margin-top:auto;padding-top:2px}
 .chip{font-size:11px;color:var(--mut);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:7px;padding:2px 7px}
 [data-theme="light"] .chip{background:rgba(10,12,20,.03)}
 .chip.ok{color:var(--ok);border-color:rgba(55,211,153,.3)}
@@ -202,6 +203,17 @@ const money=v=>v==null?"":"$"+Number(v).toLocaleString(undefined,{minimumFractio
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let DATA=null, saleOnly=false, query="";
 
+function ago(iso){
+  if(!iso) return "";
+  const t=Date.parse(iso); if(isNaN(t)) return "";
+  const days=Math.floor((Date.now()-t)/86400000);
+  if(days<=0) return "listed today";
+  if(days===1) return "listed 1 day ago";
+  if(days<7) return `listed ${days} days ago`;
+  if(days<31) return `listed ${Math.floor(days/7)}w ago`;
+  if(days<365) return `listed ${Math.floor(days/30)}mo ago`;
+  return `listed ${Math.floor(days/365)}y ago`;
+}
 function cardHTML(it){
   const chips=Object.entries(it.attrs||{}).filter(([,v])=>v!=null&&v!==""&&(!Array.isArray(v)||v.length))
     .slice(0,4).map(([k,v])=>{const val=Array.isArray(v)?v.join("/"):v;
@@ -211,8 +223,10 @@ function cardHTML(it){
     it.on_sale?`<span class="was">${money(it.was_price)}</span><span class="off">-${it.percent_off}%</span>`:""}</div>`:"";
   const thumb=it.image?`<div class="thumb"><img loading="lazy" src="${esc(it.image)}" onerror="this.parentElement.classList.add('none');this.remove()"></div>`
                       :`<div class="thumb none">◎</div>`;
+  const age=ago(it.first_seen);
+  const aged=age?`<span class="age" title="first seen ${esc(it.first_seen)}${it.last_seen?" · last seen "+esc(it.last_seen):""}">${age}</span>`:"";
   return `<a class="card" href="${esc(it.url||"#")}" target="_blank" rel="noopener" data-t="${esc((it.title||"").toLowerCase())}" data-sale="${it.on_sale?1:0}">
-    ${thumb}<span class="title">${esc(it.title)}</span>${price}<div class="chips">${chips}</div></a>`;
+    ${thumb}<span class="title">${esc(it.title)}</span>${price}<div class="chips">${chips}</div>${aged}</a>`;
 }
 function render(){
   const items=DATA.sources.flatMap(s=>s.items);
@@ -386,6 +400,7 @@ def build_site(out: str = "docs", config_dir: str = "config", state_dir: str = "
                 "on_sale": on_sale,
                 "percent_off": round((1 - float(price) / float(was)) * 100) if on_sale else None,
                 "url": r.get("url"), "image": r.get("image"), "attrs": r.get("attrs", {}),
+                "first_seen": r.get("first_seen"), "last_seen": r.get("last_seen"),
             })
         items.sort(key=lambda x: float(x["price"]) if x["price"] else 1e12)
         data["sources"].append({"key": key, "type": s.type, "bot": s.bot,
