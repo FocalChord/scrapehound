@@ -59,25 +59,29 @@ class Store:
         return (low, when) if low is not None else None
 
     def save(self, products: list[Product], scraped_at: str) -> None:
-        """Write the snapshot and append history — but only record real changes.
+        """Write the snapshot and append history, recording only real changes.
 
-        The snapshot stays byte-identical across no-op scrapes (unchanged items
-        keep their prior scraped_at, so git sees no diff), and history gets one
-        row per *price change*, not one per scrape. Both keep all-time-low intact.
+        Each snapshot item carries `first_seen` (full timestamp, set once and
+        never changed) and `last_seen` (date — "still listed as of"). last_seen
+        is date-granular so the file only changes once a day, not every scrape;
+        otherwise it's byte-stable until a price/field actually moves. History
+        appends one row per *price change*. All keep all-time-low intact.
         """
         self.dir.mkdir(parents=True, exist_ok=True)
         previous = self.load()
         _MISSING = object()
+        day = scraped_at[:10]                       # YYYY-MM-DD
         latest: dict = {}
         changed: list[Product] = []
         for p in products:
             d = p.model_dump(mode="json")
+            d.pop("scraped_at", None)               # volatile per-run ts -> not stored
             prev = previous.get(p.key)
-            if prev is not None and _without_ts(d) == _without_ts(prev):
-                d["scraped_at"] = prev.get("scraped_at", d.get("scraped_at"))  # no churn
+            d["first_seen"] = (prev or {}).get("first_seen") or scraped_at
+            d["last_seen"] = day
             latest[p.key] = d
             prev_price = prev.get("price") if prev else _MISSING
-            if prev_price != d.get("price"):                                   # new or moved
+            if prev_price != d.get("price"):        # new listing or price moved
                 changed.append(p)
         self.state_path.write_text(json.dumps(latest, indent=2, sort_keys=True))
         if changed:
@@ -102,7 +106,3 @@ class Store:
         if len(kept) != len(rows):
             self.history_path.write_text("".join(json.dumps(r) + "\n" for r in kept))
         return len(rows) - len(kept)
-
-
-def _without_ts(d: dict) -> dict:
-    return {k: v for k, v in d.items() if k != "scraped_at"}

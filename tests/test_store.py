@@ -20,12 +20,21 @@ def test_history_appends_only_on_price_change(tmp_path):
     assert st.all_time_low("s:a") == Decimal("90.00")
 
 
-def test_snapshot_byte_stable_on_noop(tmp_path):
+def test_snapshot_stable_within_day_tracks_first_and_last_seen(tmp_path):
     st = Store("s", tmp_path)
     st.save([P("a", 100)], "2026-01-01T00:00:00+00:00")
     snap1 = st.state_path.read_text()
-    st.save([P("a", 100)], "2026-02-02T09:09:09+00:00")   # same data, later ts
-    assert st.state_path.read_text() == snap1             # no git churn
+    st.save([P("a", 100)], "2026-01-01T09:30:00+00:00")   # same day, no change
+    assert st.state_path.read_text() == snap1             # byte-stable -> no churn
+    rec = json.loads(snap1)["s:a"]
+    assert rec["first_seen"] == "2026-01-01T00:00:00+00:00"
+    assert rec["last_seen"] == "2026-01-01"
+    assert "scraped_at" not in rec                        # volatile field not stored
+
+    st.save([P("a", 100)], "2026-01-05T08:00:00+00:00")   # next day, still listed
+    rec2 = json.loads(st.state_path.read_text())["s:a"]
+    assert rec2["first_seen"] == "2026-01-01T00:00:00+00:00"  # unchanged
+    assert rec2["last_seen"] == "2026-01-05"                  # bumped
 
 
 def test_compact_collapses_runs_losslessly(tmp_path):
