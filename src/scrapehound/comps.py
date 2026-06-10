@@ -150,6 +150,14 @@ class CompStore:
         return len(fresh)
 
 
+def _item_url(url: str | None) -> str:
+    """Clean /itm/<id> link, with orig_cvip=true so eBay shows the original
+    ended listing instead of redirecting catalog-matched items to the product
+    (ePID) aggregation page for logged-in users."""
+    base = (url or "").split("?")[0]
+    return f"{base}?orig_cvip=true" if base else base
+
+
 def _rows_from_products(products) -> list[dict]:
     captured = _now_iso()
     rows = []
@@ -164,7 +172,7 @@ def _rows_from_products(products) -> list[dict]:
             "price": float(p.price),
             "currency": p.currency,
             "condition": a.get("condition"),
-            "url": (p.url or "").split("?")[0],   # clean /itm/<id> link to the sold listing
+            "url": _item_url(p.url),               # ended-listing link (defeats catalog redirect)
             "sold_date": sold.isoformat(),
             "captured_at": captured,
             # sale type — distinguishes true clearing prices from asking prices
