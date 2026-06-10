@@ -94,6 +94,7 @@ class EbayAdapter(Adapter):
                         "free_shipping": d["free_shipping"],
                         "sold": d["is_sold"],
                         "sold_date": d["sold_date"],
+                        "catalog": d.get("catalog"),
                     },
                 ))
         return products

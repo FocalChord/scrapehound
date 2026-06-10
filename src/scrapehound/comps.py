@@ -150,14 +150,6 @@ class CompStore:
         return len(fresh)
 
 
-def _item_url(url: str | None) -> str:
-    """Clean /itm/<id> link, with orig_cvip=true so eBay shows the original
-    ended listing instead of redirecting catalog-matched items to the product
-    (ePID) aggregation page for logged-in users."""
-    base = (url or "").split("?")[0]
-    return f"{base}?orig_cvip=true" if base else base
-
-
 def _rows_from_products(products) -> list[dict]:
     captured = _now_iso()
     rows = []
@@ -172,7 +164,7 @@ def _rows_from_products(products) -> list[dict]:
             "price": float(p.price),
             "currency": p.currency,
             "condition": a.get("condition"),
-            "url": _item_url(p.url),               # ended-listing link (defeats catalog redirect)
+            "url": (p.url or "").split("?")[0],    # clean /itm/<id> link to the sold listing
             "sold_date": sold.isoformat(),
             "captured_at": captured,
             # sale type — distinguishes true clearing prices from asking prices
@@ -201,6 +193,9 @@ def _collect_pass(key: str, src: SourceConfig, state_dir: str, scope: str,
     for p in products:
         derive_attrs(p, src.derive)
     products = [p for p in products if src.filter.matches(p)]
+    # drop catalog-matched listings: their ended pages redirect to the eBay
+    # product (ePID) page and their titles are genericized (low-quality comps)
+    products = [p for p in products if not p.attrs.get("catalog")]
     store = CompStore(key, state_dir, scope)
     match_spec = src.options().get("match")
     # never re-classify: skip ids already stored (kept) or in the seen ledger (rejected)

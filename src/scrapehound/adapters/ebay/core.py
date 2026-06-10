@@ -526,10 +526,20 @@ def parse_search(body, site):
         image_url = ("https://i.ebayimg.com/images/g/%s/s-l500.jpg" % im.group(1)
                      if im else None)
 
+        # Strongly catalog-matched listings get eBay's generic catalog title —
+        # model name + numeric MPN in parens, e.g. "Leica Q2 ... Black (19050)".
+        # The seller's real title (condition/specifics) is lost, and for ended
+        # items eBay redirects logged-in users to the product (ePID) page. Flag
+        # so comps can drop them. (Narrow on purpose: seller-titled listings with
+        # catalog product-ratings do NOT redirect — e.g. sealed TCG — so excluding
+        # those would needlessly shrink liquid markets.)
+        catalog = bool(re.search(r"\(\d{5,6}\)\s*$", title or ""))
+
         listings.append({
             "item_id": item_id,
             "title": title,
             "url": url,
+            "catalog": catalog,
             "price": price_val,
             "price_raw": price_raw,
             "currency": currency,
