@@ -286,6 +286,20 @@ def _comps_stats(argv) -> int:
     return 0
 
 
+def _cmd_compact(argv) -> int:
+    """Collapse duplicate history rows (one per price change, not per scrape)."""
+    from .store import Store
+    sources, _ = _load()
+    total = 0
+    for key in sources:
+        removed = Store(key).compact_history()
+        if removed:
+            print(f"  {key:24} -{removed} duplicate rows")
+        total += removed
+    print(f"✓ removed {total} duplicate history row(s)")
+    return 0
+
+
 def _cmd_dashboard(argv) -> int:
     ap = argparse.ArgumentParser(prog="scrapehound dashboard")
     ap.add_argument("--out", default="docs", help="output directory for the static site")
@@ -299,7 +313,7 @@ def _cmd_dashboard(argv) -> int:
 _COMMANDS = {
     "run": _cmd_run, "list": _cmd_list, "check": _cmd_check, "test-bot": _cmd_test_bot,
     "init": _cmd_init, "add": _cmd_add, "bot": _cmd_bot, "preview": _cmd_preview,
-    "comps": _cmd_comps, "dashboard": _cmd_dashboard,
+    "comps": _cmd_comps, "compact": _cmd_compact, "dashboard": _cmd_dashboard,
 }
 
 
