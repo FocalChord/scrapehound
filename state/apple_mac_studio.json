@@ -2,14 +2,15 @@
   "apple_mac_studio:MU963X/A": {
     "attrs": {
       "pickup": "ineligible",
-      "ships": "14/08/2026 \u2013 21/08/2026 \u2014 Free"
+      "ships": "18/08/2026 \u2013 25/08/2026 \u2014 Free"
     },
     "currency": "AUD",
+    "first_seen": "2026-06-10T12:11:18+00:00",
     "id": "MU963X/A",
     "image": null,
     "in_stock": true,
+    "last_seen": "2026-06-12",
     "price": null,
-    "scraped_at": "2026-06-10T06:54:41+00:00",
     "source": "apple_mac_studio",
     "title": "Mac Studio",
     "url": "https://www.apple.com/au/shop/buy",
@@ -19,14 +20,15 @@
   "apple_mac_studio:MU973X/A": {
     "attrs": {
       "pickup": "ineligible",
-      "ships": "16-18 weeks"
+      "ships": "12-14 weeks"
     },
     "currency": "AUD",
+    "first_seen": "2026-06-10T12:11:18+00:00",
     "id": "MU973X/A",
     "image": null,
     "in_stock": true,
+    "last_seen": "2026-06-12",
     "price": null,
-    "scraped_at": "2026-06-10T06:54:41+00:00",
     "source": "apple_mac_studio",
     "title": "Mac Studio",
     "url": "https://www.apple.com/au/shop/buy",
