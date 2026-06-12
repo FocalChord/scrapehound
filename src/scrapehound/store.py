@@ -19,6 +19,13 @@ class Store:
         self.state_path = self.dir / f"{source}.json"
         self.history_path = self.dir / f"{source}.history.jsonl"
 
+    def exists(self) -> bool:
+        """True once this source has been scraped at least once (state file
+        written). Distinguishes a real first run from a previously-empty baseline,
+        so a source that was empty (e.g. all items filtered out) still alerts when
+        its first real item appears."""
+        return self.state_path.exists()
+
     def load(self) -> dict:
         if self.state_path.exists():
             return json.loads(self.state_path.read_text() or "{}")

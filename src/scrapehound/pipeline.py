@@ -59,9 +59,9 @@ def run(sources: dict[str, SourceConfig], bots: dict[str, BotConfig], *,
 
         if summary:
             _emit(bot, summary_text(products, key), dry_run)
-        elif not previous:
+        elif not store.exists():
             log.info("[%s] first run, establishing baseline", key)
-        elif not products:
+        elif not products and previous:
             log.warning("[%s] empty scrape but %d known previously; skipping",
                         key, len(previous))
             continue
