@@ -104,6 +104,21 @@
     "variants": [],
     "was_price": null
   },
+  "leica_digidirect:540091": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-06-15T13:39:18+00:00",
+    "id": "540091",
+    "image": "https://www.digidirect.com.au/media/catalog/product/1/7/179274.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
+    "in_stock": true,
+    "last_seen": "2026-06-15",
+    "price": "284.05",
+    "source": "leica_digidirect",
+    "title": "Used Meyer-Optik Trioplan 50mm f2.9 lens in Leica M Mount SN 1640697",
+    "url": "https://www.digidirect.com.au/used-meyer-optik-trioplan-50mm-f2-9-lens-in-leica-m-mount-sn-1640697",
+    "variants": [],
+    "was_price": "299.00"
+  },
   "leica_digidirect:540214": {
     "attrs": {},
     "currency": "AUD",
