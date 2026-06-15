@@ -119,21 +119,6 @@
     "variants": [],
     "was_price": "299.00"
   },
-  "leica_digidirect:540214": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-10T10:42:01+00:00",
-    "id": "540214",
-    "image": "https://www.digidirect.com.au/media/catalog/product/1/7/179276.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
-    "in_stock": true,
-    "last_seen": "2026-06-15",
-    "price": "177.00",
-    "source": "leica_digidirect",
-    "title": "Used LEICA Thumb Support for M10 & M11 Silver (Genuine Leica 24015)",
-    "url": "https://www.digidirect.com.au/used-leica-thumb-support-for-m10-m11-silver-genuine-leica-24015",
-    "variants": [],
-    "was_price": null
-  },
   "leica_digidirect:540217": {
     "attrs": {},
     "currency": "AUD",
