@@ -119,6 +119,21 @@
     "variants": [],
     "was_price": "548.00"
   },
+  "leica_digidirect:540802": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-06-18T06:39:33+00:00",
+    "id": "540802",
+    "image": "https://www.digidirect.com.au/media/catalog/product/1/7/179280.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
+    "in_stock": true,
+    "last_seen": "2026-06-18",
+    "price": "141.55",
+    "source": "leica_digidirect",
+    "title": "Used Master & Dynamic 0.95 Leica Collection MH40 Over Ear Headphones SN dfabgheb0321",
+    "url": "https://www.digidirect.com.au/used-master-dynamic-0-95-leica-collection-mh40-over-ear-headphones-sn-dfabgheb0321",
+    "variants": [],
+    "was_price": "149.00"
+  },
   "leica_digidirect:83422": {
     "attrs": {},
     "currency": "AUD",
