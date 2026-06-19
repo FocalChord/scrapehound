@@ -509,6 +509,21 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_mac:G1H10X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-06-19T12:38:41+00:00",
+    "id": "G1H10X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m4-starlight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=aXh2djVPaDJVSUtvM2FsZmN0NGxlZllITVpkM2ZCOENYUFlZWGs3bk1CcVRLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2JzeVRhV3NiYnhEMVZmN2laN2hTdTZWZWZKZEpnTUg2bTJtOU9qU1hvcWw",
+    "in_stock": true,
+    "last_seen": "2026-06-19",
+    "price": "2149.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
+    "url": "https://www.apple.com/au/shop/product/g1h10x/a/Refurbished-15-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Starlight",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_mac:G1H23X/A": {
     "attrs": {},
     "currency": "AUD",
