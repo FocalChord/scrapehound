@@ -29,21 +29,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FC6L4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-17T08:18:18+00:00",
-    "id": "FC6L4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m4-midnight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=aXh2djVPaDJVSUtvM2FsZmN0NGxlUUpQK2FzS25mbnVTcVVpU2Z2MzcyWFlLY3ZhZTUxL0tMOHhxSjgvSFVnYTE1UUxLT2t0cW42N3FvQzVqaGhrVWF0cjlkc1pDOWxmcW1tNFJpTXFNM1IrYWpGdS9XeFgvbS9ITnNYOEhYaG4",
-    "in_stock": true,
-    "last_seen": "2026-06-20",
-    "price": "1899.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-    "url": "https://www.apple.com/au/shop/product/fc6l4x/a/Refurbished-15-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Midnight",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FC7A4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -506,36 +491,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU, Nano-texture display \u2013 Space Black",
     "url": "https://www.apple.com/au/shop/product/g1fwnx/a/Refurbished-16-inch-MacBook-Pro-Apple-M4-Max-Chip-with-16%E2%80%91Core-CPU-and-40%E2%80%91Core-GPU-Nano-texture-display-Space-Black",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1H10X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-19T12:38:41+00:00",
-    "id": "G1H10X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m4-starlight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=aXh2djVPaDJVSUtvM2FsZmN0NGxlZllITVpkM2ZCOENYUFlZWGs3bk1CcVRLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2JzeVRhV3NiYnhEMVZmN2laN2hTdTZWZWZKZEpnTUg2bTJtOU9qU1hvcWw",
-    "in_stock": true,
-    "last_seen": "2026-06-20",
-    "price": "2149.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
-    "url": "https://www.apple.com/au/shop/product/g1h10x/a/Refurbished-15-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Starlight",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1H23X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-18T07:22:03+00:00",
-    "id": "G1H23X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m4-midnight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=aXh2djVPaDJVSUtvM2FsZmN0NGxlUUpQK2FzS25mbnVTcVVpU2Z2MzcyWFlLY3ZhZTUxL0tMOHhxSjgvSFVnYTE1UUxLT2t0cW42N3FvQzVqaGhrVWF0cjlkc1pDOWxmcW1tNFJpTXFNM1IrYWpGdS9XeFgvbS9ITnNYOEhYaG4",
-    "in_stock": true,
-    "last_seen": "2026-06-20",
-    "price": "2409.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-    "url": "https://www.apple.com/au/shop/product/g1h23x/a/Refurbished-15-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Midnight",
     "variants": [],
     "was_price": null
   },
