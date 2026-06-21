@@ -23,7 +23,7 @@
     "id": "14732534153588",
     "image": "https://cdn.shopify.com/s/files/1/0720/5424/3645/files/M880K15_2_9cb8f31a-eedb-4bd5-9672-c23302fe8614.jpg?v=1749174783",
     "in_stock": true,
-    "last_seen": "2026-06-19",
+    "last_seen": "2026-06-21",
     "price": "230.00",
     "source": "the_running_company",
     "title": "Mens New Balance Fresh Foam X 880 V15 (4E Extra Wide)",
@@ -206,7 +206,7 @@
         "price": "230.00"
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Color": "Black White Reflection",
           "Size": "12"
