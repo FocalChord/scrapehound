@@ -194,21 +194,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FLY03X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-23T11:49:55+00:00",
-    "id": "FLY03X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-silver-202208?wid=400&hei=400&fmt=jpeg&qlt=90&.v=QkJpMElmU3Z2QTUxaWlZMkpyNUtsdlQxOXR0R2JEZG1NVlRjY2dYRjYzWWlMQ0ZiVExFUnprZ25UOWwxZDlYMVB0RzNpQ0Mxc293RHpBd2NJd0FqVzV2Z2FlcENLVWZIdUZNazg5UkU4di8wME1iV0hPUHZaR1RydTFYUUttbks",
-    "in_stock": true,
-    "last_seen": "2026-06-23",
-    "price": "1089.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook Air Apple M2 Chip with 8\u2011Core CPU and 10\u2011Core GPU - Silver",
-    "url": "https://www.apple.com/au/shop/product/fly03x/a/refurbished-13-inch-macbook-air-apple-m2-chip-with-8%E2%80%91core-cpu-and-10%E2%80%91core-gpu-silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FLY33X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -911,21 +896,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 14-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Space Black",
     "url": "https://www.apple.com/au/shop/product/g1ff3x/a/Refurbished-14-inch-MacBook-Pro-Apple-M4-Pro-Chip-with-14%E2%80%91Core-CPU-and-20%E2%80%91Core-GPU-Space-Black",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1FF5X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-22T08:45:44+00:00",
-    "id": "G1FF5X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m4-spaceblack-202502?wid=400&hei=400&fmt=jpeg&qlt=90&.v=WjJGMFJHUEgwNFoydzVmZ0IxN1AvQk8zVnlEd1o1SE05NWdMUEFHWVMzakluU0J0WEdTMW8weGdPbHpxWFdQTi85S3R4M0M3WGhIQVNOK3lBdUI5K1plWGYyOXhKTW1yaXp6SlJ5SDgybFhXNm9oamhpbmdGcHIwa2hOU3lmQkw",
-    "in_stock": true,
-    "last_seen": "2026-06-23",
-    "price": "3319.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU, Nano-texture display \u2013 Space Black",
-    "url": "https://www.apple.com/au/shop/product/g1ff5x/a/Refurbished-14-inch-MacBook-Pro-Apple-M4-Pro-Chip-with-14%E2%80%91Core-CPU-and-20%E2%80%91Core-GPU-Nano-texture-display-Space-Black",
     "variants": [],
     "was_price": null
   },
