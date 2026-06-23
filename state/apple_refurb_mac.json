@@ -1124,21 +1124,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1KJ2X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-10T12:11:19+00:00",
-    "id": "G1KJ2X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-spaceblack-202511?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01SGpGdDQ3MlJ0TWtkZHQyRXBvVWVPSjh3Y3lMRzBPMlRDTkFucTRteE5HSy85S3R4M0M3WGhIQVNOK3lBdUI5K2U2QUhjOTN0TWVSTFVaMWxPaDRJR3lzc2VPRkY3bzB2TlBiNHV3Z2hzYkg",
-    "in_stock": true,
-    "last_seen": "2026-06-23",
-    "price": "2459.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display \u2014 Space Black",
-    "url": "https://www.apple.com/au/shop/product/g1kj2x/a/Refurbished-14-inch-MacBook-Pro-Apple-M5-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Nano-texture-display-Space-Black",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1KM1X/A": {
     "attrs": {},
     "currency": "AUD",
