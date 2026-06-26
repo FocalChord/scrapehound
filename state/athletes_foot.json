@@ -1116,6 +1116,7 @@
         9.0,
         9.5,
         10.0,
+        11.0,
         11.5
       ],
       "width": "4E"
@@ -1188,7 +1189,7 @@
         "price": null
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Size": "11"
         },
