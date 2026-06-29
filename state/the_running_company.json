@@ -54,7 +54,7 @@
         "price": "230.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black",
           "Size": "8.5"
@@ -70,7 +70,7 @@
         "price": "230.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black",
           "Size": "9.5"
@@ -78,7 +78,7 @@
         "price": "230.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black",
           "Size": "10"
@@ -86,7 +86,7 @@
         "price": "230.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black",
           "Size": "10.5"
@@ -94,7 +94,7 @@
         "price": "230.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black",
           "Size": "11"
@@ -110,7 +110,7 @@
         "price": "230.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black",
           "Size": "12"
