@@ -59,21 +59,6 @@
     "variants": [],
     "was_price": "5399.00"
   },
-  "leica_digidirect:537082": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-10T10:42:01+00:00",
-    "id": "537082",
-    "image": "https://www.digidirect.com.au/media/catalog/product/1/7/174261.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
-    "in_stock": true,
-    "last_seen": "2026-06-29",
-    "price": "1234.05",
-    "source": "leica_digidirect",
-    "title": "Used LEICA - ELMARIT-TL 18mm f/2.8 ASPH L-Mount - Black SN: 4674520 (APS-C)",
-    "url": "https://www.digidirect.com.au/used-leica-elmarit-tl-18mm-f-2-8-asph-l-mount-black-sn-4674520-aps-c",
-    "variants": [],
-    "was_price": "1299.00"
-  },
   "leica_digidirect:537088": {
     "attrs": {},
     "currency": "AUD",
