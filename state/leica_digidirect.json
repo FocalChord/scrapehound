@@ -7,12 +7,12 @@
     "image": "https://www.digidirect.com.au/media/catalog/product/o/t/otqno.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
     "in_stock": true,
     "last_seen": "2026-07-01",
-    "price": "14.25",
+    "price": "15.00",
     "source": "leica_digidirect",
     "title": "Used Leica OTQNO Extension Tube (Leitz # 16468) for Elmar 90mm f/4 Lens",
     "url": "https://www.digidirect.com.au/used-leica-otqno-extension-tube-leitz-16468-for-elmar-90mm-f-4-lens",
     "variants": [],
-    "was_price": "15.00"
+    "was_price": null
   },
   "leica_digidirect:528265": {
     "attrs": {},
@@ -22,12 +22,12 @@
     "image": "https://www.digidirect.com.au/media/catalog/product/1/6/168230.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
     "in_stock": true,
     "last_seen": "2026-07-01",
-    "price": "6649.05",
+    "price": "6999.00",
     "source": "leica_digidirect",
     "title": "Used Leica Vario-Elmarit-SL 24-90mm f/2.8-4 ASPH. Lens SN: 4523538",
     "url": "https://www.digidirect.com.au/used-leica-vario-elmarit-sl-24-90mm-f-2-8-4-asph-lens-sn-4523538",
     "variants": [],
-    "was_price": "6999.00"
+    "was_price": null
   },
   "leica_digidirect:529789": {
     "attrs": {},
@@ -37,12 +37,12 @@
     "image": "https://www.digidirect.com.au/media/catalog/product/1/5/159713.01.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
     "in_stock": true,
     "last_seen": "2026-07-01",
-    "price": "4132.50",
+    "price": "4350.00",
     "source": "leica_digidirect",
     "title": "Used Leica SL2-S Body Only (Recently Serviced by Leica Aust.) S/N 5645322",
     "url": "https://www.digidirect.com.au/used-leica-sl2-s-body-only-recently-serviced-by-leica-aust-s-n-5645322",
     "variants": [],
-    "was_price": "4350.00"
+    "was_price": null
   },
   "leica_digidirect:534205": {
     "attrs": {},
@@ -112,11 +112,11 @@
     "image": "https://www.digidirect.com.au/media/catalog/product/1/2/1252508590_642609_1.jpg?width=265&height=265&optimize=medium&bg-color=255,255,255&fit=bounds",
     "in_stock": true,
     "last_seen": "2026-07-01",
-    "price": "1899.05",
+    "price": "1999.00",
     "source": "leica_digidirect",
     "title": "Used Leica - SUMMARIT-S 35mm /f2.5 ASPH",
     "url": "https://www.digidirect.com.au/used-leica-summarit-s-35mm-f2-5-asph",
     "variants": [],
-    "was_price": "1999.00"
+    "was_price": null
   }
 }
