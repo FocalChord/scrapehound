@@ -509,21 +509,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FGEA4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-01T11:48:03+00:00",
-    "id": "FGEA4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m5-spaceblack-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=TGFvMzVxTG1qaGZ0MGErRmlGQ3ZpYnNSbmd1eG5SQ2hJT2p2dGxDNGJlN3g0ZWtQSFRIZzlKUVhXb3RzQTNxMC85S3R4M0M3WGhIQVNOK3lBdUI5K1FKSGpwS2IzbW9GRnhuTmJPeUJKa0xXcXVqdkEwa1dyZWtYOGQzeVl6SUs",
-    "in_stock": true,
-    "last_seen": "2026-07-03",
-    "price": "4079.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Pro chip with 18\u2011Core CPU and 20\u2011Core GPU \u2014 Space Black",
-    "url": "https://www.apple.com/au/shop/product/fgea4x/a/refurbished-16-inch-macbook-pro-apple-m5-pro-chip-with-18%E2%80%91core-cpu-and-20%E2%80%91core-gpu-space-black",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FGEC4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -1001,21 +986,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 13-inch MacBook Air Apple M2 Chip with 8\u2011Core CPU and 8\u2011Core GPU - Midnight",
     "url": "https://www.apple.com/au/shop/product/g1608x/a/refurbished-13-inch-macbook-air-apple-m2-chip-with-8%E2%80%91core-cpu-and-8%E2%80%91core-gpu-midnight",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G160DX/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-22T08:45:44+00:00",
-    "id": "G160DX/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-midnight-202208?wid=400&hei=400&fmt=jpeg&qlt=90&.v=QkJpMElmU3Z2QTUxaWlZMkpyNUtscEh6aWY2ZWN0VmhIWTdsdGVnU0taUGdNQ09hTjJxS2hNMUZrelBIOGtCQTlpaHIrQ0hZaTQ0a3lBVm53bGROOHU4Wk02UHh2VWFhMldnSE5KcVF2TkF2Rm5wai9Qanc1ek43aEI2b05NUGM",
-    "in_stock": true,
-    "last_seen": "2026-07-03",
-    "price": "1589.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook Air Apple M2 Chip with 8\u2011Core CPU and 10\u2011Core GPU - Midnight",
-    "url": "https://www.apple.com/au/shop/product/g160dx/a/refurbished-13-inch-macbook-air-apple-m2-chip-with-8%E2%80%91core-cpu-and-10%E2%80%91core-gpu-midnight",
     "variants": [],
     "was_price": null
   },
