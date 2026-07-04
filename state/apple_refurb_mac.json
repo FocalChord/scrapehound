@@ -899,21 +899,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G15T5X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-23T11:49:55+00:00",
-    "id": "G15T5X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-spacegray-202208?wid=400&hei=400&fmt=jpeg&qlt=90&.v=QkJpMElmU3Z2QTUxaWlZMkpyNUtsdExjdkZSUEY0WnZQQUR3bllVRXRvWnBPMFNNNkt3d1pMa2dBcnNaK1dGMStQRjdUS291STIvUmV6S3dwODFvajZNU3lWazZXTWJaaitZREE4Rlh1T1drandQVDhDSVorVFpFRVpLSFg1RHk",
-    "in_stock": true,
-    "last_seen": "2026-07-04",
-    "price": "1839.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook Air Apple M2 Chip with 8\u2011Core CPU and 10\u2011Core GPU - Space Grey",
-    "url": "https://www.apple.com/au/shop/product/g15t5x/a/refurbished-13-inch-macbook-air-apple-m2-chip-with-8%E2%80%91core-cpu-and-10%E2%80%91core-gpu-space-gray",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G15Z5X/A": {
     "attrs": {},
     "currency": "AUD",
