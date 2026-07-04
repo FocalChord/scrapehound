@@ -1169,21 +1169,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1LT0X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-30T06:42:37+00:00",
-    "id": "G1LT0X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-starlight-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3UkdDVVZSQmZhUmNkQnlYZ0RMQUJGQ1RLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2NINnpIaFd1b2FVRXV6MmZ6R3RQakc1dDgvV3BhU1hoSzFPUEZjam5HQ2g",
-    "in_stock": true,
-    "last_seen": "2026-07-04",
-    "price": "2369.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Starlight",
-    "url": "https://www.apple.com/au/shop/product/g1lt0x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1LZ0X/A": {
     "attrs": {},
     "currency": "AUD",
