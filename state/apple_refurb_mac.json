@@ -899,21 +899,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1608X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-23T11:49:55+00:00",
-    "id": "G1608X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-macbook-air-m2-midnight-202208?wid=400&hei=400&fmt=jpeg&qlt=90&.v=QkJpMElmU3Z2QTUxaWlZMkpyNUtscEh6aWY2ZWN0VmhIWTdsdGVnU0taUGdNQ09hTjJxS2hNMUZrelBIOGtCQTlpaHIrQ0hZaTQ0a3lBVm53bGROOHU4Wk02UHh2VWFhMldnSE5KcVF2TkF2Rm5wai9Qanc1ek43aEI2b05NUGM",
-    "in_stock": true,
-    "last_seen": "2026-07-05",
-    "price": "1839.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook Air Apple M2 Chip with 8\u2011Core CPU and 8\u2011Core GPU - Midnight",
-    "url": "https://www.apple.com/au/shop/product/g1608x/a/refurbished-13-inch-macbook-air-apple-m2-chip-with-8%E2%80%91core-cpu-and-8%E2%80%91core-gpu-midnight",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1DF0X/A": {
     "attrs": {},
     "currency": "AUD",
