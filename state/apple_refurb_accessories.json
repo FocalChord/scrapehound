@@ -1,19 +1,4 @@
 {
-  "apple_refurb_accessories:FFEX4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-02T11:24:09+00:00",
-    "id": "FFEX4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-tilt-202206?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJaFlPSndNaDdoR0gxdTVrVXNkVjlWVkhrRnRVaW11emo1Z3B1azh5NGUwZzlpaHIrQ0hZaTQ0a3lBVm53bGROOHZZYTF4d0R4eGVnN1ZYN25OMnA4OEh0TkcyK2t0blgzTEJ4MGt1QldVUUY",
-    "in_stock": true,
-    "last_seen": "2026-07-09",
-    "price": "2209.00",
-    "source": "apple_refurb_accessories",
-    "title": "Refurbished Studio Display - Standard glass - Tilt-adjustable stand",
-    "url": "https://www.apple.com/au/shop/product/ffex4x/a/Refurbished-Studio-Display-Standard-glass-Tilt-adjustable-stand",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_accessories:FFEY4X/A": {
     "attrs": {},
     "currency": "AUD",
