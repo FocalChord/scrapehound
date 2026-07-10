@@ -89,21 +89,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FDE64X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-30T06:42:37+00:00",
-    "id": "FDE64X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-silver-202511?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01TkgvR1c1TXVnUDM4QkcrQllKQjVpTjhPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQXlrSDl6V2JEeTVlcUo5bXZtOEVqZnc",
-    "in_stock": true,
-    "last_seen": "2026-07-10",
-    "price": "2969.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/fde64x/a/Refurbished-14-inch-MacBook-Pro-Apple-M5-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDH74X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -479,21 +464,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FGDR4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-25T17:01:08+00:00",
-    "id": "FGDR4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-spaceblack-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01THNSbmd1eG5SQ2hJT2p2dGxDNGJlN3g0ZWtQSFRIZzlKUVhXb3RzQTNxMC85S3R4M0M3WGhIQVNOK3lBdUI5K1dTck5IOExYUkZTTTR4dU5FanJ0dnp4SHlwUEZPWnJlYlE2SWFhTWJwTHU",
-    "in_stock": true,
-    "last_seen": "2026-07-10",
-    "price": "3389.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Pro chip with 15\u2011Core CPU and 16\u2011Core GPU \u2014 Space Black",
-    "url": "https://www.apple.com/au/shop/product/fgdr4x/a/refurbished-14-inch-macbook-pro-apple-m5-pro-chip-with-15%E2%80%91core-cpu-and-16%E2%80%91core-gpu-space-black",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FGDT4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -779,21 +749,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FW0W3X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-09T11:46:57+00:00",
-    "id": "FW0W3X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m4-silver-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=WlpoUU93OHdhdkJvNmxqdWVVY1FIL0ZkYS9rZWU0cUg2YnE5a2VBWVh5UjhPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQS9HZGNGbjJUTUZJVnBRNU91UUlScVk",
-    "in_stock": true,
-    "last_seen": "2026-07-10",
-    "price": "1369.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M4 chip with 10\u2011Core CPU and 8\u2011Core GPU - Silver",
-    "url": "https://www.apple.com/au/shop/product/fw0w3x/a/Refurbished-13-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-8%E2%80%91Core-GPU-Silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FW0X3X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -806,21 +761,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Silver",
     "url": "https://www.apple.com/au/shop/product/fw0x3x/a/Refurbished-13-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Silver",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FW0Y3X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-09T11:46:57+00:00",
-    "id": "FW0Y3X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m4-starlight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=WlpoUU93OHdhdkJvNmxqdWVVY1FIL1lITVpkM2ZCOENYUFlZWGs3bk1CcVRLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2ZaQkFTR0NQQmJNbWJSbGwrYUY0MENWZWZKZEpnTUg2bTJtOU9qU1hvcWw",
-    "in_stock": true,
-    "last_seen": "2026-07-10",
-    "price": "1369.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M4 chip with 10\u2011Core CPU and 8\u2011Core GPU - Starlight",
-    "url": "https://www.apple.com/au/shop/product/fw0y3x/a/Refurbished-13-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-8%E2%80%91Core-GPU-Starlight",
     "variants": [],
     "was_price": null
   },
@@ -851,21 +791,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
     "url": "https://www.apple.com/au/shop/product/fw1k3x/a/Refurbished-15-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Starlight",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FW1M3X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-09T01:25:25+00:00",
-    "id": "FW1M3X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m4-midnight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=aXh2djVPaDJVSUtvM2FsZmN0NGxlUUpQK2FzS25mbnVTcVVpU2Z2MzcyWFlLY3ZhZTUxL0tMOHhxSjgvSFVnYTE1UUxLT2t0cW42N3FvQzVqaGhrVWF0cjlkc1pDOWxmcW1tNFJpTXFNM1IrYWpGdS9XeFgvbS9ITnNYOEhYaG4",
-    "in_stock": true,
-    "last_seen": "2026-07-10",
-    "price": "1949.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-    "url": "https://www.apple.com/au/shop/product/fw1m3x/a/Refurbished-15-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Midnight",
     "variants": [],
     "was_price": null
   },
@@ -1601,21 +1526,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 16-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Max chip with 18\u2011Core CPU and 40\u2011Core GPU \u2014 Silver",
     "url": "https://www.apple.com/au/shop/product/g1mybx/a/refurbished-16-inch-macbook-pro-apple-m5-max-chip-with-18%E2%80%91core-cpu-and-40%E2%80%91core-gpu-silver",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1MYEX/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-07T11:35:06+00:00",
-    "id": "G1MYEX/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m5-silver-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=TGFvMzVxTG1qaGZ0MGErRmlGQ3ZpVWttVlFCOEUrN0xiSDJ5REt1Z3lzOThPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQTI4eUdUdmRjVUdsdUVmZzJlSDc2WVk",
-    "in_stock": true,
-    "last_seen": "2026-07-10",
-    "price": "9349.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Max chip with 18\u2011Core CPU and 40\u2011Core GPU \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/g1myex/a/refurbished-16-inch-macbook-pro-apple-m5-max-chip-with-18%E2%80%91core-cpu-and-40%E2%80%91core-gpu-silver",
     "variants": [],
     "was_price": null
   },
