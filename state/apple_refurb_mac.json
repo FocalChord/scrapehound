@@ -914,21 +914,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1BV0X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-09T11:46:57+00:00",
-    "id": "G1BV0X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m3-midnight-202405?wid=400&hei=400&fmt=jpeg&qlt=90&.v=M0xhUE9QWVFwT3UxSkErRjdjVFVkaGtEUlF1cURHQzJxek4rUDZoTjVqN1lLY3ZhZTUxL0tMOHhxSjgvSFVnYTE1UUxLT2t0cW42N3FvQzVqaGhrVVZHVE1yNXpKeVg2dVFyYVVjcDRsSXQrYWpGdS9XeFgvbS9ITnNYOEhYaG4",
-    "in_stock": true,
-    "last_seen": "2026-07-13",
-    "price": "1739.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M3\u00a0Chip with 8\u2011Core CPU and 10\u2011Core GPU - Midnight",
-    "url": "https://www.apple.com/au/shop/product/g1bv0x/a/Refurbished-15-inch-MacBook-Air-Apple-M3-Chip-with-8-Core-CPU-and-10-Core-GPU-Midnight",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1DF0X/A": {
     "attrs": {},
     "currency": "AUD",
