@@ -44,6 +44,21 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_mac:FDE34X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-07-15T05:19:19+00:00",
+    "id": "FDE34X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-spaceblack-202511?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01SGpGdDQ3MlJ0TWtkZHQyRXBvVWVPSjh3Y3lMRzBPMlRDTkFucTRteE5HSy85S3R4M0M3WGhIQVNOK3lBdUI5K2U2QUhjOTN0TWVSTFVaMWxPaDRJR3lzc2VPRkY3bzB2TlBiNHV3Z2hzYkg",
+    "in_stock": true,
+    "last_seen": "2026-07-15",
+    "price": "2969.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Space Black",
+    "url": "https://www.apple.com/au/shop/product/fde34x/a/Refurbished-14-inch-MacBook-Pro-Apple-M5-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Space-Black",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_mac:FDE44X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -1226,6 +1241,36 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Sky Blue",
     "url": "https://www.apple.com/au/shop/product/g1l91x/a",
+    "variants": [],
+    "was_price": null
+  },
+  "apple_refurb_mac:G1LV4X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-07-15T05:19:19+00:00",
+    "id": "G1LV4X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-starlight-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3UkdDVVZSQmZhUmNkQnlYZ0RMQUJGQ1RLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2NINnpIaFd1b2FVRXV6MmZ6R3RQakc1dDgvV3BhU1hoSzFPUEZjam5HQ2g",
+    "in_stock": true,
+    "last_seen": "2026-07-15",
+    "price": "4929.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Starlight",
+    "url": "https://www.apple.com/au/shop/product/g1lv4x/a",
+    "variants": [],
+    "was_price": null
+  },
+  "apple_refurb_mac:G1M22X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-07-15T05:19:19+00:00",
+    "id": "G1M22X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-blue-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3U2FSOUVwai9sMDN6YXBVTWUwd1VJWkQ4eDQxcUNOL3l1WDd2VTYzMXJYbkJkRlpCNVhYU3AwTldRQldlSnpRa0NwdW0rTThNNHZVMGhTd2pTVXk3K1U",
+    "in_stock": true,
+    "last_seen": "2026-07-15",
+    "price": "3009.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Sky Blue",
+    "url": "https://www.apple.com/au/shop/product/g1m22x/a",
     "variants": [],
     "was_price": null
   },
