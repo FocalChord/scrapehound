@@ -25,7 +25,7 @@
     "id": "M8604M84E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8604m8_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens",
@@ -172,7 +172,7 @@
     "id": "M8604MB4E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/w/8/w8603zid_8.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens",
@@ -311,7 +311,7 @@
     "id": "M86057G4E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m86057g_2_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens",
@@ -456,7 +456,7 @@
     "id": "M8605OQ4E.GRY",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8605oq_203.jpeg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens",
@@ -604,7 +604,7 @@
     "id": "M8607B24E.BLU",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8607b2_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens",
@@ -737,7 +737,7 @@
     "id": "M8607GW4E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8607gw_203.jpeg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens ",
@@ -884,7 +884,7 @@
     "id": "M8609HY4E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8609hy_203.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "249.99",
     "source": "athletes_foot",
     "title": "New Balance 860 V15 (4E X Wide) Mens",
@@ -1005,142 +1005,6 @@
     ],
     "was_price": null
   },
-  "athletes_foot:M860K144E.BLK": {
-    "attrs": {
-      "brand": "New Balance",
-      "sizes_in_stock": [
-        8.0,
-        8.5,
-        10.0
-      ],
-      "width": "4E"
-    },
-    "currency": "AUD",
-    "first_seen": "2026-07-16T13:26:54+00:00",
-    "id": "M860K144E.BLK",
-    "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m860k14_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
-    "in_stock": true,
-    "last_seen": "2026-07-19",
-    "price": "149.99",
-    "source": "athletes_foot",
-    "title": "New Balance Fresh Foam X 860 V14 (4E X-Wide) Mens",
-    "url": "https://www.theathletesfoot.com.au/new-balance-fresh-foam-x-860-v14-4e-x-wide-mens-black.html",
-    "variants": [
-      {
-        "available": false,
-        "options": {
-          "Size": "7"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "7.5"
-        },
-        "price": null
-      },
-      {
-        "available": true,
-        "options": {
-          "Size": "8"
-        },
-        "price": null
-      },
-      {
-        "available": true,
-        "options": {
-          "Size": "8.5"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "9"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "9.5"
-        },
-        "price": null
-      },
-      {
-        "available": true,
-        "options": {
-          "Size": "10"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "10.5"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "11"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "11.5"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "12"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "12.5"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "13"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "14"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "15"
-        },
-        "price": null
-      },
-      {
-        "available": false,
-        "options": {
-          "Size": "16"
-        },
-        "price": null
-      }
-    ],
-    "was_price": "239.99"
-  },
   "athletes_foot:M8801MJ4E.BLU": {
     "attrs": {
       "brand": "New Balance",
@@ -1163,7 +1027,7 @@
     "id": "M8801MJ4E.BLU",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8801mj_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "229.99",
     "source": "athletes_foot",
     "title": "New Balance Fresh Foam X 880 V15 (4E X-Wide) Mens",
@@ -1295,7 +1159,7 @@
     "id": "M8807NL4E.GRN",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8807nl_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "229.99",
     "source": "athletes_foot",
     "title": "New Balance Fresh Foam X 880 V15 (4E X Wide) Mens",
@@ -1442,7 +1306,7 @@
     "id": "M880B154E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m880b15_2_2.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "229.99",
     "source": "athletes_foot",
     "title": "New Balance Fresh Foam X 880 V15 (4E X-Wide) Mens",
@@ -1567,6 +1431,8 @@
     "attrs": {
       "brand": "New Balance",
       "sizes_in_stock": [
+        7.0,
+        7.5,
         8.0,
         8.5,
         9.0,
@@ -1588,21 +1454,21 @@
     "id": "M880K154E.BLK",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m880k15_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
-    "price": "160.99",
+    "last_seen": "2026-08-01",
+    "price": "229.99",
     "source": "athletes_foot",
     "title": "New Balance Fresh Foam X 880 V15 (4E X-Wide) Mens",
     "url": "https://www.theathletesfoot.com.au/new-balance-fresh-foam-x-880-v15-x-wide-mens-black.html",
     "variants": [
       {
-        "available": false,
+        "available": true,
         "options": {
           "Size": "7"
         },
         "price": null
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Size": "7.5"
         },
@@ -1707,7 +1573,7 @@
         "price": null
       }
     ],
-    "was_price": "229.99"
+    "was_price": null
   },
   "athletes_foot:MX857WN34E.BLU": {
     "attrs": {
@@ -1732,7 +1598,7 @@
     "id": "MX857WN34E.BLU",
     "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/x/mx857wn3_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
     "in_stock": true,
-    "last_seen": "2026-07-19",
+    "last_seen": "2026-08-01",
     "price": "199.99",
     "source": "athletes_foot",
     "title": "New Balance 857 V3 (4E X-Wide) Mens",
