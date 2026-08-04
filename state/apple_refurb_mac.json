@@ -29,21 +29,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FDHC4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-06T12:32:42+00:00",
-    "id": "FDHC4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m5-starlight-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=NkFvZHZ6L2RKYi9tTHovZkJ0VkVXQkdDVVZSQmZhUmNkQnlYZ0RMQUJGQ1RLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic1JxVzNLdGZhT0xYTkVqMGJ2Q2V0cmlIaWV5SG1KWWRSb1RMSkNqUDJYZHY",
-    "in_stock": true,
-    "last_seen": "2026-08-04",
-    "price": "2169.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Starlight",
-    "url": "https://www.apple.com/au/shop/product/fdhc4x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDHF4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -251,21 +236,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished Studio Display XDR - Standard glass - Tilt- and height-adjustable stand",
     "url": "https://www.apple.com/au/shop/product/ffel4x/a/standard-glass-tilt-and-height-adjustable-stand",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FFEN4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-14T10:27:33+00:00",
-    "id": "FFEN4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-xdr-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJcmJKbHp3bmJESVRwbnlSYWdNcnk3MkJ0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OWxFVEpaUkxXV0FVbGMxUEN2OEdiNnBsYi9ubVlJQ3dXQUh5NjRnQ2lFZHM",
-    "in_stock": true,
-    "last_seen": "2026-08-04",
-    "price": "4069.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Studio Display XDR - Standard glass - VESA mount adapter",
-    "url": "https://www.apple.com/au/shop/product/ffen4x/a/Refurbished-Studio-Display-XDR-Standard-glass-VESA-mount-adapter",
     "variants": [],
     "was_price": null
   },
