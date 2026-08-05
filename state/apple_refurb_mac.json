@@ -44,21 +44,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FDV94X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-25T17:01:08+00:00",
-    "id": "FDV94X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-silver-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3VWttVlFCOEUrN0xiSDJ5REt1Z3lzOThPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQTA3Y0czSVNtZnZuMFAvNHZmM1RYd1k",
-    "in_stock": true,
-    "last_seen": "2026-08-05",
-    "price": "2119.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/fdv94x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDVA4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -221,21 +206,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished Studio Display - Nano-texture glass - Tilt- and height-adjustable stand",
     "url": "https://www.apple.com/au/shop/product/fff04x/a/Refurbished-Studio-Display-Nano-texture-glass-Tilt-and-height-adjustable-stand",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FFF14X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-02T11:24:08+00:00",
-    "id": "FFF14X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-tilt-202206?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJaFlPSndNaDdoR0gxdTVrVXNkVjlWVkhrRnRVaW11emo1Z3B1azh5NGUwZzlpaHIrQ0hZaTQ0a3lBVm53bGROOHZZYTF4d0R4eGVnN1ZYN25OMnA4OEh0TkcyK2t0blgzTEJ4MGt1QldVUUY",
-    "in_stock": true,
-    "last_seen": "2026-08-05",
-    "price": "2629.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Studio Display - Nano-texture glass - Tilt-adjustable stand",
-    "url": "https://www.apple.com/au/shop/product/fff14x/a/Refurbished-Studio-Display-Nano-texture-glass-Tilt-adjustable-stand",
     "variants": [],
     "was_price": null
   },
