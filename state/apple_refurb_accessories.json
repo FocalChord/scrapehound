@@ -59,21 +59,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_accessories:FFF14X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-02T11:24:09+00:00",
-    "id": "FFF14X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-tilt-202206?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJaFlPSndNaDdoR0gxdTVrVXNkVjlWVkhrRnRVaW11emo1Z3B1azh5NGUwZzlpaHIrQ0hZaTQ0a3lBVm53bGROOHZZYTF4d0R4eGVnN1ZYN25OMnA4OEh0TkcyK2t0blgzTEJ4MGt1QldVUUY",
-    "in_stock": true,
-    "last_seen": "2026-08-05",
-    "price": "2629.00",
-    "source": "apple_refurb_accessories",
-    "title": "Refurbished Studio Display - Nano-texture glass - Tilt-adjustable stand",
-    "url": "https://www.apple.com/au/shop/product/fff14x/a/Refurbished-Studio-Display-Nano-texture-glass-Tilt-adjustable-stand",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_accessories:FX2D3ZA/A": {
     "attrs": {},
     "currency": "AUD",
