@@ -59,6 +59,21 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_accessories:FUWA3ZA/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-08-07T06:55:47+00:00",
+    "id": "FUWA3ZA/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-apple-pencil-usb-c?wid=400&hei=400&fmt=jpeg&qlt=90&.v=YjVWTjEyaWRNZ3BxOFBLOGNNLzlqTXFGQmFiNXNUWDJ1MlZ1bjU3aFFVZTVlaGNxdjZyUHVNbUQxQ3ZuZXFsL1hvL0YwR3NwVHB5S3ljYkMvMUpCMGhySFg1MlprSWF0STdiLzVlYWNPVGs",
+    "in_stock": true,
+    "last_seen": "2026-08-07",
+    "price": "119.00",
+    "source": "apple_refurb_accessories",
+    "title": "Refurbished Apple Pencil (USB-C)",
+    "url": "https://www.apple.com/au/shop/product/fuwa3za/a/refurbished-apple-pencil-usb-c",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_accessories:FX2D3ZA/A": {
     "attrs": {},
     "currency": "AUD",
