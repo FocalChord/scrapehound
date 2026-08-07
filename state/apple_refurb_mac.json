@@ -749,21 +749,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1GT2X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-07T04:44:38+00:00",
-    "id": "G1GT2X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m4-starlight-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=WlpoUU93OHdhdkJvNmxqdWVVY1FIL1lITVpkM2ZCOENYUFlZWGs3bk1CcVRLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2ZaQkFTR0NQQmJNbWJSbGwrYUY0MENWZWZKZEpnTUg2bTJtOU9qU1hvcWw",
-    "in_stock": true,
-    "last_seen": "2026-08-07",
-    "price": "2129.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
-    "url": "https://www.apple.com/au/shop/product/g1gt2x/a/Refurbished-13-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Starlight",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1HE0X/A": {
     "attrs": {},
     "currency": "AUD",
