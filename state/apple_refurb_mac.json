@@ -1,19 +1,4 @@
 {
-  "apple_refurb_mac:FC6T4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-10T10:05:53+00:00",
-    "id": "FC6T4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m4-skyblue-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=WlpoUU93OHdhdkJvNmxqdWVVY1FINVUvTlk5V2lDV2FaRTlna2QycTZYRVZOYmZXUnpWekhFcFdLRUF2UkJ6V3ZvdUZlR0V0VUdJSjBWaDVNVG95YkdMZ1c4OEEvclZ2SVN6Zk5mOStDU2c",
-    "in_stock": true,
-    "last_seen": "2026-08-10",
-    "price": "1369.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M4 chip with 10\u2011Core CPU and 8\u2011Core GPU - Sky Blue",
-    "url": "https://www.apple.com/au/shop/product/fc6t4x/a/Refurbished-13-inch-MacBook-Air-Apple-M4-chip-with-10%E2%80%91Core-CPU-and-8%E2%80%91Core-GPU-Sky-Blue",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDE04X/A": {
     "attrs": {},
     "currency": "AUD",
