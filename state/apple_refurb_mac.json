@@ -944,21 +944,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1L60X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-12T00:48:47+00:00",
-    "id": "G1L60X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m5-midnight-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=NkFvZHZ6L2RKYi9tTHovZkJ0VkVXRzRmWUN2dytQNlNRK0RPVlA1N2Y3N1lLY3ZhZTUxL0tMOHhxSjgvSFVnYTE1UUxLT2t0cW42N3FvQzVqaGhrVVI5TUQzL21jdWI1S2Qzb0NoYWtienArYWpGdS9XeFgvbS9ITnNYOEhYaG4",
-    "in_stock": true,
-    "last_seen": "2026-08-12",
-    "price": "1909.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Midnight",
-    "url": "https://www.apple.com/au/shop/product/g1l60x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1MV0X/A": {
     "attrs": {},
     "currency": "AUD",
