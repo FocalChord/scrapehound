@@ -269,6 +269,21 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_mac:FDVD4X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-08-12T21:31:33+00:00",
+    "id": "FDVD4X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-starlight-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3UkdDVVZSQmZhUmNkQnlYZ0RMQUJGQ1RLNDVIb25yeWxTSzhxdXNNaFBBZmJGcXNRQnFCV0w3WVRjTExvdm1ic2NINnpIaFd1b2FVRXV6MmZ6R3RQakc1dDgvV3BhU1hoSzFPUEZjam5HQ2g",
+    "in_stock": true,
+    "last_seen": "2026-08-12",
+    "price": "2119.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Starlight",
+    "url": "https://www.apple.com/au/shop/product/fdvd4x/a",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_mac:FDVE4X/A": {
     "attrs": {},
     "currency": "AUD",
