@@ -869,21 +869,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1MW9X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-07T04:44:38+00:00",
-    "id": "G1MW9X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m5-silver-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=TGFvMzVxTG1qaGZ0MGErRmlGQ3ZpVWttVlFCOEUrN0xiSDJ5REt1Z3lzOThPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQTI4eUdUdmRjVUdsdUVmZzJlSDc2WVk",
-    "in_stock": true,
-    "last_seen": "2026-08-13",
-    "price": "7449.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Pro chip with 18\u2011Core CPU and 20\u2011Core GPU, Nano-texture display \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/g1mw9x/a/refurbished-16-inch-macbook-pro-apple-m5-pro-chip-with-18%E2%80%91core-cpu-and-20%E2%80%91core-gpu-nano-texture-display-silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1MX0X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -941,21 +926,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 16-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Max chip with 18\u2011Core CPU and 40\u2011Core GPU, Nano-texture display \u2014 Silver",
     "url": "https://www.apple.com/au/shop/product/g1my9x/a/refurbished-16-inch-macbook-pro-apple-m5-max-chip-with-18%E2%80%91core-cpu-and-40%E2%80%91core-gpu-nano-texture-display-silver",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1MYEX/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-13T07:05:20+00:00",
-    "id": "G1MYEX/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m5-silver-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=TGFvMzVxTG1qaGZ0MGErRmlGQ3ZpVWttVlFCOEUrN0xiSDJ5REt1Z3lzOThPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQTI4eUdUdmRjVUdsdUVmZzJlSDc2WVk",
-    "in_stock": true,
-    "last_seen": "2026-08-13",
-    "price": "9349.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Max chip with 18\u2011Core CPU and 40\u2011Core GPU \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/g1myex/a/refurbished-16-inch-macbook-pro-apple-m5-max-chip-with-18%E2%80%91core-cpu-and-40%E2%80%91core-gpu-silver",
     "variants": [],
     "was_price": null
   },
