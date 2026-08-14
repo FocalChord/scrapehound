@@ -23,7 +23,7 @@
     "id": "14732534153588",
     "image": "https://cdn.shopify.com/s/files/1/0720/5424/3645/files/M880K15_2_9cb8f31a-eedb-4bd5-9672-c23302fe8614.jpg?v=1749174783",
     "in_stock": true,
-    "last_seen": "2026-08-13",
+    "last_seen": "2026-08-14",
     "price": "230.00",
     "source": "the_running_company",
     "title": "Mens New Balance Fresh Foam X 880 V15 (4E Extra Wide)",
@@ -340,6 +340,403 @@
           "Size": "8"
         },
         "price": "230.00"
+      }
+    ],
+    "was_price": null
+  },
+  "the_running_company:15218186256756": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        9.0,
+        9.5,
+        10.0,
+        10.5,
+        11.0,
+        11.5,
+        12.0,
+        14.0
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "first_seen": "2026-08-14T12:47:48+00:00",
+    "id": "15218186256756",
+    "image": "https://cdn.shopify.com/s/files/1/0720/5424/3645/files/M8604M8_203_7d608e85-3891-4d34-9710-bd6602cd9275.jpg?v=1783297893",
+    "in_stock": true,
+    "last_seen": "2026-08-14",
+    "price": "250.00",
+    "source": "the_running_company",
+    "title": "Mens New Balance Fresh Foam X 860v15 (4E Extra Wide)",
+    "url": "https://shop.therunningcompany.com.au/products/mens-new-balance-fresh-foam-x-860v15-4e-extra-wide",
+    "variants": [
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "7.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "8"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "8.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "9"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "9.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "10"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "10.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "11"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "11.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "12"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "13"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / NB White",
+          "Size": "14"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "9"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "9.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "10"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "10.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "11"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "11.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "12"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "13"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "14"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black / Faded Black",
+          "Size": "15"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "9"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "9.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "10"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "10.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "11"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "11.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "12"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Grey Matter / Sea Salt",
+          "Size": "13"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "8.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "9"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "9.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "10"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "10.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "11"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "11.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "12"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Fairweather Blue / NB Navy",
+          "Size": "13"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "9"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "9.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "10"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "10.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "11"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "11.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": true,
+        "options": {
+          "Color": "Black / Silver Metallic",
+          "Size": "12"
+        },
+        "price": "250.00"
       }
     ],
     "was_price": null
