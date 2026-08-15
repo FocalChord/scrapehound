@@ -134,21 +134,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FDHE4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-14T09:47:57+00:00",
-    "id": "FDHE4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m5-midnight-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=NkFvZHZ6L2RKYi9tTHovZkJ0VkVXRzRmWUN2dytQNlNRK0RPVlA1N2Y3N1lLY3ZhZTUxL0tMOHhxSjgvSFVnYTE1UUxLT2t0cW42N3FvQzVqaGhrVVI5TUQzL21jdWI1S2Qzb0NoYWtienArYWpGdS9XeFgvbS9ITnNYOEhYaG4",
-    "in_stock": true,
-    "last_seen": "2026-08-15",
-    "price": "1779.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 8\u2011Core GPU \u2014 Midnight",
-    "url": "https://www.apple.com/au/shop/product/fdhe4x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDHF4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -836,21 +821,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Sky Blue",
     "url": "https://www.apple.com/au/shop/product/g1l91x/a",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1LZ0X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-14T09:47:57+00:00",
-    "id": "G1LZ0X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-blue-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3U2FSOUVwai9sMDN6YXBVTWUwd1VJWkQ4eDQxcUNOL3l1WDd2VTYzMXJYbkJkRlpCNVhYU3AwTldRQldlSnpRa0NwdW0rTThNNHZVMGhTd2pTVXk3K1U",
-    "in_stock": true,
-    "last_seen": "2026-08-15",
-    "price": "2369.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Sky Blue",
-    "url": "https://www.apple.com/au/shop/product/g1lz0x/a",
     "variants": [],
     "was_price": null
   },
