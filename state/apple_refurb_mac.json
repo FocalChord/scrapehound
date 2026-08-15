@@ -224,21 +224,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FFEQ4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-07-14T10:27:33+00:00",
-    "id": "FFEQ4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-xdr-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJcmJKbHp3bmJESVRwbnlSYWdNcnk3MkJ0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OWxFVEpaUkxXV0FVbGMxUEN2OEdiNnBsYi9ubVlJQ3dXQUh5NjRnQ2lFZHM",
-    "in_stock": true,
-    "last_seen": "2026-08-15",
-    "price": "4499.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Studio Display XDR - Nano-texture glass - VESA mount adapter",
-    "url": "https://www.apple.com/au/shop/product/ffeq4x/a/nano-texture-glass-vesa-mount-adapter",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FFF04X/A": {
     "attrs": {},
     "currency": "AUD",
