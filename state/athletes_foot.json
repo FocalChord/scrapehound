@@ -1014,8 +1014,7 @@
         10.5,
         11.0,
         11.5,
-        12.0,
-        13.0
+        12.0
       ],
       "width": "4E"
     },
@@ -1066,7 +1065,7 @@
         "price": null
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "13"
         },
@@ -1725,7 +1724,6 @@
     "attrs": {
       "brand": "New Balance",
       "sizes_in_stock": [
-        7.0,
         7.5,
         8.0,
         8.5,
@@ -1750,7 +1748,7 @@
     "url": "https://www.theathletesfoot.com.au/new-balance-857-v3-4e-mens-pigment.html",
     "variants": [
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "7"
         },
