@@ -824,21 +824,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1MJ7X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-19T09:19:35+00:00",
-    "id": "G1MJ7X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-silver-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01RWttVlFCOEUrN0xiSDJ5REt1Z3lzOThPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQTZBR09yRmZMTEQzc3VqNWR5VDdZNmc",
-    "in_stock": true,
-    "last_seen": "2026-08-21",
-    "price": "5759.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Pro chip with 18\u2011Core CPU and 20\u2011Core GPU, Nano-texture display \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/g1mj7x/a/Refurbished-14-inch-MacBook-Pro-Apple-M5-Pro-chip-with-18%E2%80%91Core-CPU-and-20%E2%80%91Core-GPU-Nano-texture-display-Silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1MK0X/A": {
     "attrs": {},
     "currency": "AUD",
