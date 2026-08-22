@@ -7,6 +7,7 @@
         7.5,
         8.0,
         8.5,
+        9.0,
         9.5,
         10.0,
         10.5,
@@ -118,6 +119,13 @@
         "available": true,
         "options": {
           "Size": "8"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "9"
         },
         "price": null
       }
