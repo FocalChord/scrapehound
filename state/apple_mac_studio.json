@@ -1,7 +1,7 @@
 {
   "apple_mac_studio:MU963X/A": {
     "attrs": {
-      "pickup": "ineligible",
+      "pickup": "unavailable",
       "ships": "01/10/2026 \u2013 09/10/2026 \u2014 Free"
     },
     "currency": "AUD",
@@ -19,7 +19,7 @@
   },
   "apple_mac_studio:MU973X/A": {
     "attrs": {
-      "pickup": "ineligible",
+      "pickup": "unavailable",
       "ships": "01/10/2026 \u2013 09/10/2026 \u2014 Free"
     },
     "currency": "AUD",
