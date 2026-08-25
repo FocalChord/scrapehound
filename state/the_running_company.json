@@ -745,6 +745,38 @@
           "Size": "15"
         },
         "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black with Bayberry",
+          "Size": "10"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black with Bayberry",
+          "Size": "9.5"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black with Bayberry",
+          "Size": "9"
+        },
+        "price": "250.00"
+      },
+      {
+        "available": false,
+        "options": {
+          "Color": "Black with Bayberry",
+          "Size": "10.5"
+        },
+        "price": "250.00"
       }
     ],
     "was_price": null
