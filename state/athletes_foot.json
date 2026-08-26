@@ -286,6 +286,151 @@
     ],
     "was_price": null
   },
+  "athletes_foot:M8604OB4E.GRY": {
+    "attrs": {
+      "brand": "New Balance",
+      "sizes_in_stock": [
+        8.0,
+        8.5,
+        9.0,
+        9.5,
+        10.0,
+        10.5,
+        11.0,
+        11.5,
+        12.0,
+        13.0,
+        14.0,
+        15.0
+      ],
+      "width": "4E"
+    },
+    "currency": "AUD",
+    "first_seen": "2026-08-26T12:36:35+00:00",
+    "id": "M8604OB4E.GRY",
+    "image": "https://www.theathletesfoot.com.au/media/catalog/product/m/8/m8604ob_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
+    "in_stock": true,
+    "last_seen": "2026-08-26",
+    "price": "249.99",
+    "source": "athletes_foot",
+    "title": "New Balance 860 V15 (4E X Wide) Mens",
+    "url": "https://www.theathletesfoot.com.au/new-balance-860-v15-4e-x-wide-mens-slate-grey-alkaline-green.html",
+    "variants": [
+      {
+        "available": true,
+        "options": {
+          "Size": "10"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "10.5"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "11"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "11.5"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "12"
+        },
+        "price": null
+      },
+      {
+        "available": false,
+        "options": {
+          "Size": "12.5"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "13"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "14"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "15"
+        },
+        "price": null
+      },
+      {
+        "available": false,
+        "options": {
+          "Size": "16"
+        },
+        "price": null
+      },
+      {
+        "available": false,
+        "options": {
+          "Size": "7"
+        },
+        "price": null
+      },
+      {
+        "available": false,
+        "options": {
+          "Size": "7.5"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "8"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "8.5"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "9"
+        },
+        "price": null
+      },
+      {
+        "available": true,
+        "options": {
+          "Size": "9.5"
+        },
+        "price": null
+      }
+    ],
+    "was_price": null
+  },
   "athletes_foot:M86057G4E.BLK": {
     "attrs": {
       "brand": "New Balance",
@@ -713,6 +858,7 @@
     "attrs": {
       "brand": "New Balance",
       "sizes_in_stock": [
+        7.5,
         8.0,
         8.5,
         9.0,
@@ -818,7 +964,7 @@
         "price": null
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Size": "7.5"
         },
