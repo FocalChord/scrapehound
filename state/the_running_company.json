@@ -348,6 +348,8 @@
     "attrs": {
       "brand": "New Balance",
       "sizes_in_stock": [
+        8.0,
+        8.5,
         9.0,
         9.5,
         10.0,
@@ -747,7 +749,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "10"
@@ -755,7 +757,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "9.5"
@@ -763,7 +765,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "9"
@@ -771,7 +773,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "10.5"
@@ -779,7 +781,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "11"
@@ -787,7 +789,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "8.5"
@@ -795,7 +797,7 @@
         "price": "250.00"
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Color": "Black with Bayberry",
           "Size": "8"

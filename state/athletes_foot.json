@@ -299,6 +299,7 @@
         11.0,
         11.5,
         12.0,
+        12.5,
         13.0,
         14.0,
         15.0
@@ -352,7 +353,7 @@
         "price": null
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Size": "12.5"
         },
