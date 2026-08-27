@@ -539,21 +539,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1FP0X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-18T09:18:58+00:00",
-    "id": "G1FP0X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m4-silver-202502?wid=400&hei=400&fmt=jpeg&qlt=90&.v=d04ycXJNT3FjYU8yTmdpcGxNTTc2OHExTVkrVjUvZnVYc2Z5Vld3SUljUjhPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQXhEYkoxU2ZPdGIyVlBtdm5vOGZ2K00",
-    "in_stock": true,
-    "last_seen": "2026-08-27",
-    "price": "3909.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-    "url": "https://www.apple.com/au/shop/product/g1fp0x/a/Refurbished-16-inch-MacBook-Pro-Apple-M4-Pro-Chip-with-14%E2%80%91Core-CPU-and-20%E2%80%91Core-GPU-Silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1FV3X/A": {
     "attrs": {},
     "currency": "AUD",
