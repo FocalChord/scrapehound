@@ -717,7 +717,7 @@
         "price": "250.00"
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Color": "Black / Silver Metallic",
           "Size": "11"
