@@ -1151,12 +1151,9 @@
       "brand": "New Balance",
       "sizes_in_stock": [
         8.0,
-        9.0,
         9.5,
         10.0,
-        10.5,
         11.5,
-        12.0,
         13.0,
         14.0
       ],
@@ -1202,7 +1199,7 @@
         "price": null
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "9"
         },
@@ -1223,7 +1220,7 @@
         "price": null
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "10.5"
         },
@@ -1244,7 +1241,7 @@
         "price": null
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "12"
         },
@@ -2015,8 +2012,7 @@
         10.0,
         10.5,
         11.0,
-        11.5,
-        12.0
+        11.5
       ],
       "width": "4E"
     },
@@ -2102,7 +2098,7 @@
         "price": null
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "12"
         },
