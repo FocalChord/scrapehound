@@ -1152,6 +1152,7 @@
       "sizes_in_stock": [
         8.0,
         10.0,
+        11.5,
         14.0
       ],
       "width": "4E"
@@ -1231,7 +1232,7 @@
         "price": null
       },
       {
-        "available": false,
+        "available": true,
         "options": {
           "Size": "11.5"
         },
