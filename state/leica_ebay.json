@@ -10,7 +10,7 @@
       "location": null,
       "seller": "shootingthecurl",
       "seller_pct": 100.0,
-      "shipping": "+AU $40.00 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -23,7 +23,7 @@
     "price": "579.73",
     "source": "leica_ebay",
     "title": "LEICA MOTOR M",
-    "url": "https://www.ebay.com.au/itm/116060743650?_skw=leica+m6&itmmeta=01M28B634X291B7THA5S7QW8NN&hash=item1b05c267e2:g:Y0AAAOSwNXtlwfrv&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xCoZZLCN%2BnQK%2BUE75%2F9B9fXXyVeJUrDJ04jIdYY4mqZwireTkZdeHdxHSr2SbQEThiEt5%2BNmRi6ZdFtEIxAK8UAGhqeqjEYtZG8NpuLQKH1cNA%2F23CfR3EoHKMIqh6S9%2FyCRlArjkWtkCRbDxY8bHsZF0mv48ZFLS3kn6XyC%2Bqvp9KMwwaooEdRPOLABkBYY6PLTpoHB%2FgWYgaMgd14ka8%2B08jOt7KbVMJ4WPXe0UfJQg%3D%3D%7Ctkp%3ABk9SR9yymIuSaA",
+    "url": "https://www.ebay.com.au/itm/116060743650?_skw=leica+m6&itmmeta=01M28QZ3GN213CMJFKHTE14EDB&hash=item1b05c267e2:g:Y0AAAOSwNXtlwfrv&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBTucrWMUZZghKuHA9Yr6%2FyQ8aAt3sZvkFY9kK%2BaZyenMwdra3q2lvtb5BzqxeQYel4kJUv7bHsXBpvQICbLbvS%2FLFA7Wm3n%2BIROunoNZ--Va7oxZuZaA0b6Y8p2uUiBWcvO%2F6z4fluED32Zbvb5FdSjJMgry7%2FEouvmmLZvE%2BKaFvY6%2FBMuoCwb%2B%2BQcaEkDL8ZB1jS51inQOFkGQ1Y1gKiV19QO8AZbNQ2tJcyjqEWZAG0JPGU5WwcLtVvkioqGKXugf%2FFgcsiDUO9E8e5pYH7%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -51,7 +51,7 @@
     "price": "16191.55",
     "source": "leica_ebay",
     "title": "Leica M6TTL 0.72 LHSA Limited edition Black paint",
-    "url": "https://www.ebay.com.au/itm/116065569815?_skw=leica+m6&itmmeta=01M28B634W35KQMSPJPVX2S0PQ&hash=item1b060c0c17:g:tO4AAOSwbuVlle~X&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBxLDBL9MfYDce6rtpiEBr6b5VB96CzAvVUPMjy%2BUJkYs%2Bq%2F5a9jC32Fjhr7%2BGc6AbVV06hmGa8KCBLTGcD8MJz5oQWZmW79DGR072MFvTfpfcWwOe2%2BlcrkdyDbliuOz7bl0X35JtAw5HO0IKC2ptXkWWyf2DfMGOYVqoaeTD8WQkke%2BS4o%2FukRPFalRzhdavpmv1ig5S7kJB3zjrT2%2B4Y2BmlbvTvS%2Fe3LJhLzVJjBum3PvUlCxXqPtsKhOerElZQ6nOov%2FW9WTwKGD%2BIi5Pgu%2F0j7kqKAWFCo9F244dzEQ%3D%3D%7Ctkp%3ABk9SR9yymIuSaA",
+    "url": "https://www.ebay.com.au/itm/116065569815?_skw=leica+m6&itmmeta=01M28QZ3GNKDMHCYE9ZNGW360V&hash=item1b060c0c17:g:tO4AAOSwbuVlle~X&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBxLDBL9MfYDce6rtpiEBr6b5VB96CzAvVUPMjy%2BUJkYs%2Bq%2F5a9jC32Fjhr7%2BGc6AbVV06hmGa8KCBLTGcD8MJz5oQWZmW79DGR072MFvTfpfcWwOe2%2BlcrkdyDbliuOz4KwINQbXrdLh0lW%2BFro9VvPJBS88U1htxivmIBif5DySuqM%2FUkWBPm5ZAFjUC%2FetturDSZfu8MCQ2g5l678mGFA0E25qDOb4Ux%2FpfMkyIbpjwhlibi91T71bsV0TB5jOHQt8IUiLywpgfuHFw9DQSa1ZYn%2FGtgfDFxbFhzzreaNg%3D%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -66,7 +66,7 @@
       "location": null,
       "seller": "kobi2boy",
       "seller_pct": 99.4,
-      "shipping": "+AU $14.95 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -79,7 +79,7 @@
     "price": "999.95",
     "source": "leica_ebay",
     "title": "LEICA R6 AS NEW QUALITY FILM CAMERA CAP & STRAP WORKS FINE NO LENS GERMANY",
-    "url": "https://www.ebay.com.au/itm/116900709768?_skw=leica+m6&itmmeta=01M28B634XEENFDHK5X1BKX2BX&hash=item1b37d34588:g:OMkAAeSwrxVpJ-z6&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xB1hV3yMnhS6IrdvcfhBaYdUpIdIAagyRb%2FVFGZ57tMuTja9Fe%2F80IdkNUqgkhKooh0jFosusNpZvSU68ihUETNZGGOrh8MoQzCv83EKmvBGlpe2KUy9rxHpXkZtu0hPlcBGDUh8S4D96wN6VR%2BNJPgLYVHPluXwpW4wTD7kzKLi5ocxvcFaqKGdSDPSL7QIkpSlk%2FBnpPiYNu8wHWd5IJtDzruRmKffB2paKrrDyz0Fkps7JZilWle%2BzNNYol1keM%3D%7Ctkp%3ABk9SR-CymIuSaA",
+    "url": "https://www.ebay.com.au/itm/116900709768?_skw=leica+m6&itmmeta=01M28QZ3GNDRRNBGPGC74XGAHK&hash=item1b37d34588:g:OMkAAeSwrxVpJ-z6&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xAkINlB9buLzR7WWIMndNfqioYXDOIWelOBmindYDV%2BCwDKSayE6v9tkRKlmBY2SLEoxCA9fHymiIznqtYtq%2FKO9WDlM9f2QW4fG4udpbRTU469miBnzr7Cpdh5%2BOhh4ZHXjQBKxWE7rW53GvMowJeKZXRHva69h5QGlulPYrxfFQrhGJ%2B0RCUbC%2Bpf9%2BOJIbKaGnjejIFYlhzWZLjgs8cdZIBOgFfcp10%2BQ8iURxgYaw6oXbT288HJrK2erk%2Bx3HxSa6madIzWxMZXvFdp%2FnT8NQNDcNYzcHcG4wCOTXjQlw%3D%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -107,7 +107,7 @@
     "price": "5480.85",
     "source": "leica_ebay",
     "title": "Leica M6 Classic (with Box and Accessories) *Excellent Condition*",
-    "url": "https://www.ebay.com.au/itm/116964322501?_skw=leica+m6&itmmeta=01M28B634WFXCEJ5XEW8QB7CMH&hash=item1b3b9decc5:g:NFEAAeSw7ydpWhN4&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xAFbtAKDVIeHfaz3w6c49QR5WNjBQG28hKBUIMrhIbi7zK74RxsqXVvzO2ZDzuGzRbv%2Fka7gUgzHgShrpP3%2FRvYtqMKU93tg%2B20l8CzMQgdNFsoWqvfjNtnJD%2BCa9aBcCNuF8W1ySuh3ZYGBYiwyWKoJ4weBHFiYXqIHWpIFz0xHygdKk8zxYIifCqsNgVf1gakTlbtjlSaV6nS8iNWUaS343meLwtZdWKOemEf9O433hdePFKc81AbW%2Be9kU7u2VJXwVEX28NTnLbUxmKi1Y4Fb5Z0nMXhQ9CqUfDIZ7u%2Fqg%3D%3D%7Ctkp%3ABk9SR9qymIuSaA",
+    "url": "https://www.ebay.com.au/itm/116964322501?_skw=leica+m6&itmmeta=01M28QZ3GNNCRRNVA699RPC5AP&hash=item1b3b9decc5:g:NFEAAeSw7ydpWhN4&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBrcXtTKI5yWLYMRjrxTwhdAQLwmxSa2pHBCkvWH741avVQkwLaqtFmw%2BL8jDUVQR27Sm1n22cp8J3WaoZab6b%2BtN4Wsrb%2FBu9E2iPE5IxX9qpZF6Bj7tNpxp%2FdHTT%2F3N%2F7ge%2Boan0RmYKtMh8hqeEc3hyOPbsBKKxw9sCnVvt13g3V03DeFkIAj%2Bau5Ivlprcgw3BbOcjcA5M8zvqWtpzS0uoc2%2BaH8cCTObBKF1e903SxWcqjhylHedp2K41oRak%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -122,7 +122,7 @@
       "location": null,
       "seller": "tmg_collectibles_n_more",
       "seller_pct": 100.0,
-      "shipping": "+AU $13.95 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -135,7 +135,7 @@
     "price": "29.64",
     "source": "leica_ebay",
     "title": "Soligor 70-235mm f/5.6 Auto Zoom Telephoto Lens - M42 Screw Mount Manual Focus",
-    "url": "https://www.ebay.com.au/itm/117315724119?_skw=leica+m6&itmmeta=01M28B634YG41H9B8W6A260G5Z&hash=item1b508fe357:g:APAAAeSwq49pIYPz&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xAoJLzjqanbF4G4NBca1ENpECzYR9%2FCEe%2FfCh06netLv7bJpAkZGZImpGrtSrDDcnYGY9mzIMJUREDnyf9Y%2BLWZEqVeVpM7SbfCHISPsslvml7XDZguyzX37j3tr82ZvylWLKMAQYhvSYQRczb7Cy6p%2FYKBGa6mko0uWDugh1A4CsKE2eZGp8Y7SSWeNzcT%2FnOtm3i%2FjIklKywUOrWJ%2FyPNbjPJ9k1%2Bz%2B6TBYVKJzLsPg%3D%3D%7Ctkp%3ABk9SR-KymIuSaA",
+    "url": "https://www.ebay.com.au/itm/117315724119?_skw=leica+m6&itmmeta=01M28QZ3GPPZ55AT4QBT44565B&hash=item1b508fe357:g:APAAAeSwq49pIYPz&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xAoJLzjqanbF4G4NBca1ENpECzYR9%2FCEe%2FfCh06netLv5F2B0AFCXrrEW57p9n3YDkoUoUMdDDhFUPhL9IV3FbKAMaMNWCo%2FjAcVjI5dZCc4P%2FfrS9SMyTi3q5%2Fkfl4yrxjfO2dMOZRMMBKXn0sx1JqdBgpj4s3bvWSfLuM5oq%2FWhDMDXE790wVdm7PEbVjLwDvVRYDss4C5Wo3A0uuE0tSXRdtXWVDaZRw0ii%2F5xzEyw%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -163,7 +163,7 @@
     "price": "85.00",
     "source": "leica_ebay",
     "title": "Leica Books, Brochures and other literature",
-    "url": "https://www.ebay.com.au/itm/117396878518?_skw=leica+m6&itmmeta=01M28B634WT0T239JG5MYM0C2F&hash=item1b556634b6:g:5VEAAeSwva1qm7cb&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xDxFhA15j3ITuabBX6ql5gHV4IpHTUSkcBHYu%2FSVm%2BmeNmT5bu2NEJzvyX0joVLMgVlNQcXN5fiiHtCOCs9wzMGvTNi2oyZBfQF62GDybrM5M9NNLWV6MTSxfc0xNsfGlmAaPVzJ4lXP6B0yFvM%2BoGQYHZ0Mrt7EM5Z9poGWTaP5xDnkR%2BjB%2B13Ceyrm8aT4t8Ye42CnXBqBgPavEnS5YSFaGJ3600ksVFQj4AFQoD7o2oq%2FhE%2BRhmWYFNM5X9mdF5QF6LHoSqLULXCPuHVL2rz%7Ctkp%3ABk9SR9iymIuSaA",
+    "url": "https://www.ebay.com.au/itm/117396878518?_skw=leica+m6&itmmeta=01M28QZ3GM9ECMPFSGPC6ZZQ5C&hash=item1b556634b6:g:5VEAAeSwva1qm7cb&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xDBIf5mFRrJl%2BJHXi37GRVrrobqYC9oH3TqbpbCF2vrRQMIqMP4j0%2BuZfwhuZbNya9twypRaYIo3EoLflRmq%2BT4KSbT4CEmzJY3rSycn78GEkiKye4nsTKQUWM2FxBVncOyOmQFbfCSuUOzrMnAQFo7TqkV5B6ipXa%2BY3dPaxTmnmoTvsigcNmB6GpDkZFrWKvhFMCS0YahtF1KAngI4YLorX2y98LGUyeHvEYbTk--iA%3D%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -191,7 +191,7 @@
     "price": "899.00",
     "source": "leica_ebay",
     "title": "Voigtlander Nokton Classic S.C. 35mm f/1.4 II (Leica M Mount) (6 Mon. War.)",
-    "url": "https://www.ebay.com.au/itm/146854863549?_skw=leica+m6&itmmeta=01M28B634Y9XCXXR4K4CWGMMF9&hash=item22313b62bd:g:Td4AAeSw53No1e4T&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCw9a7HmGedSrCrBWNt69UdZvUAeFF7cKNQOhCjSpAlmwDNEXZ%2BfNdeFpiOtwkE9aak0pE8IXc0wDQNmlDu8Nd9coehHvcnyfhM30qITsvpbl0CpBxinSiNVmaDdx2KJ9hOE7hcbkFHMhmG9jw62DKe5ogZa1ZijvAH%2BjuiyN8V6iJx6D7%2BUzmnB7mfP9y862kPpN6LvWnMYCi%2BgFPOIK6zRGwxNlXwq9cVAgaHdpkoMSZgO%2BGEPR%2BX5P4sGr0dmHSbnq74gry8bNVe2YYeHtCS%7Ctkp%3ABk9SR-KymIuSaA",
+    "url": "https://www.ebay.com.au/itm/146854863549?_skw=leica+m6&itmmeta=01M28QZ3GPWJSHH9RFC21NJ0FA&hash=item22313b62bd:g:Td4AAeSw53No1e4T&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xA6raiYDHrwLrf0n%2BLItBGxwpOcErp%2F8jJTRqX0OirHO--D%2Fl4cFbj%2FcSxbsv7thf4%2F3y2aFI9XgPDmcOOsx5RsmIqJFndKFnsZlTinifqx3d4hyiZKEMx50hrOzON1%2BkdPCZeeTM3icWZ5QiltYmykQJ5VUZpG9pCVwYb3QB0dAndpYy6yLwzsOJTZS%2FpsWkZImql2fFChbelmU6krkT7lpRoFug6QoprfQWjX4eBqiA%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -219,7 +219,7 @@
     "price": "48.18",
     "source": "leica_ebay",
     "title": "40 Set 6\" Paper Picture Frames, Includes Colorful Cardboard Photo Frames with Wo",
-    "url": "https://www.ebay.com.au/itm/147531421041?_skw=leica+m6&itmmeta=01M28B634YQWEN9GNP5ZZS9ZX6&hash=item22598ed571:g:2VsAAeSwWIxqkIQd&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xDB%2BlsyLDHomdKCdghH1y5%2Brhgh0R%2BYbVgNDbCxTlCvetCBL1UUuuy%2FR0S6hPAZV1kuUUd9k7YAQs82QoPw0vPAdFBVLjhSGIQc7d0AxYZ8cS9aYx0rrPPemdzlYARYnFCjhI0zsai2dRMDXk%2FKHGES9FRStN6plMCfsfCMZW5vC%2FMEGjmtWTO6aw9tAm1Au3fUBJwP%2BtBGCZiBY8wzivcUG%2FUzajiPAa4l5dYa%2FcuFLdswvXq0hPKAh4vFpkn11iPvGHBCnhb1bUx7ttLZzmU0%7Ctkp%3ABk9SR-SymIuSaA",
+    "url": "https://www.ebay.com.au/itm/147531421041?_skw=leica+m6&itmmeta=01M28QZ3GPXR8R45DHTH0WV4Q1&hash=item22598ed571:g:2VsAAeSwWIxqkIQd&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xDB%2BlsyLDHomdKCdghH1y5%2Brhgh0R%2BYbVgNDbCxTlCvetCBL1UUuuy%2FR0S6hPAZV1kuUUd9k7YAQs82QoPw0vPAdFBVLjhSGIQc7d0AxYZ8cS9aYx0rrPPemdzlYARYnFBx4FIs7GnO6jo45AoNHO1dn2%2FCFmk5RWUM0S4kSk9a3OCUxgU7d2lWsJ8d8mxAzf6Mw5lra7DPY5EnApUaBAF1U3VuRRRtKGmQIztmWBYY%2BIuypKwKJNaY1IgcsMmSNiugYvTmL3RVtG13OBUKNLB3%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -230,11 +230,11 @@
       "buying_format": "Best Offer",
       "catalog": false,
       "condition": "Opened \u2013 never used",
-      "free_shipping": true,
+      "free_shipping": false,
       "location": null,
       "seller": "bachelorbest",
       "seller_pct": 100.0,
-      "shipping": "Free delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -247,7 +247,7 @@
     "price": "734.15",
     "source": "leica_ebay",
     "title": "Leica Black Paint Shutter Speed Dial / Early M3 MP Leitz Replacement Part",
-    "url": "https://www.ebay.com.au/itm/155124475264?_skw=leica+m6&itmmeta=01M28B634YE8PMNSD6W349VYVC&hash=item241e23a580:g:pBgAAOSwZ4Ri~j3f&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xC3sUMlKVy0vjak0j%2FpBctSmhDH0Eb1hpYkC0H5oFW%2F930Do2qmPTR7GoWobfwrtFUZfq8PhDL8Lsw8%2BlNwRsRNUGTLW9Wf%2BcCsEww77YOrv6JrOSgzvOYOF6R37P3TUfu8FI2kEap24pd4guvESWeTKGYQZqRMMIZoAxfPIPsIb9gB2%2Fz%2BrreXaE18WGuY0YYiJWnaSFpJjIQxvtRRT%2B7N0dZWm04DK4%2BaJxazqm7JHYV5sn3SgHoBcvGVsxIh2JJUuHqH%2FNoVwvicHjJzwM6y%7Ctkp%3ABk9SR-SymIuSaA",
+    "url": "https://www.ebay.com.au/itm/155124475264?_skw=leica+m6&itmmeta=01M28QZ3GPNQTMYFC818DB998E&hash=item241e23a580:g:pBgAAOSwZ4Ri~j3f&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xC3sUMlKVy0vjak0j%2FpBctSmhDH0Eb1hpYkC0H5oFW%2F930Do2qmPTR7GoWobfwrtFUZfq8PhDL8Lsw8%2BlNwRsRNUGTLW9Wf%2BcCsEww77YOrv6JrOSgzvOYOF6R37P3TUfscN%2F85Q8XRn5I8Fi0cn%2B74COkRlIslnsmSFjuaccBc4dr8I2iJXJtyfwjqZG13DNue3PvkvrJYLXAWbvD2T3Fr9HGBieC370vW6nWj9g5Upa3jGR4p%2BdvBMVJ8%2Bn2kgD1mbi6XKJuGB99OCf%2BNaqFD%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -275,7 +275,7 @@
     "price": "7186.91",
     "source": "leica_ebay",
     "title": "Excellent Leica M7 0.58 Black Rangefinder 35mm Film Camera",
-    "url": "https://www.ebay.com.au/itm/168231545398?_skw=leica+m6&itmmeta=01M28B634YW5KTHSNQNZ30J6JN&hash=item272b61aa36:g:9rUAAeSwkONptOQx&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDjc%2BvSWRnO0zKK9AWS6zd0fFg65dTJ%2BboD0wa2fXa9s%2FyWI%2BghXewDuI4UelxeaR38hhkMBiaKVdtNFD1AAgjxjHnZiJEXC59yiIorwO8JJ7GkxmTFabi7H6asUCf%2Fg6JnKCzsO2GAwIHs%2FdEc8Jv1ARh5Dpel8xmzgv1XTirm9R3FxrAoI7dCjuCi6Lz9jNgma%2BMIpBsJnuj7OINFOrSflRLsysXEBxN%2BCscsx3S8LrFGwSEEjzzbJoxVnKmnaAw%3D%7Ctkp%3ABk9SR-SymIuSaA",
+    "url": "https://www.ebay.com.au/itm/168231545398?_skw=leica+m6&itmmeta=01M28QZ3GP7167JVFW2ZF7D3VW&hash=item272b61aa36:g:9rUAAeSwkONptOQx&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDjc%2BvSWRnO0zKK9AWS6zd0fFg65dTJ%2BboD0wa2fXa9sxeBudoAw9XaSAF5R86cJEX9zoJHC8h%2FaB13xAxKk8nxUPOieIz%2F1EienfMvkU9Jk15cjDXPeH7FUH46MN4%2FV8ljmlOkyJ1Kc8V0L%2BDPnJ%2BHpntSrndtpiZnF2VluHVnCpJEuzfZ%2B0XjlXbsXpUUb324ACmCb35tgETZ2qLPxCim44AlKOjjDyVy0jiDQChzGxxEFKC30ApatkDs3GerIPc%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -303,7 +303,7 @@
     "price": "86.16",
     "source": "leica_ebay",
     "title": "Kodak M35 Film Camera Flash Olive Green Built In Timer 5.6 Inches 1 Count",
-    "url": "https://www.ebay.com.au/itm/168585697674?_skw=leica+m6&itmmeta=01M28B634YVB0TP87K4QNGFPJ0&hash=item27407d998a:g:0qQAAeSwvTxqcKPp&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xALr9CjtuPy9xcyFiHf9RA2C1WQ%2FOuIbfpCYDqfK4JWixgizR0YoULWbxwfemJy9--KST356kzJOtincsdxRRC6HfmNzurSKUuCZ0JB1W036mkE8vED7vROOIcRMwSQVuv4smjlx%2B41uvWXYoib2ANEt9olNzfYXWFQHwkfxdudJAolanUXproWkg4a399y6U4QrncIJVr7vxshTorjj3e%2BIoMLwOCIhEquQQABqhWjP%2B4DECzWHhyz7peD7Rd14%2FFb5UIifMC6MJeTfuDi6MkZ%7Ctkp%3ABk9SR-aymIuSaA",
+    "url": "https://www.ebay.com.au/itm/168585697674?_skw=leica+m6&itmmeta=01M28QZ3GPYVXGGHRYCQHPF9Q2&hash=item27407d998a:g:0qQAAeSwvTxqcKPp&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xC0tMlwsBbNQbkgevJH7Gty%2Bj3LjUIOyKkrFkcwL61P8nMotY6oCS72cXBTqtS5hkAnbfVfBh5eX3Y5N2dyYM4QQFO5X%2FAQAISXql%2FBCbCu9Eq1jnOg5alLi74v4YF%2FdPPMKwcMNgaruhoEjhErb5XToVxmJz25X9ct1%2FNk3t6tMYlPIt%2BUy0aeUk8QMmrJwmAK3giHrZlsg9Kiog4VSjrgIUPWhQH7NOyM%2FMM5QnXA5Q%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -331,7 +331,7 @@
     "price": "16777.00",
     "source": "leica_ebay",
     "title": "Leica M6 TTL 0.72 Millennium Edition Black Paint 35mm Rangefinder Film Camera",
-    "url": "https://www.ebay.com.au/itm/177882633401?_skw=leica+m6&itmmeta=01M28B634WK9J0XJT3HV8Z7RK2&hash=item296aa194b9:g:2OoAAOSwst9m38BZ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDcAAE6flDgN%2B3yfV%2F6o8YXZQys%2Bt9tNj7VDSdG4oFMjx1Y6SNNMNaDGphfBc9tTMY8ql6EpwxoT6r1fnSAZAbvcuOLJHt3XQd%2BmGSqOXtPVl3ZvXgPls5rPSfgdRjJAYF8yWZKPDK9SK26a6Fmr4sQwgr4xuuHyjT0V99YnZ4XRNi%2BmYXMawZhyQsGjrYL%2BYvXuEEAQnoXubAwADCiIRNI3sIUBdLiZ0HYgg5QamgbQ6SFIx%2FLjWCFoupsRJukUsjcRmxnkKvPqkC7Gk19ud29MATNdxaHQkNI293tiWHXQg%3D%3D%7Ctkp%3ABk9SR9qymIuSaA",
+    "url": "https://www.ebay.com.au/itm/177882633401?_skw=leica+m6&itmmeta=01M28QZ3GNA3Z36DXMNJT2RVSR&hash=item296aa194b9:g:2OoAAOSwst9m38BZ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDcAAE6flDgN%2B3yfV%2F6o8YXZQys%2Bt9tNj7VDSdG4oFMjx1Y6SNNMNaDGphfBc9tTMY8ql6EpwxoT6r1fnSAZAbvcuOLJHt3XQd%2BmGSqOXtPVl3ZvXgPls5rPSfgdRjJAYEZZPIVvBrkhLN2B5pczMhxI5DCpQYcHsNa026j4R%2FRTRHwlGjcKmNUQVFlRHgT7HMIrJXnbbp4tVz14hHAO4oD10enMKTQYZjD3bsltW0QjkFfETvapN%2Fke4%2BVdy9MpTGYaK2MhKzBw%2B2Jp0ihwnymmGgEG9TxJQk27X2lS%2Fsvog%3D%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -359,7 +359,7 @@
     "price": "2377.00",
     "source": "leica_ebay",
     "title": "Leica Leitz M3 35mm Rangefinder Film Camera Body, Double Stroke DS, M3",
-    "url": "https://www.ebay.com.au/itm/177882633415?_skw=leica+m6&itmmeta=01M28B634XYA1ZERYXJ8HNCD67&hash=item296aa194c7:g:~cMAAOSwmfJkN2eg&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBqF3NSvIJnC%2B0bqEPxaITEYkXLbd3XV4FRPIJIIdcMDnD6cQmBdTQ5z2W1xqy6Xkph%2ByidDOD94Vb8FrO1VEImlro%2B8rAeNrsjJHbrXbVR%2FW8EmELftNaCt0kljupeabBrKWWRunLpagaGaz0Sn21Fb75OLJXSSBeP6uBU2SPSakcr39qaVCPgT%2FZPHM9CdM2qqmK78eAt1tYWsBU8bxpz4TY8l1%2FVFcaQvTWsY7KJMra7%2F6EoT2UfoqA1%2FbbqdQdWgKsW5t51boZKX1Ck5WyI7NZxJAllGoB24VOAbndw%2Bw%3D%3D%7Ctkp%3ABk9SR96ymIuSaA",
+    "url": "https://www.ebay.com.au/itm/177882633415?_skw=leica+m6&itmmeta=01M28QZ3GN9JCM0MM2ZD4H0ED2&hash=item296aa194c7:g:~cMAAOSwmfJkN2eg&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAT3I9X%2Bumke1popxu6PNNyILyD%2FW29FGB1a1TndWrEc4MEaiCDXOuKRFuvAxP7kfE1KByUbgFnUSdXtSkMVPKD4tN9rEKyPpJYQy4UpIHK0TT8rd7%2Fc23hzQcES0LFwhql615%2FYCxpva%2F6dIvYtIYOckmUu5pOFTr%2BPuiTCSJx0soHpA8zkHD9PDnJgeakgF4n1V6%2Bmsnfpxvyy2O0EDBgaTfF9xPC04gZE07DRtu19RrMR6UGsUPiFlrNAb90x74%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -387,7 +387,7 @@
     "price": "2277.00",
     "source": "leica_ebay",
     "title": "Leica Leitz M3 35mm Rangefinder Film Camera Body, Single Stroke SS, M3",
-    "url": "https://www.ebay.com.au/itm/178256671258?_skw=leica+m6&itmmeta=01M28B634X3V7QX6Z73PCC7NP5&hash=item2980ecf21a:g:ffwAAeSwqZ9qPiKL&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDn7nJXHlNK9i5uU9TXVUtTZXlJsdKOYb1ME%2Fjf0j3tGsaUPrRUdu1w83l5%2FQjST%2BkY1u0OVN0QcAk9o5MSvKiF%2BlCuMSVR2Nx%2FxQVNvheE%2F%2BWmTqhbDgHh6i5W%2FbbESU9rsRHVRwG30Gyu0sftliq1BCjLPTVE414CmU2DqHBL3p4eoxhYvPFMx9RqvNFn14SQIN7Mm3rDjDXCVdzaCahUyuyUAjCh1ZWrY29tCuhxWVwaD1GgiJYPlPGHZV7hFGYJBPTJqY7f7M04%2FgBR2UCNgWuaaqmSq32G6I%2Fsw9NydA%3D%3D%7Ctkp%3ABk9SR96ymIuSaA",
+    "url": "https://www.ebay.com.au/itm/178256671258?_skw=leica+m6&itmmeta=01M28QZ3GN51H91C3X0G513696&hash=item2980ecf21a:g:ffwAAeSwqZ9qPiKL&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAB2%2FtvPMNAlkkf6eZDlBG5QEmUqqcy5jO3ijBDq9M90wjn9Typ57y%2FSvDteLwsI4h41pNw8fziHP6QlEK2yOL4fK60mvX%2FjUdxljwRKwFjc157ISgmJU9HUwRjbrMkUPxsflqv3Esjp6aJCtTXibenyY56kz9wZKLYJfTV71OrWTFAYzYzs6zCJt%2B1Uo1%2FwIbboIuXH%2B%2BbjYsuqsYK%2FwalHyk%2FM%2BhJ6LkXcAO8J%2Bt%2FkUDvczbIMeBrEwBQpw%2F6nGE%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -415,7 +415,7 @@
     "price": "3777.00",
     "source": "leica_ebay",
     "title": "Leica Leitz M4-P Black Chrome 35mm Rangefinder Film Camera Body, M4P",
-    "url": "https://www.ebay.com.au/itm/178293150799?_skw=leica+m6&itmmeta=01M28B634XGGWV7S5YSPY8302H&hash=item298319944f:g:6zsAAeSwebNqTfVA&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDs36nD01Sq3FfPKlHUseF1LLPG1aAtkHTu2%2FxKhy2Vn98qXJM9GXPSlgD253oKztBRXSLZDWVTWqod6aPcGNPv0P0oIVUY0c8Mhy4yB4XJwh4DAZhDiadPDFW1kk8tTGmGpYYNv2LKcuxLads6G4oOcbnV92vjRGSM96XZo5bz4ZJF11B0lTkX4%2FaapoCj8MWBd%2BUkvp7tQ0tFoXSHGrC8Se3q8XmyKXwDwZoExMpjlVgSJ%2Bu3apDsYWVFH4tZkU0%3D%7Ctkp%3ABk9SR96ymIuSaA",
+    "url": "https://www.ebay.com.au/itm/178293150799?_skw=leica+m6&itmmeta=01M28QZ3GNGT8M3BNQ3379E7QP&hash=item298319944f:g:6zsAAeSwebNqTfVA&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xABOp1LxSUSNNCelDiW5cXTYGyedmwo8TXPKoRkCSR6IGshI5sPfrffPjxJi1yXEEO0qnzd4OF3rYnDxbWNcnICIUAdXK86T0yYgNmDvP32glQyDTjGgkknfhyji%2B9msoRZNy%2BCCWpvJhJsdw1aYUR%2Baq0a8WHkx0yV3f62Q3dxY69YcXs%2FKzIPNTqLWDpKSnKn28vUNpiC%2BhGzOr9%2FLxzsX4IJDzsFaDhTYNhn%2FZSvsiylWdFa4JEm78Q5zSYAmp2cE4ni5ztIBPJ9YMz7OFognl5YzbiZgYFA6GKPT3keXQ%3D%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -443,7 +443,7 @@
     "price": "5777.00",
     "source": "leica_ebay",
     "title": "Leica M6 Titanium Titan 0.72 Non TTL 35mm Rangefinder Film Camera Body",
-    "url": "https://www.ebay.com.au/itm/178296155522?_skw=leica+m6&itmmeta=01M28B634WKZ42QFV6DY77QG2R&hash=item2983476d82:g:ysYAAeSw~5tqTx9Q&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAUqYhs20bHC5hEzFrEUeA9tAkJGt94zLr0%2FjL5EwKktC%2FQialqvB%2FiAsWZ7DGZEiafL%2F4WlWvGEzUKZuMEtDIZpl7KcXivSn1Q0B5cSGKbOJ0MRNr3E9KqSZIS45J4ZqW3%2FkHc6NyxUVp1Q00WRW4EwKxI0A9E%2B4HUyD9VDI3OLIvt9Lo4bWDLRhnpi4lCvoFQa%2F8yxv7svh5uQx0vGpaQpp00JE8U7fkoanWVQxd%2FJSJlaUG6NjqYnJNxhLs3txs%3D%7Ctkp%3ABk9SR9qymIuSaA",
+    "url": "https://www.ebay.com.au/itm/178296155522?_skw=leica+m6&itmmeta=01M28QZ3GMKXMRS9682B5X8JBK&hash=item2983476d82:g:ysYAAeSw~5tqTx9Q&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAUqYhs20bHC5hEzFrEUeA9tAkJGt94zLr0%2FjL5EwKktMEYDyj8icJeUF%2FAH0qU4lODovwL8h%2BDjxPI2de3YFW5gNgZlovJZGrhfRQWAWdj1E4EZ5iHq5wky5h4l5bGujVC9J0SJlj3onLoaGgMO%2BRN%2Ba83yZD4tWBumODGlYnczir1jIMEx7wOMI%2FdgRNXi2ZHT2c0WwRCpDvJpUO5a52PUCaAYYkZQckmtaXHO9oNcm2v92n%2FTC3E6IzeBHzLVBk%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -471,7 +471,7 @@
     "price": "5892.85",
     "source": "leica_ebay",
     "title": "Leica M7 - 0.72 Black Rangefinder 35mm Film Camera - Great Condition",
-    "url": "https://www.ebay.com.au/itm/178306023077?_skw=leica+m6&itmmeta=01M28B634X8KJP5KX0Q2YMGK96&hash=item2983ddfea5:g:ci8AAeSw9fxqNOlB&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAWD%2B3gGXkvfTbAHHACOfo7lpK1IqVv3b6xzeGjYgrvk5DZO5JXRhxuCIcDo6Js9Bl1%2BoPDyUdLWS%2FzLi2p%2FbS9ybS7ksga%2BBi2IzJctsfb6a7su4rjfckgrGgV63pH5zPk%2BqzLEquQ9K0gw%2FGBVy%2Fy8NKcloBhLLUBOFGMV8uhgQ8sZoMGnVqy13LUHNGa3M8oCOaePE78iKgndmyBomIo7QuCyQewX3%2FEJ2jOi%2B0731NYxlwg%2FsmzpS%2FmaU1ZDVk%3D%7Ctkp%3ABk9SR9yymIuSaA",
+    "url": "https://www.ebay.com.au/itm/178306023077?_skw=leica+m6&itmmeta=01M28QZ3GN5E86EBV56RJSESCD&hash=item2983ddfea5:g:ci8AAeSw9fxqNOlB&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAWD%2B3gGXkvfTbAHHACOfo7lpK1IqVv3b6xzeGjYgrvk8C4SNxBX5oRIPfueGyMaJOdfEG%2Bpo2V5D73Ohwy73ax2dZejG%2Bst5vW%2FYaVdHYRQfQuihO%2Fv1kE9W10N%2B5u1pWTzbDIyJcIuNvyfAQYg5evp%2FGZMjpxqQWZ4XK3gNMA8sHDkkQF6Tpu0B9qmhrQBjphaNSHG3WDoX4cq4umn0CDxfmBsFskjttbfSRuTgXjo7xqVDRKPwSuL7cTjfDRBmg%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -482,11 +482,11 @@
       "buying_format": "Buy It Now",
       "catalog": false,
       "condition": "Pre-owned",
-      "free_shipping": true,
+      "free_shipping": false,
       "location": null,
       "seller": "b5zoo89",
       "seller_pct": 100.0,
-      "shipping": "Free delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -499,7 +499,7 @@
     "price": "5602.18",
     "source": "leica_ebay",
     "title": "Leica M6 0.58 TTL Black Chrome Body",
-    "url": "https://www.ebay.com.au/itm/178392145920?_skw=leica+m6&itmmeta=01M28B634WRQAXQCKTXVS5Z406&hash=item2989002000:g:vmYAAeSw~cFqeSv5&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAwq9TiiFQLL73RvjYtEJ5FoiN7Q898iB9cTjm4tkP7eGB99y7jkBJ8zoJg1tG7UwTNH3SEFWRF1Mj2zIretdBQLqT4iZWttEcViKfmIQ7VqENwxgy9TJWRsS2ZGOAoUs7xRcjaO7rcGIByQHxmDI4A9nUzF2%2Fz0yUcUuCghdAuGAnjPQmbbJwR9d%2FWz5SsaS81IUDz0lZCFDdn9%2FqDNF7038ZF%2BlrQfjWXJo%2Fo%2BVHJqeFwVTGhNhS9Ix5a18c0dQM%3D%7Ctkp%3ABk9SR9iymIuSaA",
+    "url": "https://www.ebay.com.au/itm/178392145920?_skw=leica+m6&itmmeta=01M28QZ3GMSFRMHAF8D8Y9AYMV&hash=item2989002000:g:vmYAAeSw~cFqeSv5&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAwq9TiiFQLL73RvjYtEJ5FoiN7Q898iB9cTjm4tkP7eN5%2B7blwx12L2OxFii2lBn4m7zTBfy80CuSA0C%2FdVagg0kudW6X8Ny9gDoNv8E112mm9%2FMvhDkQ9PZtwZOsa%2FcHW%2BJq831Fy8engXK3Kozvd9MDUBFZ%2B2VMfFMS3DQA2WAdrEgfG3Tbp%2F0NWDlNXT5M0rG5Jk3nL86h9TVkxH%2FLY28ANTVKsgVoQQcysfP8ZrNQtLJSRW4ZmiAUYEmLr2aA%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -527,7 +527,7 @@
     "price": "3777.00",
     "source": "leica_ebay",
     "title": "Leica M4-P 70th Anniversary 1913\u20111983 Rangefinder 35mm Film Camera Silver Chrome",
-    "url": "https://www.ebay.com.au/itm/178444286595?_skw=leica+m6&itmmeta=01M28B634XVSEF8K1ASKGETD64&hash=item298c1bba83:g:M~gAAeSwpEtqj9sZ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xC9cqH2pCCNnyNe9rnOWq6B%2B3x7L4YdWOzztMXyBh8H02Vfv3OAapaZjFC382Fwpjryiwc5p4MKtLvpBhvZT2Q5zesy0poq3nwxw8ANNsu7zSdqq%2B1pCmuWg%2Frw9CJYL48kLzP32YhTBZ60MmqY4Ws01Y5BaCN5%2FtyvE6kg6ZqnUaKwYewUnPYAn03eGzntqGG%2FjRkT747xBeE8yKVaOUTFPAFVtvo9tldAxlVtnBgLzz8GXsOFQYsL3rNVCgKI8YW1NU5Y--yvU%2BEp2SXGAufTXI08h8nKx8SFU%2FN5nSfzdA%3D%3D%7Ctkp%3ABk9SR9yymIuSaA",
+    "url": "https://www.ebay.com.au/itm/178444286595?_skw=leica+m6&itmmeta=01M28QZ3GN6ZQDJM5ABFF2JVTH&hash=item298c1bba83:g:M~gAAeSwpEtqj9sZ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xC9cqH2pCCNnyNe9rnOWq6B%2B3x7L4YdWOzztMXyBh8H02Vfv3OAapaZjFC382Fwpjryiwc5p4MKtLvpBhvZT2Q5zesy0poq3nwxw8ANNsu7zSdqq%2B1pCmuWg%2Frw9CJYL4%2Fbi0kZztK5k27yAuYOM3VJry2U6tqF4YeE5I9dWmfQUsu1xfltIM2KnuEdbNjXNWJQjHNvz83mCzgmQazcohho6ZgSqli%2BLzLOr2geD1H86%2BGPaPmUY4Nw2Dl8EF5bxgbomyfaVdmENQsOxiWpvE6PXIdZuvPjTE%2By31DxJaDSug%3D%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -555,7 +555,7 @@
     "price": "13191.55",
     "source": "leica_ebay",
     "title": "Leica M6 classic; 35/50/90mm lens bundle - Unused condition",
-    "url": "https://www.ebay.com.au/itm/198026964978?_skw=leica+m6&itmmeta=01M28B634W4E0J0T9R2DNYQK73&hash=item2e1b53aff2:g:-XwAAeSwMPVoxK8Q&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xAdAKF2CcxomBT6X9KIcu40d7OSiB%2BHQLLfE%2FwX1QQW%2BobJuBDEoCXycqHWSSMZd%2BCvzx5p1yI71xsuuWZNgdpAW7taAhT65MH%2BW1fcYHXScdJT%2Bg8JK8Z76QG7pCKK2KFE1Aeh7j3%2BR2gVgiKMGLAUy%2B3hvSZ08%2BZBECHzBVbQezD1zcXc78sPSjxH2cgnMyOE5yINUIstoMIXd%2BytKW5DQQ8mBsail6H%2F24H2g7XfK%2BivCqeg%2BelqLJYRNsd54s4%3D%7Ctkp%3ABk9SR9qymIuSaA",
+    "url": "https://www.ebay.com.au/itm/198026964978?_skw=leica+m6&itmmeta=01M28QZ3GNCHD9747GXEYRZ5PJ&hash=item2e1b53aff2:g:-XwAAeSwMPVoxK8Q&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xAM%2FdtrXm8v3lznQFa8yCg0wFGX8SBxO6glTkClriiq9XOjHXkFzTcqXiBI6DJNaW7VjGylAUdFogTqSoNgNtTO7ZYc3uXJ8NyMXbSctP24Ia6zzdUuKcSbHsEZfjFfBP1zLK1bnFrfHihUl%2Bk5cJ%2BYyZ9R2UoGz9pwpfrNAyjy9iKXF16wBc1kvZ7WzN0fVpIz0Nu5X6MheN90vJkOYoQKlHt32QD6FDJSQ%2BTZo3lBN5%2F6k6ae%2BE7028iPji%2BL8lqZyuscp%2Bjb5SunsOuEzn0HZTKpUWC5CPWXiY4OJAiNpQ%3D%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -583,7 +583,7 @@
     "price": "2328.29",
     "source": "leica_ebay",
     "title": "leica m3 Single Stroke",
-    "url": "https://www.ebay.com.au/itm/198277052520?_skw=leica+m6&itmmeta=01M28B634YBN2V3ERCKTHTZDFQ&hash=item2e2a3bb868:g:H6UAAeSw-jZp3Dx6&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xAMOowenUAr%2BiDL2PCm%2Bw3disxh29wmhIGYTmXba2ZPWxObADv%2FJvqsSXi%2B3y9I2mSjo6Zh8OgRkehuYJL8Qv6DysHqjJhnGf86mCbqwpZ0dTbYCZrmiEPxHlcZWoVjPVN5w1BlVBYidxxr7t5CeMZl9zw2S7QS0jDoBGb8waVjoafZQdMMdT7TDEAG1Himd9ZHZsRU7ss5oAaTym4Cs44kQcy3LPw48B0kcaQPJOvVddM3XDa1myuEU1rxS%2BUtr%2BxQ%2F7H3MWdZjjVxLPydxrOteA5MqiqvqvAG%2BWMD8UNq1w%3D%3D%7Ctkp%3ABk9SR-KymIuSaA",
+    "url": "https://www.ebay.com.au/itm/198277052520?_skw=leica+m6&itmmeta=01M28QZ3GPFDNRN9T32A3SGJ0J&hash=item2e2a3bb868:g:H6UAAeSw-jZp3Dx6&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xAMOowenUAr%2BiDL2PCm%2Bw3disxh29wmhIGYTmXba2ZPWxObADv%2FJvqsSXi%2B3y9I2mSjo6Zh8OgRkehuYJL8Qv6DysHqjJhnGf86mCbqwpZ0dTbYCZrmiEPxHlcZWoVjPVPfIepG9Job1UogQ69Z78zKIKXxD360Hz5xh2QyyQsrSdPWY%2Bb0yAsp7Lnh%2F3I1O56MRrJf7j1PjPh3yXQdNTQ%2Fp5cSQ4PuCS3CuYYp%2F%2BCoEekvyUjePL0vZtn670B5rxQ%2BQwqjmVrnJabrY3Mk2pI2O59JOpqs8hV31owkDg9gRA%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -598,7 +598,7 @@
       "location": null,
       "seller": "marshalldjenkins",
       "seller_pct": 0.0,
-      "shipping": "+AU $20.00 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -611,7 +611,7 @@
     "price": "2289.73",
     "source": "leica_ebay",
     "title": "camera Leica M3 SS excellent condition.",
-    "url": "https://www.ebay.com.au/itm/225999422395?_skw=leica+m6&itmmeta=01M28B634XP59XB09AARQ9VJK9&hash=item349e9d83bb:g:~nQAAOSw50FlyZxy&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBXYNviUNMgovjFbd4YDyiWXFUMYJ077n2o4aFJRKCig7wrs0QODBRUfcVodXdpYOdM61ncW%2Ftowf4ButQs%2FRW1KNmuoUEh1YIeZnwQEyHmSwjP32YeQ6BrGJQaobZt2xCsIkRK6IrTYERQV7YtzRyamfHuQhoonjf8lh%2BsL4h18OjDcrP2i4SDbUbn6cqON%2FgAEv9%2BfcwOd1BkwCN66gByI8PN%2BUO%2BJ%2FyTYWr1MFNmfZF7XkEVjF766h65pTjdCR4%3D%7Ctkp%3ABk9SR-CymIuSaA",
+    "url": "https://www.ebay.com.au/itm/225999422395?_skw=leica+m6&itmmeta=01M28QZ3GPHWQRAZK1PN6JKZ82&hash=item349e9d83bb:g:~nQAAOSw50FlyZxy&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xAxA%2BxedvrfH0awYGrfKPf7%2B4jSRPJGtZ1128vJinvY1MrFp679IYiGwtwWfpQdHXywfGoW2KfMtmiObTd3VkU0mjsswRXa%2BhXC1jpZ7RSOGa9xlpxOruS2x962kzjgYoCn6wcC0Ws0KHpJx5YIAorimLkYDmzlFOSrEcKOxx8%2Fng%2F6xCn4RFQVpUy2aoNDsMV7gud7oN9oH0py6NL0nSAiDOoBlH6dz%2F1ZHmTSF7qFkIet3gSM5kJhiUw4HpKTI%2FACIMexnfrSA3lwjnReK6XuRFgDeuGKJP3D30%2BbQJryCQ%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -639,7 +639,7 @@
     "price": "520.00",
     "source": "leica_ebay",
     "title": "Vintage Corfield Lumax 2.8/45mm lens M39Leica Mount",
-    "url": "https://www.ebay.com.au/itm/236076988059?_skw=leica+m6&itmmeta=01M28B634YEKM4XMPJPAPX0R9Y&hash=item36f748f69b:g:M9YAAeSwzLdoEFO-&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xAahmeq27fxE16SeQIi%2BDU4S87OOlqneek0gAhc4Re0WKT4uJWDliDJk%2BdswECbgGDCRFpYPhh1lMSeQeA9hHWPSNNwVtzKGOf0aYuiHYqZvzdLGxnc2ouT5P%2BEEXeQbov5hUxsarBTI9QTbkR9gRgkAjukbVsQoa3C7nihCFymMkJB8vneQv9ud99rqXKX0ms4LjLACbqZ%2Fg0WClEoSNz0DYxM984zXSdPAC9WAC8KURu5OHSmEC6OAIsp%2F7SqkE2D5fO2N95Je%2FcGKmIK17OH%7Ctkp%3ABk9SR-SymIuSaA",
+    "url": "https://www.ebay.com.au/itm/236076988059?_skw=leica+m6&itmmeta=01M28QZ3GPPS9GVMJAQPPYSFTB&hash=item36f748f69b:g:M9YAAeSwzLdoEFO-&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xAahmeq27fxE16SeQIi%2BDU4S87OOlqneek0gAhc4Re0WKT4uJWDliDJk%2BdswECbgGDCRFpYPhh1lMSeQeA9hHWPSNNwVtzKGOf0aYuiHYqZvzdLGxnc2ouT5P%2BEEXeQbotbO5hpFKJV6HysAEftOfkKLcZhxk0mJLEw8xx5URVTPDLwR5ziuqiYDvqhRVz9%2Bv4I%2BpCfOiZl7o3q8%2BqRNGGPhi%2FXF2VWoZup6fT0jKCqVnEvyDtVcZjhuDbQGPmXXaiQ3ha3vVLuN9zjxcdbgDax%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -667,7 +667,7 @@
     "price": "8200.00",
     "source": "leica_ebay",
     "title": "Rare Late Batch Leica M7 0.72 Black Rangefinder Film Camera Near Mint",
-    "url": "https://www.ebay.com.au/itm/236461810227?_skw=leica+m6&itmmeta=01M28B634XPX3AB9574ZV9BHGP&hash=item370e38e233:g:1DwAAeSwUABpFxFW&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xD5KlKb3hrSWZ%2FFyp7fRvutuIvQGOkBAVKP%2Fev3iqmYvE5Wq3WkueHZ5QGTYBe9gs9odkKDRph9CzO0p0xY1dFfUo8bE0V847N7lk%2FMoEN9%2FCl%2FI0U9K5n%2BW7awBjulZ1fwZqBTbF2Ft1BJa4v6EyaSxPo30BXpFXCaCQ3W3XbMsgMYOG8T7XYcy7Wbnp05Nv8bdnCd9NwG9mQzwRTFGFoGguQXp1IwWYP%2FmZO90h2cFBnnJ78Sj%2BzRMeWnFt%2FKykQvOze9YTmmhcV%2FWdOgZnpZfaATq4EzQmLVkUzX7%2BOrEg%3D%3D%7Ctkp%3ABk9SR96ymIuSaA",
+    "url": "https://www.ebay.com.au/itm/236461810227?_skw=leica+m6&itmmeta=01M28QZ3GNYYT4JPW7CAWS3VHE&hash=item370e38e233:g:1DwAAeSwUABpFxFW&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBcxyJUbEyBM%2ByVR9qet1VQ5GcT%2Fjr%2BzjEZFPZk6%2B1HuNR2h8AVjqyUg%2BL7%2BxaTsH9Py2Eq5erhq55HW6SotfBzh%2BjbLPkYwgTEjp5X8Q2IGF2xB1VctnUikXvIuxJzhLBLYMWDEbbTUP8d%2BWDGTLyaWeXgBBUYW8kLDre8z1sM3tKMU9gG7n2siCfrhXOvh69%2BtP45Syvb2Eh0hKa5eoygJSt5WdcUjHjUOlxWdqKWKerQ6GA%2BQewb6%2B%2F923llfC0%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -695,7 +695,7 @@
     "price": "6680.00",
     "source": "leica_ebay",
     "title": "Nearly-mint Leica M7 072 Black Rangefinder Film Camera Japan Version",
-    "url": "https://www.ebay.com.au/itm/236890090235?_skw=leica+m6&itmmeta=01M28B634XZ59H9129MKH8QYEK&hash=item3727bfeafb:g:nFkAAeSwOUVqN~Mu&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xCHRfOFw3%2FNQMsjaHnSFyp6SSuq1r7%2BvLfgpULkGUdwPkzMru6flUjPCdkwMUEQ0eAheMagFQnSRe6%2Bw6fT7HtptMzJYogQGPk2DFN1jFlXg44%2BAeeJFGTMQrPoo5jKj87Qloz6Pq%2Fg59EfjT3mK4QX%2B73UB4PbL7Jrn9%2FPVeAvOleIooU7t%2FRheOaVaFOmWzht19hAEI5rfhdRXnEUc0wzkR%2FQ2cOb0cOxedYw34VjfenYq4cxdUH7MleeGXCODLk%3D%7Ctkp%3ABk9SR-CymIuSaA",
+    "url": "https://www.ebay.com.au/itm/236890090235?_skw=leica+m6&itmmeta=01M28QZ3GNCFPPTE6XN58YQ1RQ&hash=item3727bfeafb:g:nFkAAeSwOUVqN~Mu&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xCCUBp7zUr07ouSWaO2aRVtlsm0LPexCkw8XrlDnhW8gWkhsWkWw07af%2B3tmlN5dJWfakYeCpqEANYO1PVIa%2FDz95fDr9WaS7eUBYXMRkV4xGOwDWjh27oK3gAI2cmgx9Rj4Y%2BDPiJaW8kGGf8h6sHAxCaLk0LGemRkop6v8%2B2h2J4SqFE4G6r0YdaXSIf69a5BEOycF7nuoRv8NVCmKfZQbjZjevowyj1EG8I2BbHUgYBq6I0cDiGnS7VRCMACuDzBuaWVOXfe2MLemXCI938vkNfPtvqedKAHw2Yc0usDgw%3D%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -706,11 +706,11 @@
       "buying_format": "Best Offer",
       "catalog": false,
       "condition": "Opened \u2013 never used",
-      "free_shipping": true,
+      "free_shipping": false,
       "location": null,
       "seller": "reginaborik",
       "seller_pct": 0.0,
-      "shipping": "Free delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -723,7 +723,7 @@
     "price": "21691.55",
     "source": "leica_ebay",
     "title": "Leica M60 Titanium Camera",
-    "url": "https://www.ebay.com.au/itm/256781589707?_skw=leica+m6&itmmeta=01M28B634Y0SZCX7RNRF82ZFX5&hash=item3bc9601ccb:g:6awAAOSwoR5nhJXJ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBSv5qm%2F1mgVSe5L4tcdSSDtgb6xl2wbblRyR6QpJ66bkuwCryxEwpre2ymjdzRUixpojf3dVxIypStWnnqhu521sCq0HBuWBoV%2F5DdR9FVVS3L%2FIxovjndWHYvJKuuPTfMjr6IyOYEOukkwXSUzLAaiIK5lLrlGW6BJ5NBuT9unid3pErVTsxxTi7pYjGiW45yVjeEpLnJHkb27dIDkSLRkCR5TeTv8irdEfgpaYKYiR7lflcRpogm8RBUFJM2gGY6QLJAuZ4ARwBvb9UpqPHdD%2Fau9%2F8aO2SxC7WtfRCU%2FQ%3D%3D%7Ctkp%3ABk9SR-KymIuSaA",
+    "url": "https://www.ebay.com.au/itm/256781589707?_skw=leica+m6&itmmeta=01M28QZ3GP5Q0C7RJPQNZDE62J&hash=item3bc9601ccb:g:6awAAOSwoR5nhJXJ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBSv5qm%2F1mgVSe5L4tcdSSDtgb6xl2wbblRyR6QpJ66bkuwCryxEwpre2ymjdzRUixpojf3dVxIypStWnnqhu521sCq0HBuWBoV%2F5DdR9FVVS3L%2FIxovjndWHYvJKuuPTdWJvdEF%2Fm%2B7PQd8bOcOlW91txYVsQr2ocAYvn2nPCuBSRdRrvyVur1zII0C0k%2BK15c1KmoA%2BJMEKy7MARlGLLIICTsLmMGR7nKlsEMPtnyAqwZk2phiwTyK%2BzqXIOf1rb412GAXDbrYrgcGKpAEFaP59mCbohNBJJwKukhZo1nRw%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -734,11 +734,11 @@
       "buying_format": "Buy It Now",
       "catalog": false,
       "condition": "Pre-owned",
-      "free_shipping": true,
+      "free_shipping": false,
       "location": null,
       "seller": "block121",
       "seller_pct": 100.0,
-      "shipping": "Free delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -751,7 +751,7 @@
     "price": "6441.55",
     "source": "leica_ebay",
     "title": "leica M7 0.72 Just returned from Leica service and parts replaced. Immaculate",
-    "url": "https://www.ebay.com.au/itm/267271865153?_skw=leica+m6&itmmeta=01M28B634XNQJXMHR79SQPMDC9&hash=item3e3aa50341:g:j08AAOSwhqtnwVgc&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xD2A3OrV9jfczaRzN53pG58OqG3aLD%2FIunGHi3vnZTqnHcWts9uCb9Sfuq%2B9ApiaAIAwX7TW4arao%2BzfJv7tzNDA%2Fvj8F6EuQyL5ot%2BGPQufqqOUmAG3GqxSZc8oL2A5KuriWbUx22ouIQ6fmZyZeZ%2BfHyW6HWpS%2BVc97h0y4Y%2FAwg5JGq8fIPTG6IMbg1C%2B9IdXnKwk7fizdXWJiqfcBL2a7FWNPF73R%2F2k6mpzK11bS2NmzOnE1YIH3arTy21ksu2kSkiBZYm4RzzHyE13PaWdbcnLLIIJADQS2v4d9fCdA%3D%3D%7Ctkp%3ABk9SR96ymIuSaA",
+    "url": "https://www.ebay.com.au/itm/267271865153?_skw=leica+m6&itmmeta=01M28QZ3GNWFPEFPRPGJJFNVV3&hash=item3e3aa50341:g:j08AAOSwhqtnwVgc&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xARnahPwDx9KsRF9qaUqmZqusk%2BBiLARFeU6mh1PJdbroMTqEWEl%2B5NggQ%2BJ1wegEoXf60Jp45TnoVzBN4zXvDZfSdY1rwl%2FtUB0Z3RpO9NQtBO%2BWkmj4lEo9FXGfHNkGp2Ew3qVlRY8WaJjJozfmgb3KmjC8R7V51XVh1O3jnllMp0qv5xIOfgwZ4MEb5DCCFQfOpKDN12rtEzfEbdram1z5ZHZmv%2BzAOMs7lHcGydJLPFTV2UmI5z2yv3U2uP7cM%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -766,7 +766,7 @@
       "location": null,
       "seller": "kal3713.ewvvyktms",
       "seller_pct": 0.0,
-      "shipping": "+AU $150.00 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -779,7 +779,7 @@
     "price": "6190.55",
     "source": "leica_ebay",
     "title": "EXCELLENT ! Leica M6 TTL 0.85 35mm Rangefinder Film Camera Body - Black",
-    "url": "https://www.ebay.com.au/itm/285718382695?_skw=leica+m6&itmmeta=01M28B634WPFY4DE7XTK7KJS8X&hash=item4286248867:g:irQAAOSw4qdl1UP7&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xADD0lMFGgI5oBqS%2B6qjuRapQuzx4aV2SVNq116oTAOlAMurgTJjCzdt7KfQV4iFSZDlVgjVN85mPE8htBPReqyCxyrQ8cZEr7%2FNIa1KgEfiPsjzSGsSkJD0j9SXeCWBiD838Mv%2BTIoZTW%2FwB6zOh3n2GDTRzHPtZ1f6gcSaQwn8bwz5qH1YCYqHrlPCx%2BvVYKowxEREsPo7fa38Q5mHCTMrQsqqjVnw34l5ZK2U0rquQN1NVvtOPQc%2BcUtvGj%2F5Sr9mfdghXDb9oClwkWyllCoRPCjlQp8p2jb2Vb02C%2FGCQ%3D%3D%7Ctkp%3ABk9SR9qymIuSaA",
+    "url": "https://www.ebay.com.au/itm/285718382695?_skw=leica+m6&itmmeta=01M28QZ3GN168CNWHV90TCJ0E7&hash=item4286248867:g:irQAAOSw4qdl1UP7&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xADD0lMFGgI5oBqS%2B6qjuRapQuzx4aV2SVNq116oTAOlAMurgTJjCzdt7KfQV4iFSZDlVgjVN85mPE8htBPReqyCxyrQ8cZEr7%2FNIa1KgEfiPsjzSGsSkJD0j9SXeCWBiCLJFsSGfZgaf4TmBNdJUVqAlId1FaejFlsT2LncZZJ49fFAXiOWnBoV7LEbS2QzNX%2FFER%2BnPv%2BA8IxECByxIoCVvFUP7gTCkntwsrAMPi0PBw7qtXqAb251xiXQiLV7AJY6eHQaWyWiS2V3QOsyVSkkX4EfTHmz4qs4em5gLekgA%3D%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -807,7 +807,7 @@
     "price": "6391.55",
     "source": "leica_ebay",
     "title": "Leica M7 0.72 Black Rangefinder 35mm Film Camera Excellent",
-    "url": "https://www.ebay.com.au/itm/287402928428?_skw=leica+m6&itmmeta=01M28B634XH69NFMVEGSZRSYMJ&hash=item42ea8ca92c:g:8z4AAeSwPuhqM6u2&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDMh5v%2F2a7EYQGnNRdbMCGC8%2FIPevKHP2f7j7aS56HbQtKe6C7yDWUOLaxzGqf%2BrqcSLFXDNj5hrnQAvGNtpqhRvWGOureZNfn%2FXH%2BLd%2FaYdRRYpo2KtYa79gJn2nZJvC%2Bp4abrCLLFuKtMnCAtUYR33Kaw7XM5Am59fV4PGPIO%2FITmWXngBJEGKl0cHHjU25L2MXrxlIB8gDiuwBJPlaf33ZwweqSz3uy%2FdtcIN2Jpo2Y7shl0hkrDceA%2Fn6RfCdJANQjyoqi6MjkAYviSxhHQPtgK6ZKt6KEcUDG%2F8Tweig%3D%3D%7Ctkp%3ABk9SR-CymIuSaA",
+    "url": "https://www.ebay.com.au/itm/287402928428?_skw=leica+m6&itmmeta=01M28QZ3GPXHNHEQ29W8FJG1F5&hash=item42ea8ca92c:g:8z4AAeSwPuhqM6u2&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDMh5v%2F2a7EYQGnNRdbMCGC8%2FIPevKHP2f7j7aS56HbQtKe6C7yDWUOLaxzGqf%2BrqcSLFXDNj5hrnQAvGNtpqhRvWGOureZNfn%2FXH%2BLd%2FaYdRRYpo2KtYa79gJn2nZJvC8W6b%2FqV8Uzu1FY4lzAAtn%2B25VC0hDz75vE4Vykn4A7Bs0ln%2BCMim5PPHLKJ1fXltU78ooNe%2BZsuCg9jhMoveKPz2bWeDvvETBvOr%2F2u%2BCVV%2FMbTp%2BWfxKyrT2ihei40j%2B33bcrlG9wdDLqq3LndAJ4F7AlvtnrjtK%2BTT3p%2Bq6Fjw%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -822,7 +822,7 @@
       "location": null,
       "seller": "kalw28",
       "seller_pct": 100.0,
-      "shipping": "+AU $20.00 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -835,7 +835,7 @@
     "price": "1253.36",
     "source": "leica_ebay",
     "title": "Leica M2 Body - For Parts, Shutter, Top & Bottom Plate, Rangefinder Assembly",
-    "url": "https://www.ebay.com.au/itm/318842261155?_skw=leica+m6&itmmeta=01M28B634XT298Q6XZXDS87WDV&hash=item4a3c7acea3:g:amoAAeSw131qnlq0&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDTbTuGULgZ8pkPKFXkH5ogYGyUlpodejbjgkLC4ME4hB22xjVMXkdTILKrT3T0FP0mwteVq1pqe%2B%2FRVO1Fziwq8%2F82U9ZZQOyz1AwNOrezW4FCXAoMNighed8tpv98GephQCNhLUQ18dR0OhmPnDJfxP1S3GChRyJF7BUFm5Ph8oAt86aFbYon3zBVkYifc0sNjUqGPT1syI3P%2FEyE9jTHMqQ1DOj1ElCsQfP1jGkMZqHlWc5U30ML1Fi8naVS0%2BE%3D%7Ctkp%3ABk9SR-CymIuSaA",
+    "url": "https://www.ebay.com.au/itm/318842261155?_skw=leica+m6&itmmeta=01M28QZ3GPGZ3X76NZJYXP69KH&hash=item4a3c7acea3:g:amoAAeSw131qnlq0&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDTbTuGULgZ8pkPKFXkH5ogYGyUlpodejbjgkLC4ME4hLXdDAWPC49VwtKuqf3uygWhCdkdhS9%2BF2orDLt3%2FGW8eXpKSCm5pf8HcTSEKIIvSlWI24IEx65OoRqPbXXYr4ok7iNaNaipSK2Q7DY%2FjlTgJSdd6ixA8Ie8%2FQ4NrYogWjqO8HqisFXZdqA2kb7OemswQAmmPXvQFQhs6FbeKkbmn6B%2BsFl9DRybMScS9F4AdFFkxwXqaV1YNJMq6TzBVh4%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -850,7 +850,7 @@
       "location": null,
       "seller": "melbournevintagecameras",
       "seller_pct": 75.0,
-      "shipping": "+AU $15.00 delivery",
+      "shipping": null,
       "sold": false,
       "sold_date": null
     },
@@ -863,7 +863,7 @@
     "price": "53.36",
     "source": "leica_ebay",
     "title": "for Leica M6 Top and Bottom Plate Protective Cover set in BLACK",
-    "url": "https://www.ebay.com.au/itm/324769981037?_skw=leica+m6&itmmeta=01M28B634X96M0SK91SGSF05SZ&hash=item4b9dcca26d:g:cDoAAOSwfJ5hK3qC&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xCeiWcffiIOK2z01yyA43wFs0YeoKKE4OGgQ0kLhziTN%2F%2BOOiUIV07JeTnmvmbXX6oxL2JCSSh5mxuCU%2Fxoam25LROI8bVKWS935mmom%2FXCZ%2Bu0KVXAo5JzMg%2BSV5cgHaBSETmYIVCn9GJHfkE%2Fs75dRifkU6Ftjd3ZvtpwYq%2BcKl2PjNnCGFStnBWd1pYACbOPB4lBrtcE1Td%2B%2Fpd%2FhfxVofu72vvVCkmTiIu5KEnUJA%3D%3D%7Ctkp%3ABk9SR9yymIuSaA",
+    "url": "https://www.ebay.com.au/itm/324769981037?_skw=leica+m6&itmmeta=01M28QZ3GNWC4WB9N5VTRWDGX9&hash=item4b9dcca26d:g:cDoAAOSwfJ5hK3qC&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCWNboKNFQ0PtEPlsq--IOSbLBLJprsyXm0h9qJaPIy7OGu1f33RiFi5GZj681Anab%2FGwpcmA91UiNqkFQ2rrEa8vealxRY9gdknJIa77m3gBFV0M%2BSiVcDVAaB2C89MLSKnFOML6J26dWaJMI0At%2FV%2FawxhRKrnqxEtcIgempWDWQmywFoG0Aj2QsaH8AyEhPogxTNxVN1LbOx7D6ddYuLm3y%2BeRGEG3rP8ho8rtkxX743j11YelOdGXRh4xnxRom32HliR5Jc8F1f1cl%2Fi72X%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -891,7 +891,7 @@
     "price": "1033.95",
     "source": "leica_ebay",
     "title": "Zenza Bronica ETRS Medium Format 6x4.5 Manual Film Camera w/ 75mm and 250m Lens",
-    "url": "https://www.ebay.com.au/itm/366221948881?_skw=leica+m6&itmmeta=01M28B634YR1X2CPEE70WBCADE&hash=item55448777d1:g:H3cAAeSwJllpj8Eq&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xCvpWSw7qWNlq4qrhjmQf16o7ZW8Wny0oVQwoNRpXvqWKYEy6K9qAUFd6%2BOjPt9Z%2FgTuG8BG0lmzFhEbeIaKGauZrXoe%2FW7RpMCvkcDBahXkY0yYiFGO4psC%2BQ%2BmWaTcFeQZBQRk%2FXXm9e1J6zoJW5QKMwdBu2HY%2FbV4P9KnPjX6pSpVgYXuCWoKoPCo4C1nDSqVMaRWRvPyeDf2jJJ3C4qbynNKGtDrtkncPjC%2BitLOQ%3D%3D%7Ctkp%3ABk9SR-aymIuSaA",
+    "url": "https://www.ebay.com.au/itm/366221948881?_skw=leica+m6&itmmeta=01M28QZ3GPQ9AAB42WCG8DQXVP&hash=item55448777d1:g:H3cAAeSwJllpj8Eq&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xCvpWSw7qWNlq4qrhjmQf16o7ZW8Wny0oVQwoNRpXvqWFLrUhTdsUpRUFK3iuY2HD2QzXbg2y%2BQghwwm%2FXcY%2B4SIHDjgh4M6UT%2FuJQk9QbYylL8Blu%2FLetmBObA9LnvJ7JfZuGIFg%2Fvoj9z4PGk3WQXDb8Je0DVhBcMGjiURre%2FI3ejdpEhagQa3xIZ8vjHJBgx7we5E6L0W2t1qqZBHg%2Fvr8naEMaRvxg5mOW0fAqAKA%3D%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -916,10 +916,10 @@
     "image": "https://i.ebayimg.com/images/g/4d8AAeSwHVhpwNwk/s-l500.jpg",
     "in_stock": true,
     "last_seen": "2026-09-11",
-    "price": "15.89",
+    "price": "16.41",
     "source": "leica_ebay",
     "title": "10Pcs Brass Camera Strap Rings 15Mm Outer Diameter Compatible with Leica M Co...",
-    "url": "https://www.ebay.com.au/itm/389786486351?_skw=leica+m6&itmmeta=01M28B634YRERVJ3XEM0R0KF6W&hash=item5ac115c64f:g:4d8AAeSwHVhpwNwk&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xB7HLptehy1CqK97a%2FfOf8yBNeXYef7FrrbUzYmiqnHXyhjbS5VHhZ4ZQDGVfeUtj597kEgFVbHVE7MS80SV4iAgQRxVwVr4i7dPt68Avgqg%2BEtWu44q1puvWJrEDc905Up9ti%2BNwDWitTeldnGUH6bPmmZbM7zpD5yFy3CgT%2BXc0O5wuxGEAn0pceBNh5DTgSrhZSlxhKmbK%2BiJAxKLgRKbAcBDACf9%2FzhPlzpBOpy1ijMYJT2wdSH%2BXVuJmdRasHkrP2aeyi765acPzVmdVQj%7Ctkp%3ABk9SR-SymIuSaA",
+    "url": "https://www.ebay.com.au/itm/389786486351?_skw=leica+m6&itmmeta=01M28QZ3GPC45QYVASY3QF7PYX&hash=item5ac115c64f:g:4d8AAeSwHVhpwNwk&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xB7HLptehy1CqK97a%2FfOf8yBNeXYef7FrrbUzYmiqnHXyhjbS5VHhZ4ZQDGVfeUtj597kEgFVbHVE7MS80SV4iAgQRxVwVr4i7dPt68Avgqg%2BEtWu44q1puvWJrEDc905X9Ulew97pdHNUMFIISTgAmNX1OHljtK26KxE9IWg44SjjeEQ95h%2B9G2LK%2BVAGa0w0zH9Gd90WkDwZFe0GV3H2RumiWSW88B5%2Bk8DQJ%2F8K8LnxcQ7Fjl8DwUSkUJoMZ63%2FZ%2FtY%2BdwKcH9hzUx%2FgFsya%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -947,7 +947,7 @@
     "price": "11979.85",
     "source": "leica_ebay",
     "title": "Yr1998 Leica M6 TTL 0.85 Rangefinder & Leica Summicron-M 35mm f/2 ASPH",
-    "url": "https://www.ebay.com.au/itm/396302489352?_skw=leica+m6&itmmeta=01M28B634W2XST25692N1NQY9J&hash=item5c45781708:g:pc8AAOSwkLlnZkW5&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBZQG8x%2BjP9VdQBTBYm6FLxh3aJbYiW7HA%2BS%2Bh9ZyWvHwMUFK9gQgz158lB6f8jeW%2BMl6QItZBQHR9D5fE2vsAKh3pPLa%2FCZlUYtEouqCMcb%2Bxhxco6ixNtRFQCJFmGqpVm%2BnDYCQUrwlFi4VSODbLOgHKRpbb4H0%2B2n1zUp5jjI5Njdzet7Vnt1Xv%2FuO7Rn1IGOoTtr3vaan3FHP0KZu3FEHMvxOiOOqDsTR4sUrOyT3AIbchPL%2FIRBmgwINXfTDY%3D%7Ctkp%3ABk9SR9qymIuSaA",
+    "url": "https://www.ebay.com.au/itm/396302489352?_skw=leica+m6&itmmeta=01M28QZ3GN7VVJTPBQE5F2JV7E&hash=item5c45781708:g:pc8AAOSwkLlnZkW5&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBZQG8x%2BjP9VdQBTBYm6FLxh3aJbYiW7HA%2BS%2Bh9ZyWvH6VRH%2BVkzo9XaVNzPnZNLuBPF%2Bv6FkZFjkP3p7yJl8ONEb1KEF2GYleGFYvkj4zBljVTDw6EE6G0qVjnxADD%2FwPK0oIJ9pK56%2B30o7Y6M5TWIqZq1l7sJ1GHSvqJ%2Bc%2FgPCZwDfgSZioN8vGLdJVGJ6yVEN3kvfRdIeaacaQ17kF7tgru4GfY3WFab1goXX%2F%2BDNLLCorJAE0CCQgugmaGni0%3D%7Ctkp%3ABk9SR8C4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -975,7 +975,7 @@
     "price": "5291.55",
     "source": "leica_ebay",
     "title": "CLA\u2019d + Overhauled by DAG Mint Leica M3 DS & 5cm Summicron DR V1 + Accessories",
-    "url": "https://www.ebay.com.au/itm/397831531500?_skw=leica+m6&itmmeta=01M28B634XQVS6K68P8JGRBATV&hash=item5ca09b6bec:g:Q6EAAeSwpHBp26D3&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xA0JsFsi8He7GSay86d%2BSh6p0DiJJhct1uxtkRLiwhpbO3E7%2BNz%2ByvgdJ3dPsBk0tZE6DFkeIl%2FIeLjASU7Am%2B3wvaacmo%2BIhR3ekqnKi%2BlDWfU1ANDZZUHtKS5%2FzgYpvllBqKCk%2FRCFsNXQciyNdkPtVrVIYZAxBT7CbQH63%2FhNxl1dFfHC2J42obi2%2FNT0QpmmqEoA%2Bi5FHiBWqOijAo2swggZOsjh88%2BtVdgDZ1Pf653zD79hKBc%2BPe1r5BLVfY%3D%7Ctkp%3ABk9SR96ymIuSaA",
+    "url": "https://www.ebay.com.au/itm/397831531500?_skw=leica+m6&itmmeta=01M28QZ3GNMKN3GFB3RY1ASKJR&hash=item5ca09b6bec:g:Q6EAAeSwpHBp26D3&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xCUmlP6HPLte745SPxeVnazmHqLQQnnM6SGa6%2BX0muPFq8pKndDzNnHgrcfCz1p3wKBYEBP2F5F8qi4sOFVNoY79Zmv3Ndn%2BG5WbV9bcf26lBy0EdiMpkzClwFFUy8dhEW1G66%2FpcSB0jtP%2B7sXiQb1mXS8acaKjFblpCBEY%2BAjJ7%2BxktzLvhg%2FIVZnhdFWHP9T8TdqGGLq7OyU01Pt4YXWuOS7bpm6%2BenZfXEJixcEVAGvRRiH40AtABGGnDHc4ZyaBacIq1XqEBZI3u8WRhY4NegKzEwjY7DB5h9Jw%2BhG4g%3D%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -1003,7 +1003,7 @@
     "price": "2599.60",
     "source": "leica_ebay",
     "title": "3 Lenses [Near MINT] Pentax 6x7 67 MLU M-UP TTL 55mm 105mm 200mm Grip From JAPAN",
-    "url": "https://www.ebay.com.au/itm/406033503851?_skw=leica+m6&itmmeta=01M28B634YEM2KP4JFYB9XW39V&hash=item5e897b966b:g:0qcAAeSwDWVoborB&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBTk6X%2BrwEXBx1MCnly622dhxkP5qw0p19q1N1OGvGWESgfuyvRZDN1xRMv%2FUUYGiUwJqu71lLrV62cvPAn%2B9guZgt8kVcnQCS5LeFr4Nq3E87vosD6pcdCTRIi77uyEa%2BCcf6GQNVo6zkSbXeM1wsRYAy1UoCSAGR20hI2mVdYGoq7R7dBHw2pAE%2BWm%2FcdmHkcZ2X%2FetPOOn01Sutt9%2FtqjsrO3rMwc7HnkCyyPAgI0RdpHjTWIiZ2R%2FW5SB878WE%3D%7Ctkp%3ABk9SR-SymIuSaA",
+    "url": "https://www.ebay.com.au/itm/406033503851?_skw=leica+m6&itmmeta=01M28QZ3GPPE11CNJ10ZV8543M&hash=item5e897b966b:g:0qcAAeSwDWVoborB&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBTk6X%2BrwEXBx1MCnly622dhxkP5qw0p19q1N1OGvGWEQwNbFxBJMl8yYIF%2FNMYyiKHSl%2B2bl8qxKTBuahqKVC%2BFJPHWrrxQcQIN88fY%2BBzN6Q5qd6%2B1AmlKvVJt6%2BBGNl9cAM6TGV0wsbgfHToYxRbaj7rC0nxRm9yZWDLvr97xfly29raIzGiBfhruTRuF4JO6Peuts77DWI%2FPMJ3uWSGtqQOLsw6w%2F1SMEqZUlorg1d%2BluOD3zGw7TE%2Fn68JjOQ%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -1031,7 +1031,7 @@
     "price": "2699.09",
     "source": "leica_ebay",
     "title": "Bessa R3A + Voigtlander 40mm f1.4 M Mount (Leica Style) 35mm Film Camera",
-    "url": "https://www.ebay.com.au/itm/406834018134?_skw=leica+m6&itmmeta=01M28B634YDYNEY82Z93XD5H42&hash=item5eb9327756:g:UZsAAeSwIAhp037s&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDttkVbXGIoDoOaI4dQJu4wwBrsuZYIIJ9yCLxiDKJdnSLoeblaEVhZIVoVFzI%2BAVEYwmSgvKReM2YU4wsIAdBQh1vgxEoftCn8ikuzdc9YqWSMorHd%2Fm%2FxwMtKFqa8Uo1wcAkkFGnO2DtizttobXX9vldijRt2ZAAlB%2BheNwot46mKQ9KC0lofHfWg7qzTooM0aUot%2Fzn5arav0rdKaYbIQK6q5C%2FEjd9XjHos7VS5HGqwQ8AzSwIsBwIOBjw6Jqs%3D%7Ctkp%3ABk9SR-KymIuSaA",
+    "url": "https://www.ebay.com.au/itm/406834018134?_skw=leica+m6&itmmeta=01M28QZ3GP7EMFWZAW1CY1K3GG&hash=item5eb9327756:g:UZsAAeSwIAhp037s&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDttkVbXGIoDoOaI4dQJu4wwBrsuZYIIJ9yCLxiDKJdnRxZYnKAsAB%2FqQ4umURfgkuNoV0RZEsysvBNiohjT0qKmN1KCeuplMthICzTpVeC3Vz89d7aufjfieZJLx8vp1SY2NGV1al9Ujx1js6p6Zv45DRfbG1rNzulKUjCCfbOrFL0jBLtT8GQx0QCLL70sderM8Ch%2BkueP3Eo1dclM0YH8Fkin3uZuOML9r%2FmeE8y8o4HOr6J%2FU%2FAgBeQa3BzR2E%3D%7Ctkp%3ABk9SR8S4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -1059,7 +1059,7 @@
     "price": "7691.55",
     "source": "leica_ebay",
     "title": "Leica M-A Leica M Series 35mm Manual Focus Rangefinder Camera Black w/ Box",
-    "url": "https://www.ebay.com.au/itm/407140385108?_skw=leica+m6&itmmeta=01M28B634YXG5HBMFST2FE7AEZ&hash=item5ecb754154:g:4aAAAeSwCQJqfS9m&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBLyOTZB%2FKoZbMhnevEqLwodm837A2XHlNAmv7W7jQAOxGkGV4q34Aws8XqGyst%2FkHq0hKdah7NwkRoOG2EpiK6bty%2FpzxACzDN4J76DF%2FURo7StEvVQYtb7lqEy4tD302YWSz0m0TR%2B66xDUB%2FYTnWz9cX4Al%2BZf2KMmJP%2FAokH97rjocDGNT0o0c6hbzphRBy3EjntxwbzAz9eiXSqUKpTQQJcHZRIjXmH4wDb05Fcp79T77iMn3Hwgrf%2F5IhY8c%3D%7Ctkp%3ABk9SR-KymIuSaA",
+    "url": "https://www.ebay.com.au/itm/407140385108?_skw=leica+m6&itmmeta=01M28QZ3GPR1RJCSXTKYK8XTSF&hash=item5ecb754154:g:4aAAAeSwCQJqfS9m&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xBLyOTZB%2FKoZbMhnevEqLwodm837A2XHlNAmv7W7jQAO2KzVAdzF1UlEeFIwfM8pwM1V1o9uogfrusstF3XsaZtOaFtIDsPMMmjpIOqxsG1gRJWHfIY2LVZnkbYzaYfEbbpaYu3wIozUGGeGb0XYH5B2ajRPng4WLZc6zQzJQ1ftzeFxf6FfMR6gqJ0BMtiX0qB7YWIbPOF4GlpBdzPLPvu7Vo%2BnJizWLs%2BZH%2FnJHgiESGXWo8rGQV6R0Xy%2FsTUuaA%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   },
@@ -1087,7 +1087,7 @@
     "price": "2497.00",
     "source": "leica_ebay",
     "title": "Leica M3 Camera Single Stroke Camera Leitz Wetzlar Great Working Order Vintage",
-    "url": "https://www.ebay.com.au/itm/800615082840?_skw=leica+m6&itmmeta=01M28B634XCAWX5RC35V4CHT7W&hash=itemba6860ab58:g:GRAAAeSwvdFpuMyR&itmprp=enc%3AAQALAAAA0GfYFPkwiKCW4ZNSs2u11xDkBhsIXQRzD%2B4m%2BFhUf05sYuRvpqWUmlIddbGHOHtKJHgSEMylqQROno%2FZQ7%2BIkMqtnb69yoyQ87%2FNBGnwOZDs2tVpEGRGz%2FSF2OCY9NNIdOqorNIrr0JfmldkKUNVUkZbY6UAcZozVIBRRJQn%2FU5bf%2FrUEjfrd8grs4xWUDxOUGFPlQ0lKHW16srMM1E%2FI24rH3634LP9XEcYZ2rv6t%2Flb7mmXFOv4ZuU%2FW9E0ylolBsphi%2F8L91wGcaFFWxnpIc%3D%7Ctkp%3ABk9SR9yymIuSaA",
+    "url": "https://www.ebay.com.au/itm/800615082840?_skw=leica+m6&itmmeta=01M28QZ3GNJXRDQ5N1G873Y6HR&hash=itemba6860ab58:g:GRAAAeSwvdFpuMyR&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBkYoL5JFCijoqqzsWaFEtvQhdKVu4knI9iGzb7OuTSK6SHhC4mhsUqWmOuSouSM1U9X1RxoMVwLK%2BmLZK%2F56BzdAT%2Bfidtd7QGhUIwB%2B%2B6aOeONAhRqy9UQ2zmtLsO2vhuonMWy6s3NHoiaQ4gqQOsBFbKVxOq7tkOYFnWZKtD%2FpMN6%2BSoBIvuUVSxtz9aDY4bM5n5AV7KDZfsUrTM4Xd8MrfVXskR7ZalNdF5yjKVhPzFEzh8V2W5PMrOurfLkibFk34QQcaIdQd5CWeWT8RhXEit7zUm7v0wyM45f%2BTLIQ%3D%3D%7Ctkp%3ABk9SR8K4_JeSaA",
     "variants": [],
     "was_price": null
   }
