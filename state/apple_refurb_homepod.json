@@ -1,19 +1,4 @@
 {
-  "apple_refurb_homepod:FDEW4AX/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-10T12:11:19+00:00",
-    "id": "FDEW4AX/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-homepod-midnight-202305?wid=400&hei=400&fmt=jpeg&qlt=90&.v=cmFobXVvclUvREQ5SHMrcFIwLzBvM2o3RDBnMGN4NXM2L0VLS3VPK2UyUVZOYmZXUnpWekhFcFdLRUF2UkJ6V3ZvdUZlR0V0VUdJSjBWaDVNVG95Ykk0THErenZpejRFN0FLVEdjWEFsdmc",
-    "in_stock": true,
-    "last_seen": "2026-09-21",
-    "price": "469.00",
-    "source": "apple_refurb_homepod",
-    "title": "Refurbished HomePod (2nd Generation) \u2014 Midnight",
-    "url": "https://www.apple.com/au/shop/product/fdew4ax/a/Refurbished-HomePod-2nd-Gen-Midnight",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_homepod:FDEY4AX/A": {
     "attrs": {},
     "currency": "AUD",
@@ -21,7 +6,7 @@
     "id": "FDEY4AX/A",
     "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-homepod-white-202305?wid=400&hei=400&fmt=jpeg&qlt=90&.v=OEU5bHV4YzlhYndPZFdMaWdOSFRZNmVwd044SWNMVTBkb3EyUjUwY3JPTkQ4eDQxcUNOL3l1WDd2VTYzMXJYbkJkRlpCNVhYU3AwTldRQldlSnpRa0s5ZFFYc3hzZzZxOGxMeS9VR2pQRnM",
     "in_stock": true,
-    "last_seen": "2026-09-21",
+    "last_seen": "2026-09-22",
     "price": "469.00",
     "source": "apple_refurb_homepod",
     "title": "Refurbished HomePod (2nd Generation) \u2014 White",
