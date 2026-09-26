@@ -194,21 +194,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FFEW4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-09-09T07:35:52+00:00",
-    "id": "FFEW4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-tilt-height-202206?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJak1JbUpGajlzb1ZKR29lMnp5bXgxVlhOTXoxalNTSnNHQUdNQUdnQmpmUHNCSkJFVEJwbzJjczV4ajdXUW5HY2pNZGEwYVUyTzcvZlg1UkxwTzJQS1VBbmdvVmp1aENTSG13NHJ3TkcvSGk",
-    "in_stock": true,
-    "last_seen": "2026-09-26",
-    "price": "2799.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Studio Display - Standard glass - Tilt- and height-adjustable stand",
-    "url": "https://www.apple.com/au/shop/product/ffew4x/a/Refurbished-Studio-Display-Standard-glass-Tilt-and-height-adjustable-stand",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FFF04X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -251,21 +236,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 14-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Max chip with 18\u2011Core CPU and 32\u2011Core GPU \u2014 Silver",
     "url": "https://www.apple.com/au/shop/product/fgdq4x/a/refurbished-14-inch-macbook-pro-apple-m5-max-chip-with-18%E2%80%91core-cpu-and-32%E2%80%91core-gpu-silver",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FGDR4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-09-23T07:59:38+00:00",
-    "id": "FGDR4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-spaceblack-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01THNSbmd1eG5SQ2hJT2p2dGxDNGJlN3g0ZWtQSFRIZzlKUVhXb3RzQTNxMC85S3R4M0M3WGhIQVNOK3lBdUI5K1dTck5IOExYUkZTTTR4dU5FanJ0dnp4SHlwUEZPWnJlYlE2SWFhTWJwTHU",
-    "in_stock": true,
-    "last_seen": "2026-09-26",
-    "price": "3389.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Pro chip with 15\u2011Core CPU and 16\u2011Core GPU \u2014 Space Black",
-    "url": "https://www.apple.com/au/shop/product/fgdr4x/a/refurbished-14-inch-macbook-pro-apple-m5-pro-chip-with-15%E2%80%91core-cpu-and-16%E2%80%91core-gpu-space-black",
     "variants": [],
     "was_price": null
   },
