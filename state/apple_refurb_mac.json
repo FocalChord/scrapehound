@@ -299,6 +299,21 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_mac:FHFH4X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-10-01T22:02:31+00:00",
+    "id": "FHFH4X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-blush-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xYlFFbmNPeWduQ0ZxekRqemRjQVpwd3BMSTR2SHgwTDd3Qy96dWd1OVBYTlB0RzNpQ0Mxc293RHpBd2NJd0FqVzBIMS9hcHV1V3NBSFZrMVJzRmFFRWNDaVQ0RU5FQ2JUWGRpRHcwQkZ1Nno",
+    "in_stock": true,
+    "last_seen": "2026-10-01",
+    "price": "899.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished MacBook Neo Apple A18 Pro chip \u2014 Blush",
+    "url": "https://www.apple.com/au/shop/product/fhfh4x/a/refurbished-macbook-neo-apple-a18-pro-chip-blush",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_mac:FHFJ4X/A": {
     "attrs": {},
     "currency": "AUD",
