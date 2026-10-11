@@ -1,19 +1,4 @@
 {
-  "apple_refurb_mac:FDE54X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-09-23T07:59:38+00:00",
-    "id": "FDE54X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-silver-202511?wid=400&hei=400&fmt=jpeg&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01TkgvR1c1TXVnUDM4QkcrQllKQjVpTjhPSkMxOStEeW1wdSszbExkeVJKZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQXlrSDl6V2JEeTVlcUo5bXZtOEVqZnc",
-    "in_stock": true,
-    "last_seen": "2026-10-11",
-    "price": "2719.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/fde54x/a/Refurbished-14-inch-MacBook-Pro-Apple-M5-chip-with-10%E2%80%91Core-CPU-and-10%E2%80%91Core-GPU-Silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FFEL4X/A": {
     "attrs": {},
     "currency": "AUD",
