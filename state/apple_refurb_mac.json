@@ -164,21 +164,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FHFC4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-26T06:39:59+00:00",
-    "id": "FHFC4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-silver-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xYllDQUIwMnV0STF0WFRmN05vUUc0cUJ0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OXV2MHhUK1hWTUpnN0poZDNVWCtHMXFJa1Evbk5jTUkvY1BFNEk1c3RMc3Q",
-    "in_stock": true,
-    "last_seen": "2026-10-15",
-    "price": "1059.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished MacBook Neo Apple A18 Pro chip with Touch ID \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/fhfc4x/a/refurbished-macbook-neo-apple-a18-pro-chip-with-touch-id-silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FHFE4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -356,21 +341,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU \u2013 Space Black",
     "url": "https://www.apple.com/au/shop/product/fx313x/a/Refurbished-16-inch-MacBook-Pro-Apple-M4-Max-Chip-with-16%E2%80%91Core-CPU-and-40%E2%80%91Core-GPU-Space-Black",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:G1CEHX/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-09-22T07:58:26+00:00",
-    "id": "G1CEHX/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJajZLUnNDY2lVbG9VOWlYU3BPOFJkL1htNzFpejIzSXMvUDdLcTNKdnVtazVEeFh6SEJnOTd6K3FNSnk2bUxBbmZSMkhFYVFnRWh2ZTdTcGVQWVRHTTA",
-    "in_stock": true,
-    "last_seen": "2026-10-15",
-    "price": "18949.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Mac Studio Apple M3 Ultra chip with 32\u2011Core CPU and 80\u2011Core GPU",
-    "url": "https://www.apple.com/au/shop/product/g1cehx/a/Refurbished-Mac-Studio-Apple-M3-Ultra-chip-with-32%E2%80%91Core-CPU-and-80%E2%80%91Core-GPU",
     "variants": [],
     "was_price": null
   },
