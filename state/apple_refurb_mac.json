@@ -104,21 +104,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FDHH4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-10-16T13:34:25+00:00",
-    "id": "FDHH4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba13-m5-blue-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=NkFvZHZ6L2RKYi9tTHovZkJ0VkVXQ2FSOUVwai9sMDN6YXBVTWUwd1VJWkQ4eDQxcUNOL3l1WDd2VTYzMXJYbkJkRlpCNVhYU3AwTldRQldlSnpRa0NCZDhnSVl6OTRJcDZrRVlWaFFQblE",
-    "in_stock": true,
-    "last_seen": "2026-10-18",
-    "price": "1779.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 13-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 8\u2011Core GPU \u2014 Sky Blue",
-    "url": "https://www.apple.com/au/shop/product/fdhh4x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDHJ4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -341,21 +326,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished Mac mini Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet ",
     "url": "https://www.apple.com/au/shop/product/fu9d3x/a/Refurbished-Mac-mini-Apple-M4-Chip-with-10-Core-CPU-and-10-Core-GPU-Gigabit-Ethernet-",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FU9E3X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-10-16T13:34:25+00:00",
-    "id": "FU9E3X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-mini-202501?wid=400&hei=400&fmt=jpeg&qlt=90&.v=MUZqZ3JUM0g1Wk9tcDV3bml3ODVUUXk4OTQvamJsMUtvK3duZGpuMFNJNzQ4WHRNcWk0amI5RjdNckNueldpUG0yRkkrVHUrOGtna0dDMk1MQVpsNjY1RDRKeWZrK3psTHgvVFlCTUF0dUU",
-    "in_stock": true,
-    "last_seen": "2026-10-18",
-    "price": "1359.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Mac mini Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet ",
-    "url": "https://www.apple.com/au/shop/product/fu9e3x/a/Refurbished-Mac-mini-Apple-M4-Chip-with-10-Core-CPU-and-10-Core-GPU-Gigabit-Ethernet-",
     "variants": [],
     "was_price": null
   },
