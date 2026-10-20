@@ -730,7 +730,6 @@
     "attrs": {
       "brand": "New Balance",
       "sizes_in_stock": [
-        7.5,
         8.0,
         8.5,
         9.0,
@@ -836,7 +835,7 @@
         "price": null
       },
       {
-        "available": true,
+        "available": false,
         "options": {
           "Size": "7.5"
         },

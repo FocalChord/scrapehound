@@ -19,7 +19,7 @@
     "image": "https://cdn.shopify.com/s/files/1/2716/1006/files/new-balance-860-v15-mens-black-with-faded-black-01.jpg?v=1782706143",
     "in_stock": true,
     "last_seen": "2026-10-20",
-    "price": "250.00",
+    "price": "200.00",
     "source": "active_feet",
     "title": "New Balance 860 V15 Mens Extra Wide Running Shoes",
     "url": "https://activefeet.com.au/products/new-balance-860-v15-mens-extra-wide-running-shoes-1",
@@ -30,7 +30,7 @@
           "Colour": "Black With Faded Black",
           "Size": "9"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": true,
@@ -38,7 +38,7 @@
           "Colour": "Black With Faded Black",
           "Size": "9.5"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": true,
@@ -46,7 +46,7 @@
           "Colour": "Black With Faded Black",
           "Size": "10"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": false,
@@ -54,7 +54,7 @@
           "Colour": "Black With Faded Black",
           "Size": "10.5"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": true,
@@ -62,7 +62,7 @@
           "Colour": "Black With Faded Black",
           "Size": "11"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": true,
@@ -70,7 +70,7 @@
           "Colour": "Black With Faded Black",
           "Size": "11.5"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": true,
@@ -78,7 +78,7 @@
           "Colour": "Black With Faded Black",
           "Size": "12"
         },
-        "price": "250.00"
+        "price": "200.00"
       },
       {
         "available": true,
@@ -86,9 +86,9 @@
           "Colour": "Black With Faded Black",
           "Size": "12.5"
         },
-        "price": "250.00"
+        "price": "200.00"
       }
     ],
-    "was_price": null
+    "was_price": "250.00"
   }
 }
