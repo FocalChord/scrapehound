@@ -209,21 +209,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FHFE4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-26T06:39:59+00:00",
-    "id": "FHFE4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-citrus-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xYWpuTGF1UmZlWm1DcjRzeXRHRjdCV0J0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OXV2MHhUK1hWTUpnN0poZDNVWCtHMXBBTXV1QjdZaWlad1FOUExYQ0F4MXo",
-    "in_stock": true,
-    "last_seen": "2026-10-20",
-    "price": "1059.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished MacBook Neo Apple A18 Pro chip with Touch ID \u2014 Citrus",
-    "url": "https://www.apple.com/au/shop/product/fhfe4x/a/refurbished-macbook-neo-apple-a18-pro-chip-with-touch-id-citrus",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FHFJ4X/A": {
     "attrs": {},
     "currency": "AUD",
