@@ -74,21 +74,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FFEN4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-10-21T14:10:17+00:00",
-    "id": "FFEN4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-xdr-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJcmJKbHp3bmJESVRwbnlSYWdNcnk3MkJ0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OWxFVEpaUkxXV0FVbGMxUEN2OEdiNnBsYi9ubVlJQ3dXQUh5NjRnQ2lFZHM",
-    "in_stock": true,
-    "last_seen": "2026-10-22",
-    "price": "4069.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished Studio Display XDR - Standard glass - VESA mount adapter",
-    "url": "https://www.apple.com/au/shop/product/ffen4x/a/Refurbished-Studio-Display-XDR-Standard-glass-VESA-mount-adapter",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FFEP4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -386,21 +371,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
     "url": "https://www.apple.com/au/shop/product/fx2v3x/a/Refurbished-16-inch-MacBook-Pro-Apple-M4-Max-Chip-with-14%E2%80%91Core-CPU-and-32%E2%80%91Core-GPU-Silver",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FX2X3X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-06-10T12:11:19+00:00",
-    "id": "FX2X3X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m4-spaceblack-202502?wid=400&hei=400&fmt=jpeg&qlt=90&.v=d04ycXJNT3FjYU8yTmdpcGxNTTc2eE8zVnlEd1o1SE05NWdMUEFHWVMzakluU0J0WEdTMW8weGdPbHpxWFdQTi85S3R4M0M3WGhIQVNOK3lBdUI5K2NmT3lDcEt1YU9kd3dlU3pPejJGQUFUUFRyb2RjNHk0akgzMk1vc0ErMzk",
-    "in_stock": true,
-    "last_seen": "2026-10-22",
-    "price": "3529.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Space Black",
-    "url": "https://www.apple.com/au/shop/product/fx2x3x/a/Refurbished-16-inch-MacBook-Pro-Apple-M4-Pro-Chip-with-14%E2%80%91Core-CPU-and-20%E2%80%91Core-GPU-Space-Black",
     "variants": [],
     "was_price": null
   },
