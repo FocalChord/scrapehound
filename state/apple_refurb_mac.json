@@ -404,21 +404,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FUW73X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-08-17T18:17:49+00:00",
-    "id": "FUW73X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp16-m3-max-pro-silver-202402?wid=400&hei=400&fmt=jpeg&qlt=90&.v=ZktrSUorMi9mWVVqWkZDa29GK2hqZEdOclBNNmNzSnVBa3FnSXZ5UGpYRnBmb3R2WkxVZGovNTJTRFM4NXVvTjlpaHIrQ0hZaTQ0a3lBVm53bGROOHVnNXB2TTFobk9oNDErY1RreVZvYWRITlFMaTNNUUxFa1FCNnlUV05Nalk",
-    "in_stock": true,
-    "last_seen": "2026-10-27",
-    "price": "5919.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 16-inch MacBook Pro Apple M3 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU - Silver",
-    "url": "https://www.apple.com/au/shop/product/fuw73x/a/refurbished-16-inch-macbook-pro-apple-m3-max-chip-with-16%E2%80%91core-cpu-and-40%E2%80%91core-gpu-silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FW1K3X/A": {
     "attrs": {},
     "currency": "AUD",
