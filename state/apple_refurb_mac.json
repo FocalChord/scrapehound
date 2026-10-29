@@ -344,6 +344,36 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_mac:FHFD4X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-10-29T17:38:39+00:00",
+    "id": "FHFD4X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-citrus-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xYWpuTGF1UmZlWm1DcjRzeXRHRjdCV0J0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OXV2MHhUK1hWTUpnN0poZDNVWCtHMXBBTXV1QjdZaWlad1FOUExYQ0F4MXo",
+    "in_stock": true,
+    "last_seen": "2026-10-29",
+    "price": "899.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished MacBook Neo Apple A18 Pro chip \u2014 Citrus",
+    "url": "https://www.apple.com/au/shop/product/fhfd4x/a/refurbished-macbook-neo-apple-a18-pro-chip-citrus",
+    "variants": [],
+    "was_price": null
+  },
+  "apple_refurb_mac:FHFF4X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-10-29T17:38:39+00:00",
+    "id": "FHFF4X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-indigo-202606?wid=400&hei=400&fmt=jpeg&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xZTZmdldtQTZla096VGlTcHp4bXJNQ0J0eEJ5Mm9mdjh5RDFLZGZaNno5VktFVWtWOTN6UjdqcFR3T3hCME14OXV2MHhUK1hWTUpnN0poZDNVWCtHMXF4NVVsckRFNVFNSVZpVms5Mzdaamo",
+    "in_stock": true,
+    "last_seen": "2026-10-29",
+    "price": "899.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished MacBook Neo Apple A18 Pro chip \u2014 Indigo",
+    "url": "https://www.apple.com/au/shop/product/fhff4x/a/refurbished-macbook-neo-apple-a18-pro-chip-indigo",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_mac:FW1K3X/A": {
     "attrs": {},
     "currency": "AUD",
