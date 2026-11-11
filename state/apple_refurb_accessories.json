@@ -44,21 +44,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_accessories:FFF24X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-10-21T14:10:17+00:00",
-    "id": "FFF24X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-studio-display-vesa-202206?wid=800&hei=800&fmt=webp&qlt=90&.v=SHNkQVBCNFdPWW5Id3MyYjJjL2FJaEttNVdPZm5VckhmRUVjMlo2TCsyY3d1UE9qSnNuaDFaMzAxYzg4WFF4VnAxU0NpNTVPeXI2MU5LQkN5QkNQbE5hTGNPbVF4S1dKR05CRi9vck50RVJjMVF2Qm1wek9RL211RENFWDR6d1o&traceId=1",
-    "in_stock": true,
-    "last_seen": "2026-11-11",
-    "price": "2629.00",
-    "source": "apple_refurb_accessories",
-    "title": "Refurbished Studio Display - Nano-texture glass - VESA mount adapter",
-    "url": "https://www.apple.com/au/shop/product/fff24x/a/Refurbished-Studio-Display-Nano-texture-glass-VESA-mount-adapter",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_accessories:FUWA3ZA/A": {
     "attrs": {},
     "currency": "AUD",
