@@ -74,21 +74,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FDVE4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-11-03T10:10:21+00:00",
-    "id": "FDVE4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-starlight-202606?wid=800&hei=800&fmt=webp&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3UkdDVVZSQmZhUmNkQnlYZ0RMQUJGQmVFR3BNVCtOSS9iaVo4aVVFYkF3VnlPWjFvdU5EZVdwUnRCZ2RHSDBFS3NINnpIaFd1b2FVRXV6MmZ6R3RQakc1dDgvV3BhU1hoSzFPUEZjam5HQ2g&traceId=1",
-    "in_stock": true,
-    "last_seen": "2026-11-19",
-    "price": "2509.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Starlight",
-    "url": "https://www.apple.com/au/shop/product/fdve4x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FDVK4X/A": {
     "attrs": {},
     "currency": "AUD",
@@ -311,21 +296,6 @@
     "source": "apple_refurb_mac",
     "title": "Refurbished MacBook Neo Apple A18 Pro chip \u2014 Indigo",
     "url": "https://www.apple.com/au/shop/product/fhff4x/a/refurbished-macbook-neo-apple-a18-pro-chip-indigo",
-    "variants": [],
-    "was_price": null
-  },
-  "apple_refurb_mac:FHFG4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-11-10T13:49:40+00:00",
-    "id": "FHFG4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-indigo-202606?wid=800&hei=800&fmt=webp&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xZTZmdldtQTZla096VGlTcHp4bXJNRDhnQUluTWJMZ2VwalpRSFRFOWUxSEl3b0s2NGZJaTNFMHFCa1lhUnljaE92MHhUK1hWTUpnN0poZDNVWCtHMXF4NVVsckRFNVFNSVZpVms5Mzdaamo&traceId=1",
-    "in_stock": true,
-    "last_seen": "2026-11-19",
-    "price": "1059.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished MacBook Neo Apple A18 Pro chip with Touch ID \u2014 Indigo",
-    "url": "https://www.apple.com/au/shop/product/fhfg4x/a/refurbished-macbook-neo-apple-a18-pro-chip-with-touch-id-indigo",
     "variants": [],
     "was_price": null
   },
