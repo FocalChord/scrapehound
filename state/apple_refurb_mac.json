@@ -239,21 +239,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:FHFA4X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-11-10T13:49:40+00:00",
-    "id": "FHFA4X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mac-neo-a18-pro-silver-202606?wid=800&hei=800&fmt=webp&qlt=90&.v=VFV6RG10eUMvaGwrUDMrSzU2QS8xYllDQUIwMnV0STF0WFRmN05vUUc0cjhnQUluTWJMZ2VwalpRSFRFOWUxSEl3b0s2NGZJaTNFMHFCa1lhUnljaE92MHhUK1hWTUpnN0poZDNVWCtHMXFJa1Evbk5jTUkvY1BFNEk1c3RMc3Q&traceId=1",
-    "in_stock": true,
-    "last_seen": "2026-11-20",
-    "price": "899.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished MacBook Neo Apple A18 Pro chip \u2014 Silver",
-    "url": "https://www.apple.com/au/shop/product/fhfa4x/a/refurbished-macbook-neo-apple-a18-pro-chip-silver",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:FHFC4X/A": {
     "attrs": {},
     "currency": "AUD",
