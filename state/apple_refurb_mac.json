@@ -59,6 +59,21 @@
     "variants": [],
     "was_price": null
   },
+  "apple_refurb_mac:FGDN4X/A": {
+    "attrs": {},
+    "currency": "AUD",
+    "first_seen": "2026-11-21T20:41:00+00:00",
+    "id": "FGDN4X/A",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mbp14-m5-silver-202606?wid=800&hei=800&fmt=webp&qlt=90&.v=dXdxeU1SM0NxV0Nlb3NIeVRObG01RWttVlFCOEUrN0xiSDJ5REt1Z3lzK09wQXdCN3lGYWkxbXNwOVQ5K1pwWUR5ZVpDdUpVU08vSGU1ZXgwbmQ5RnFBR09yRmZMTEQzc3VqNWR5VDdZNmc&traceId=1",
+    "in_stock": true,
+    "last_seen": "2026-11-21",
+    "price": "3389.00",
+    "source": "apple_refurb_mac",
+    "title": "Refurbished 14-inch MacBook\u00a0Pro Apple\u00a0M5\u00a0Pro chip with 15\u2011Core CPU and 16\u2011Core GPU \u2014 Silver",
+    "url": "https://www.apple.com/au/shop/product/fgdn4x/a/refurbished-14-inch-macbook-pro-apple-m5-pro-chip-with-15%E2%80%91core-cpu-and-16%E2%80%91core-gpu-silver",
+    "variants": [],
+    "was_price": null
+  },
   "apple_refurb_mac:FGDQ4X/A": {
     "attrs": {},
     "currency": "AUD",
