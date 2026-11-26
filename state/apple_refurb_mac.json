@@ -569,21 +569,6 @@
     "variants": [],
     "was_price": null
   },
-  "apple_refurb_mac:G1LW0X/A": {
-    "attrs": {},
-    "currency": "AUD",
-    "first_seen": "2026-11-26T01:12:19+00:00",
-    "id": "G1LW0X/A",
-    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-mba15-m5-midnight-202606?wid=800&hei=800&fmt=webp&qlt=90&.v=RzRDeEhDSzJOVmhSUDI1ZktlVUQ3VzRmWUN2dytQNlNRK0RPVlA1N2Y3N05PUGtsSXhYYzQzWGhCbHQ5VVJhS0ZXZzlzM2cwVmJseGdsS3RYT09za3N2bUhydGh0ZkR5VStUeFJQakFuU1IrYWpGdS9XeFgvbS9ITnNYOEhYaG4&traceId=1",
-    "in_stock": true,
-    "last_seen": "2026-11-26",
-    "price": "2369.00",
-    "source": "apple_refurb_mac",
-    "title": "Refurbished 15-inch MacBook\u00a0Air Apple\u00a0M5 chip with 10\u2011Core CPU and 10\u2011Core GPU \u2014 Midnight",
-    "url": "https://www.apple.com/au/shop/product/g1lw0x/a",
-    "variants": [],
-    "was_price": null
-  },
   "apple_refurb_mac:G1MNBX/A": {
     "attrs": {},
     "currency": "AUD",
